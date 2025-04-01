@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>OBOGクラブ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>OBOGクラブ</h1>
+    <div class="container">
+        <h1 class="text-primary">test</h1>
+        <button class="btn btn-primary">クリック</button>
+    </div>
+    <div class="container text-center mt-5">
+        <!-- 一般ボタン -->
+        <button class="btn btn-primary">一般ボタン</button>
+    
+        <!-- 会員ページボタン（ログインモーダルを開く） -->
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">会員ページ</button>
+    </div>
+    
+    <!-- ログインモーダル -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">会員ログイン</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">メールアドレス</label>
+                            <input type="email" class="form-control" id="email" placeholder="example@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">パスワード</label>
+                            <input type="password" class="form-control" id="password" placeholder="••••••••">
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="loginBtn">ログイン</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script>
+        document.getElementById("loginBtn").addEventListener("click", function() {
+            // メールアドレスとパスワードの値を取得
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+    
+            // テスト用の認証条件（メールとパスワード）
+            if (email === "lumikojo@ikkosha.co.jp" && password === "1922") {
+                // 認証成功 → archive.html に遷移
+                window.location.href = "archive.html";
+            } else {
+                // 認証失敗 → エラーメッセージを表示
+                alert("メールアドレスまたはパスワードが間違っています。");
+            }
+        });
+    </script> -->
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function() {
+            // メールアドレスとパスワードの値を取得
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+    
+            // 認証成功条件（追加したメールアドレス）
+            const validEmails = [
+                "lumikojo@ikkosha.co.jp",
+                "k_minamimoto@ikkosha.co.jp",
+                "take_iwata@ikkosha.co.jp",
+                "tanigake@ikkosha.co.jp"
+            ];
+    
+            // パスワードが一致し、かつメールアドレスがリストに含まれている場合
+            if (validEmails.includes(email) && password === "1922") {
+                // 認証成功 → archive.html に遷移
+                window.location.href = "archive.html";
+            } else {
+                // 認証失敗 → エラーメッセージを表示
+                alert("メールアドレスまたはパスワードが間違っています。");
+            }
+        });
+    </script>
+    
+</body>
+</html>
