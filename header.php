@@ -18,7 +18,7 @@
 
 
 <body>
-    <header>
+    <header id="header" class="header">
         <h1>header</h1>
 
     </header>
