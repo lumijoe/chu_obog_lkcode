@@ -20,6 +20,17 @@
 <body>
     <header id="header" class="header">
         <h1>header</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" target="_blank" rel="noopener noreferrer">お知らせ一覧</a>
+                </li>
+
+                <li>
+                    <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" target="_blank" rel="noopener noreferrer">OBOGクラブについて</a>
+                </li>
+            </ul>
+        </nav>
 
     </header>
     <main class="main">
