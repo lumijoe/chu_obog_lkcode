@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: archive
+ * Template Name: page-about
  * Description: This is the template
  */
 
@@ -18,7 +18,7 @@ get_header();
 
 <main>
     <div>
-        <p>お知らせ一覧ページです</p>
+        <p>aboutページです</p>
     </div>
 </main>
 
