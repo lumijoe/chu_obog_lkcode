@@ -1,0 +1,76 @@
+@use "../setting" as *;
+
+// ======================================
+// モーダル
+// ======================================
+.modal {
+  &__content {
+    width: 100.0rem;
+    max-width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    display: none;
+    background-color: #fff;
+    transform: translateX(-50%) translateY(-50%);
+
+    &--inner {
+      max-height: calc(100vh - 10.0rem);
+      padding: 6.0rem 5.0rem 4.0rem;
+      overflow-y: auto;
+    }
+
+    &--visual {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    select {
+      background-image: url("data:image/svg+xml;charset=utf8,<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M4 6L8 10L12 6' stroke='%230F172A' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+      background-position: right 1.0rem center;
+      background-size: 1.5rem;
+      background-repeat: no-repeat;
+    }
+  }
+  &__close {
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0;
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    &::before, &::after {
+      content: "";
+      width: 2px;
+      height: 70%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: $primary;
+    }
+    &::before {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &::after {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+}
+
+
+// ======================================
+// タブレット以下
+// ======================================
+@include mq(tb) {
+  .modal {
+    &__content {
+      &--inner {
+        padding: 5rem 3rem 4rem;
+      }
+    }
+  }
+}

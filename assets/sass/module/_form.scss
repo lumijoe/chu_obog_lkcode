@@ -1,0 +1,555 @@
+@use "../setting" as *;
+
+// ======================================
+// フォーム 設定
+// ======================================
+
+//Chromeの青枠をリセット
+*:focus {
+  outline: none;
+}
+
+input {
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: var(--placeholder-color, #ccc);
+  }
+  &:-ms-input-placeholder {
+    color: var(--placeholder-color, #ccc);
+  }
+  &::-moz-placeholder {
+    color: var(--placeholder-color, #ccc);
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  }
+}
+
+textarea {
+  vertical-align: bottom;
+  &::-webkit-input-placeholder {
+    color: var(--placeholder-color, #ccc);
+  }
+  &:-ms-input-placeholder {
+    color: var(--placeholder-color, #ccc);
+  }
+  &::-moz-placeholder {
+    color: var(--placeholder-color, #ccc);
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  }
+}
+
+form {
+  .p-country-name {
+    display: none;
+  }
+}
+
+.c-form {
+  &__box {
+    margin-bottom: 0;
+    display: flex;
+    gap: 1rem 3rem;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: $font-family-sans-serif;
+
+    + .c-form__box {
+      margin-top: 3rem;
+    }
+
+    &.contact-item {
+      width: 100%;
+      padding: 4.4rem 4.2rem;
+      gap: 4rem;
+      flex-direction: column;
+      background-color: #fff;
+
+      .c-form__checkbox {
+        padding: 1rem 2rem;
+        border: 1px solid #ccc;
+
+        &.is-active {
+          background-color: #261f88;
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+
+          --text-color: #fff;
+        }
+      }
+      .c-form__text {
+        margin: 0 auto;
+        padding: 1.5rem 2rem;
+
+        &.row {
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: repeat(3,1fr);
+          align-items: center;
+          flex-wrap: wrap;
+        }
+      }
+      .c-form__label {
+        width: 100%;
+        gap: 2.8rem;
+        align-items: center;
+        justify-content: start;
+      }
+
+      &-01 {
+        .c-form__checkbox {
+          .mwform-checkbox-field-text {
+            padding: .6rem 2rem;
+            border: 1px solid $primary;
+            color: $primary;
+
+            &::before {
+              content: none;
+            }
+            &::after {
+              content: none;
+            }
+          }
+          input:checked {
+            + .mwform-checkbox-field-text {
+              background-color: #261f88 !important;
+              color: #fff;
+            }
+          }
+        }
+
+        .mwform-radio-field {
+          margin-left: 0 !important;
+          &-text {
+            padding: .6rem 2rem;
+            border: 1px solid $primary;
+            color: $primary;
+            font-size: 1.4rem;
+            line-height: 1.75;
+
+            &::before, &::after {
+              content: none;
+            }
+          }
+          input:checked {
+            + .mwform-radio-field-text {
+              background-color: #261f88 !important;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    gap: 2.8rem;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: "";
+      width: 9rem;
+      height: 2.0rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+    .title {
+      span {
+        display: block;
+        font-size: 1.6rem;
+      }
+      .sub {
+        color: var(--theme-color,$primary);
+      }
+    }
+  }
+
+  &__required {
+    &::after {
+      content: "必須 required";
+      flex: none;
+      border: 1px solid $primary;
+      background-color: $primary;
+      color: #fff;
+    }
+  }
+
+  &__optional {
+    &::after {
+      content: "任意";
+    }
+  }
+
+  &__text {
+    width: 100%;
+    margin-bottom: 0;
+    flex: 1;
+
+    &.radiobox {
+      .mwform-radio-field + .mwform-radio-field {
+        margin-top: 2rem;
+      }
+    }
+
+    &--row {
+      display: flex;
+      align-items: center;
+
+      figure {
+        margin-right: 1rem;
+      }
+
+      .p-region {
+        margin-right: 1rem;
+      }
+
+      & + & {
+        margin-top: 1rem;
+      }
+    }
+
+    .note {
+      margin-top: .3em;
+      letter-spacing: 0;
+      font-size: 1.4rem;
+    }
+
+    &.row {
+      display: flex;
+      gap: 1rem 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &.radiobox {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .radiobox {
+      &__message {
+        margin-top: 2rem;
+      }
+    }
+
+    .btn__01 {
+      width: 15rem;
+      height: 4rem;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__control {
+    width: 100%;
+    padding: 1.125em 1.25em;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1.6rem;
+    line-height: calc(24 / 16);
+
+    &.w-25 {
+      width: 25%;
+    }
+  }
+
+  // セレクトボックス
+  &__select {
+    background-image: url("data: image/svg+xml,<svg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M8 1.09131L6.87779 0L4.00008 2.79808L1.12225 0L4.1008e-05 1.09131L4.00008 4.98061L8 1.09131Z' fill='%2329318A'/></svg>");
+    background-position: right 1.5rem center;
+    background-size: .8rem auto;
+    background-repeat: no-repeat;
+  }
+
+  // チェックボックス
+  &__checkbox {
+    font-family: $font-family-sans-serif;
+    label {
+      position: relative;
+      > span {
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+    input[type="checkbox"] {
+      display: none;
+      + span {
+        display: inline-flex;
+        text-align: left;
+        line-height: 1.75;
+
+        &::before {
+          content: "";
+          width: 2rem;
+          height: 2rem;
+          margin-right: 1.0rem;
+          display: inline-block;
+          flex: none;
+          border: 1px solid #ccc;
+          background-color: #fff;
+        }
+        &::after {
+          content: "";
+          width: .7em;
+          height: 1.0em;
+          position: absolute;
+          top: -1rem;
+          left: .5rem;
+          display: block;
+          border-right: 3px solid $primary;
+          border-bottom: 3px solid $primary;
+          opacity: 0;
+          transform: rotate(40deg);;
+        }
+      }
+
+      // 選択後
+      &:checked {
+        + span {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // ラジオボタン
+  &__radio {
+    font-family: $font-family-sans-serif;
+    label {
+      position: relative;
+    }
+    input[type="radio"] {
+      display: none;
+      + span {
+        display: inline-flex;
+        text-align: left;
+        line-height: 1.75;
+        &::before {
+          content: "";
+          width: 1.75em;
+          height: 1.75em;
+          margin-right: 1.0rem;
+          display: inline-block;
+          flex: none;
+          border: 2px solid var(--primary-color, #000);
+          border-radius: 50%;
+        }
+        &::after {
+          content: "";
+          width: .75em;
+          height: .75em;
+          position: absolute;
+          top: -.3em;
+          left: .5em;
+          display: block;
+          border-radius: 50%;
+          background-color: var(--primary-color, #000);
+          opacity: 0;
+        }
+      }
+
+      // 選択後
+      &:checked {
+        + span {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // テキストエリア
+  &__textarea {
+    height: 24rem;
+  }
+
+  &__policy {
+    padding-top: 5rem;
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .row {
+      display: flex;
+      gap: 6.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item {
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 1.5rem;
+        height: 2rem;
+        position: absolute;
+        top: 1px;
+        right: -3rem;
+        background-image: url("data: image/svg+xml,<svg width='12' height='12' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13.3 19.0016H2.85C1.235 19.0016 0 17.7666 0 16.1516V5.70156C0 4.08656 1.235 2.85156 2.85 2.85156H8.55C9.12 2.85156 9.5 3.23156 9.5 3.80156C9.5 4.37156 9.12 4.75156 8.55 4.75156H2.85C2.28 4.75156 1.9 5.13156 1.9 5.70156V16.1516C1.9 16.7216 2.28 17.1016 2.85 17.1016H13.3C13.87 17.1016 14.25 16.7216 14.25 16.1516V10.4516C14.25 9.88156 14.63 9.50156 15.2 9.50156C15.77 9.50156 16.15 9.88156 16.15 10.4516V16.1516C16.15 17.7666 14.915 19.0016 13.3 19.0016Z' fill='%23333333'/><path d='M18.0504 7.6C17.4804 7.6 17.1004 7.22 17.1004 6.65V1.9H12.3504C11.7804 1.9 11.4004 1.52 11.4004 0.95C11.4004 0.38 11.7804 0 12.3504 0H18.0504C18.6204 0 19.0004 0.38 19.0004 0.95V6.65C19.0004 7.22 18.6204 7.6 18.0504 7.6Z' fill='%23333333'/><path d='M7.60039 12.35C7.31539 12.35 7.12539 12.255 6.93539 12.065C6.55539 11.685 6.55539 11.115 6.93539 10.735L17.3854 0.285C17.7654 -0.095 18.3354 -0.095 18.7154 0.285C19.0954 0.665 19.0954 1.235 18.7154 1.615L8.26539 12.065C8.07539 12.255 7.88539 12.35 7.60039 12.35Z' fill='%23333333'/></svg>");
+        background-position: center;
+      }
+    }
+
+    label {
+      font-weight: 600;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 5.5rem;
+
+    &.btn__grid {
+      gap: 5rem;
+    }
+  }
+}
+
+// ======================================
+//  MW WP FORM
+// ======================================
+.mwform {
+  // ラジオボタン
+  &-radio {
+    &-field {
+      &-text {
+        padding-left: 1.9em;
+        position: relative;
+        display: inline-block;
+        font-size: 1.6rem;
+        line-height: 1.4;
+
+        &::before {
+          content: "";
+          width: 1.4em;
+          height: 1.4em;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          background-color: #fff;
+          transition: background .3s;
+        }
+        &::after {
+          content: "";
+          width: .7em;
+          height: .7em;
+          position: absolute;
+          top: .35em;
+          left: .35em;
+          border-radius: 50%;
+          background-color: $primary;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity .3s, visibility .3s;
+          transform: rotate(-45deg);
+        }
+      }
+
+      input[type="radio"] {
+        display: none;
+        &:checked {
+          + .mwform-radio-field-text {
+            &::after {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.recaptcha-notice {
+  margin-top: 3rem;
+  padding: 1em;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.75;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
+// ======================================
+// タブレット以下
+// ======================================
+@include mq(tb) {
+  .c-form {
+    &__box {
+      gap: 1rem;
+      flex-direction: column;
+
+      & + & {
+        margin-top: 2.5rem;
+      }
+
+      &.postal {
+        .row {
+          align-items: start;
+          flex-direction: column-reverse;
+        }
+      }
+
+      &.contact-item {
+        padding: 3rem 2rem;
+        gap: 2rem;
+        .c-form__text {
+          padding: 0;
+
+          &.row {
+            gap: 1rem;
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+    &__label {
+      width: 100%;
+    }
+    &__text {
+      width: 100%;
+    }
+    &__control {
+      width: 100% !important;
+    }
+    &__policy {
+      padding-top: 3rem;
+      text-align: left;
+
+      .row {
+        gap: 0;
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+    &__button {
+      &.btn__grid {
+        gap: 2rem;
+      }
+    }
+  }
+}

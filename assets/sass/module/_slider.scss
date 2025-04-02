@@ -1,0 +1,234 @@
+@use "../setting" as *;
+
+// ======================================
+//  スライダー
+// ======================================
+.js-slider01 {
+  &-control {
+    .swiper-navigation {
+      display: flex;
+      gap: 0 5.0rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .swiper-button {
+      height: auto;
+      margin: 0;
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      transform: none;
+      &::after {
+        color: $body-color;
+        font-size: 2.0rem;
+      }
+    }
+    .swiper-pause {
+      width: 2.0rem;
+      height: 2.0rem;
+      position: relative;
+      display: flex;
+      gap: 0 .4rem;
+      align-items: center;
+      justify-content: center;
+      &::before, &::after {
+        content: "";
+        width: .4rem;
+        height: 100%;
+        background-color: var(--theme-color, $primary);
+      }
+
+      &.paused {
+        &::before {
+          width: 2.0rem;
+          height: 1.0rem;
+
+          clip-path: polygon(0 0, 100% 50%, 0 100%);
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  &__01 {
+    &--card {
+      .pic {
+        margin-bottom: 1.6rem;
+        display: block;
+        overflow: hidden;
+
+        aspect-ratio: 296 / 400;
+        img {
+          @include coverImage;
+        }
+
+        &.asp-auto {
+          aspect-ratio: auto;
+        }
+      }
+      .tag {
+        padding: 0 .8rem;
+        display: inline-block;
+        border-radius: .3rem;
+        background-color: var(--theme-color, $primary);
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.2rem;
+        + .name {
+          margin-top: .8rem;
+        }
+      }
+      .name {
+        font-weight: 500;
+        line-height: calc(28 / 16);
+
+        @include line-clamp(2);
+      }
+    }
+
+    .swiper {
+      overflow: visible !important;
+    }
+
+    .swiper-wrapper {
+      height: auto;
+    }
+
+    .swiper-slide {
+      width: 29.6rem;
+    }
+
+    &--control {
+      margin-top: 8.0rem;
+      padding: 2.0rem 0;
+    }
+  }
+
+  &__02 {
+    &--card {
+      .pic {
+        display: block;
+        overflow: hidden;
+
+        aspect-ratio: 1 / .5;
+        img {
+          @include coverImage;
+        }
+      }
+    }
+
+    .swiper {
+      overflow: visible !important;
+    }
+
+    .swiper-wrapper {
+      height: auto;
+    }
+
+    .swiper-slide {
+      width: 83.2rem;
+    }
+
+    &--control {
+      margin-top: 4.0rem;
+    }
+  }
+
+  &__03 {
+    &--card {
+      .pic {
+        display: block;
+        overflow: hidden;
+
+        aspect-ratio: 1 / .68;
+        img {
+          @include coverImage;
+        }
+        + p {
+          margin-top: 2.4rem;
+        }
+      }
+    }
+
+    .swiper {
+      overflow: visible !important;
+    }
+
+    .swiper-wrapper {
+      height: auto;
+    }
+
+    .swiper-slide {
+      width: 36.0rem;
+    }
+
+    &--control {
+      margin-top: 10.0rem;
+    }
+  }
+}
+
+.swiper-pagination {
+  &.type01 {
+    margin-top: 3.6rem;
+    position: relative;
+    bottom: auto;
+
+    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-color: #29318a;
+    .swiper-pagination-bullet {
+      border: 1px solid var(--swiper-pagination-color);
+    }
+  }
+}
+
+
+// ======================================
+// PC時のみ
+// ======================================
+@include mq(tb, min) {
+  .slider {
+    &__01 {
+      position: relative;
+      .btn__01 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+
+// ======================================
+// タブレット以下
+// ======================================
+@include mq(tb) {
+  .slider {
+    &__01 {
+      &--control {
+        margin-top: 2.5rem;
+        padding: 0;
+      }
+      .btn__01 {
+        margin-top: 4.0rem;
+      }
+    }
+
+    &__02 {
+      .swiper-slide {
+        width: 100%;
+      }
+      &--control {
+        margin-top: 3.5rem;
+      }
+    }
+  }
+}

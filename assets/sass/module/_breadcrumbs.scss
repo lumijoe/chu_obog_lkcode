@@ -1,0 +1,28 @@
+@use "../setting" as *;
+
+// ======================================
+// パンくず
+// ======================================
+.breadcrumbs {
+  padding: 1.0rem 0;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  --text-color: #0e1346;
+  &__inner {
+    display: flex;
+    gap: .5em .5em;
+    flex-wrap: wrap;
+    > span {
+      white-space: nowrap;
+      &:last-of-type {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  a {
+    text-decoration: underline;
+  }
+}
