@@ -22,6 +22,7 @@
     <!-- 前後の記事ナビゲーション -->
     <nav>
         <p><?php previous_post_link('« %link'); ?></p>
+        <p><a href="<?php echo get_post_type_archive_link('news'); ?>">一覧に戻る</a></p>
         <p><?php next_post_link('%link »'); ?></p>
     </nav>
 
