@@ -29,8 +29,8 @@ function create_post_type_news() {
         'news',
         array(
             'labels' => array(
-                'name'          => 'ニュース',
-                'singular_name' => 'ニュース',
+                'name'          => 'お知らせ',
+                'singular_name' => 'お知らせ',
             ),
             'public'       => true,
             'has_archive'  => true, // アーカイブページを有効にする
