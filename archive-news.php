@@ -7,7 +7,7 @@
         <?php while (have_posts()) : the_post(); ?>
             <li>
                 <!-- ACFタイトル -->
-                <a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a>
+                <a href="<?php the_permalink(); ?>">テスト投稿：<?php the_field('post_title'); ?></a>
                 <!-- ACF投稿日時 -->
                 <p><?php echo get_the_date('Y年m月d日'); ?></p>
                 <!-- ACF本文 -->
