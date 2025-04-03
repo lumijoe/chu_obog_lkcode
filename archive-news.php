@@ -1,22 +1,22 @@
-<?php
+<!-- カスタム投稿の一覧 -->
+<?php get_header(); ?>
+<h1>ニュース一覧</h1>
 
-/**
- * Template Name: page-news
- * Description: This is the template
- */
-
-get_header();
-?>
-<!-- <?php
-/*******************************************
- * archive
- *******************************************/
-// テーマディレクトリ
-$theme_url = get_template_directory_uri();
-get_header();
-?> -->
-
-<main>
+<?php if (have_posts()) : ?>
+    <ul>
+        <?php while (have_posts()) : the_post(); ?>
+            <li>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <p><?php the_excerpt(); ?></p>
+                
+                <!-- ACFのカスタムフィールドを表示 -->
+                <p>日付: <?php the_field('news_date'); ?></p>
+                <p>サブタイトル: <?php the_field('subtitle'); ?></p>
+                <p>関連リンク: <a href="<?php the_field('related_link'); ?>" target="_blank">詳細はこちら</a></p>
+            </li>
+        <?php endwhile; ?>
+    </ul>
+    <h1>以下はhtmlテスト</h1>
     <div>
         <p>お知らせ一覧ページです-page-news</p>
         <br>
@@ -36,12 +36,11 @@ get_header();
         </div>
        
     </div>
-</main>
 
-　
+    <?php the_posts_pagination(); ?>
 
+<?php else : ?>
+    <p>ニュースがありません。</p>
+<?php endif; ?>
 
-
-<?php
-    get_footer(); 
-?>
+<?php get_footer(); ?>
