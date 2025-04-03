@@ -11,12 +11,15 @@
         <!-- ACF本文 -->
         <p><?php the_field('post_text'); ?></p>
         <!-- 画像 -->
-        <img src="<?php the_field('post_image'); ?>" 
-            alt="ニュース画像" 
-            width="300" 
-            data-src="<?php the_field('post_image'); ?>" 
-            decoding="async" 
-            class="lazyloaded">
+        <!-- 画像 -->
+        <?php if (get_field('post_image')) : ?>
+                    <img src="<?php the_field('post_image'); ?>" 
+                        alt="ニュース画像" 
+                        width="300" 
+                        data-src="<?php the_field('post_image'); ?>" 
+                        decoding="async" 
+                        class="lazyloaded">
+                <?php endif; ?>
     </article>
 
     <!-- 前後の記事ナビゲーション -->
