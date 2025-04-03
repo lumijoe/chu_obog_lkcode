@@ -82,8 +82,14 @@ function set_category_based_on_acf_radio( $post_id ) {
 
     // カテゴリIDが正しく取得できた場合、カテゴリを投稿に設定
     if ($category_id) {
-        wp_set_post_categories( $post_id, array( $category_id ), true );
+        // カテゴリを設定
+        wp_set_post_categories($post_id, array($category_id), true);
+        
+        // デバッグ用：カテゴリIDを出力
+        error_log('カテゴリID: ' . $category_id);
+    } else {
+        // エラーメッセージを出力（必要なら）
+        error_log('カテゴリIDが設定できませんでした');
     }
 }
 add_action('save_post', 'set_category_based_on_acf_radio');
-
