@@ -11,7 +11,19 @@
                 <!-- ACF投稿日時 -->
                 <p><?php echo get_the_date('Y年m月d日'); ?></p>
                 <!-- カテゴリ表示 -->
-                
+                <!-- カテゴリスラッグ表示 -->
+                <p class="post-category">
+                    <?php
+                    // 投稿のカテゴリを取得
+                    $categories = get_the_category();
+                    if (!empty($categories)) {
+                        foreach ($categories as $category) {
+                            // カテゴリのスラッグを表示
+                            echo '<span class="category-slug">' . esc_html($category->slug) . '</span>';
+                        }
+                    }
+                    ?>
+                </p>
                 <!-- ACF本文 -->
                 <p><?php the_field('post_text'); ?></p>
                 <!-- 画像 -->
