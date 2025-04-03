@@ -11,8 +11,16 @@
                 
                 <!-- ACFのカスタムフィールドを表示 -->
                 <p>日付: <?php the_field('news_date'); ?></p>
-                <p>サブタイトル: <?php the_field('subtitle'); ?></p>
-                <p>関連リンク: <a href="<?php the_field('related_link'); ?>" target="_blank">詳細はこちら</a></p>
+                <p>サブタイトル: <?php the_field('post_title'); ?></p>
+                <p>本文: <?php the_field('post_text'); ?></p>
+                <p>画像:</p>
+                <img src="<?php the_field('post_image'); ?>" 
+                    alt="ニュース画像" 
+                    width="300" 
+                    data-src="<?php the_field('post_image'); ?>" 
+                    decoding="async" 
+                    class="lazyloaded">
+                <p>関連リンク: <a href="<?php the_field('related_link'); ?>" target="_blank">詳細はこちら</a></p>                                    
             </li>
         <?php endwhile; ?>
     </ul>
