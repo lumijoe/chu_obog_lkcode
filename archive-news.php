@@ -9,7 +9,7 @@
                 <!-- ACFタイトル -->
                 <a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a>
                 <!-- ACF投稿日時 -->
-                <p><?php the_field('news_date'); ?></p>
+                <p><?php echo get_the_date('Y年m月d日'); ?></p>
                 <!-- ACF本文 -->
                 <p><?php the_field('post_text'); ?></p>
                 <!-- 画像 -->
