@@ -36,7 +36,7 @@ function create_post_type_news() {
             'public'       => true,
             'has_archive'  => true, // アーカイブページを有効にする
             'menu_position' => 5,
-            'menu_icon'    => 'dashicons-admin-site',
+            'menu_icon'    => 'dashicons-edit',
             'supports'     => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
             'rewrite'      => array('slug' => 'news'), // URLを '/news/' にする
         )
