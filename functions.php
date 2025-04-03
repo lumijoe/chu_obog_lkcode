@@ -49,3 +49,41 @@ function remove_editor_from_custom_post_type() {
     remove_post_type_support('news', 'editor'); // 'news' カスタム投稿タイプの名前、その投稿の時は非表示
 }
 add_action('init', 'remove_editor_from_custom_post_type');
+
+// 投稿で選択したフォームカテゴリ＝記事カテゴリとする設定
+function set_category_based_on_acf_radio( $post_id ) {
+    // 投稿タイプが「お知らせ」の場合のみ実行
+    if ( get_post_type( $post_id ) != 'news' ) {
+        return;
+    }
+
+    // ACFフィールドで選択されたラジオボタンの値を取得
+    $selected_category = get_field('category_radio_field', $post_id); // 'category_radio_field' はあなたが作成したフィールド名に変更
+
+    // ラジオボタンの選択肢に基づいてカテゴリIDを設定
+    $category_id = 0; // 初期化
+    switch ($selected_category) {
+        case 'news_company':
+            $category_id = get_cat_ID('会社だより');
+            break;
+        case 'news_allevent':
+            $category_id = get_cat_ID('全体行事');
+            break;
+        case 'news_obog':
+            $category_id = get_cat_ID('OBOG会だより');
+            break;
+        case 'news_member_shin':
+            $category_id = get_cat_ID('会員だより（新入会員）');
+            break;
+        case 'news_member_fuhou':
+            $category_id = get_cat_ID('会員だより（訃報）');
+            break;
+    }
+
+    // カテゴリIDが正しく取得できた場合、カテゴリを投稿に設定
+    if ($category_id) {
+        wp_set_post_categories( $post_id, array( $category_id ), true );
+    }
+}
+add_action('save_post', 'set_category_based_on_acf_radio');
+
