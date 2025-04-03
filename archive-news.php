@@ -10,6 +10,18 @@
                 <a href="<?php the_permalink(); ?>">テスト投稿：<?php the_field('post_title'); ?></a>
                 <!-- ACF投稿日時 -->
                 <p><?php echo get_the_date('Y年m月d日'); ?></p>
+                <!-- カテゴリ表示 -->
+                <p class="post-category">
+                    <?php
+                    // 投稿のカテゴリを表示
+                    $categories = get_the_category();
+                    if (!empty($categories)) {
+                        foreach ($categories as $category) {
+                            echo '<span class="category-name">' . esc_html($category->name) . '</span>';
+                        }
+                    }
+                    ?>
+                </p>
                 <!-- ACF本文 -->
                 <p><?php the_field('post_text'); ?></p>
                 <!-- 画像 -->
