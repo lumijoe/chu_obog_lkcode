@@ -179,3 +179,9 @@ get_header();
 
 ## 関連リンクACF
 <p>関連リンク: <a href="<?php the_field('related_link'); ?>" target="_blank">詳細はこちら</a></p>     
+
+## ビジュアルエディタを非表示にする方法
+function remove_editor_from_custom_post_type() {
+    remove_post_type_support('news', 'editor'); // 'news' はカスタム投稿タイプの名前
+}
+add_action('init', 'remove_editor_from_custom_post_type');
