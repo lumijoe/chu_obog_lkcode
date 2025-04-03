@@ -16,7 +16,13 @@
             </li>
         <?php endwhile; ?>
     </ul>
-    <h1>以下はhtmlテスト</h1>
+
+    <?php the_posts_pagination(); ?>
+
+<?php else : ?>
+    <p>ニュースがありません。</p>
+<?php endif; ?>
+<h1>以下はhtmlテスト</h1>
     <div>
         <p>お知らせ一覧ページです-page-news</p>
         <br>
@@ -36,11 +42,5 @@
         </div>
        
     </div>
-
-    <?php the_posts_pagination(); ?>
-
-<?php else : ?>
-    <p>ニュースがありません。</p>
-<?php endif; ?>
 
 <?php get_footer(); ?>
