@@ -15,7 +15,7 @@ function my_login_logo() { ?>
             width:100%;
         }
         .login h1 a {
-            background-size:100%important;
+            background-size:100%!important;
         }
     </style>
 <?php }
