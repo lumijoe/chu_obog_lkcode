@@ -30,4 +30,7 @@
     <p>ニュースがありません。</p>
 <?php endif; ?>
 
+<!-- サイトバー設定 -->
+<?php get_sidebar('news'); ?> <!-- sidebar-news.php を読み込む -->
+
 <?php get_footer(); ?>
