@@ -14,13 +14,14 @@
                 <!-- カテゴリスラッグ表示 -->
                 <p class="post-category">
                     <?php
-                    // 投稿のカテゴリを取得
-                    $categories = get_the_category();
-                    if (!empty($categories)) {
-                        foreach ($categories as $category) {
-                            // カテゴリのスラッグを表示
-                            echo '<span class="category-slug">' . esc_html($category->slug) . '</span>';
+                    // 投稿に関連するカテゴリ（newscategory）を表示
+                    $terms = get_the_terms(get_the_ID(), 'newscategory');
+                    if ($terms && !is_wp_error($terms)) {
+                        $term_list = array();
+                        foreach ($terms as $term) {
+                            $term_list[] = $term->name; // カテゴリ名を取得
                         }
+                        echo implode(', ', $term_list); // 複数カテゴリがあればカンマ区切りで表示
                     }
                     ?>
                 </p>
