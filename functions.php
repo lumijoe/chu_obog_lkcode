@@ -43,3 +43,9 @@ function create_post_type_news() {
     );
 }
 add_action('init', 'create_post_type_news');
+
+// ビジュアルエディタの非表示設定
+function remove_editor_from_custom_post_type() {
+    remove_post_type_support('news', 'editor'); // 'news' カスタム投稿タイプの名前、その投稿の時は非表示
+}
+add_action('init', 'remove_editor_from_custom_post_type');
