@@ -22,3 +22,23 @@ function my_login_logo() { ?>
     </style>
 <?php }
 add_action('login_enqueue_scripts', 'my_login_logo');
+
+// 投稿タイプ
+function create_post_type_news() {
+    register_post_type(
+        'news',
+        array(
+            'labels' => array(
+                'name'          => 'ニュース',
+                'singular_name' => 'ニュース',
+            ),
+            'public'       => true,
+            'has_archive'  => true, // アーカイブページを有効にする
+            'menu_position' => 5,
+            'menu_icon'    => 'dashicons-admin-site',
+            'supports'     => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+            'rewrite'      => array('slug' => 'news'), // URLを '/news/' にする
+        )
+    );
+}
+add_action('init', 'create_post_type_news');
