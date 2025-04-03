@@ -7,6 +7,8 @@
  *
  * @package custom_theme
  */
+
+// 管理画面ロゴ設定 
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
