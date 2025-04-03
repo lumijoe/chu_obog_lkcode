@@ -31,6 +31,7 @@ function create_post_type_news() {
             'labels' => array(
                 'name'          => 'お知らせ',
                 'singular_name' => 'お知らせ',
+                'all_items'     => 'お知らせ一覧',
             ),
             'public'       => true,
             'has_archive'  => true, // アーカイブページを有効にする
