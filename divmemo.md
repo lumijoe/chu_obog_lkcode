@@ -176,3 +176,6 @@ get_header();
     </div>
   </section>
 <?php get_footer(); ?>
+
+## 関連リンクACF
+<p>関連リンク: <a href="<?php the_field('related_link'); ?>" target="_blank">詳細はこちら</a></p>     
