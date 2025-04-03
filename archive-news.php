@@ -6,9 +6,7 @@
     <ul>
         <?php while (have_posts()) : the_post(); ?>
             <li>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                <p><?php the_excerpt(); ?></p>
-                
+                <a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a>
                 <!-- ACFのカスタムフィールドを表示 -->
                 <p>日付: <?php the_field('news_date'); ?></p>
                 <p>サブタイトル: <?php the_field('post_title'); ?></p>
