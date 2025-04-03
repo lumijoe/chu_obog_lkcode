@@ -58,7 +58,7 @@ function set_category_based_on_acf_radio( $post_id ) {
     }
 
     // ACFフィールドで選択されたラジオボタンの値を取得
-    $selected_category = get_field('post_category', $post_id); // 'post_category' はあなたが作成したフィールド名に変更
+    $selected_category = get_field('post_category', $post_id); // 'post_category' はフィールド名
 
     // ラジオボタンの選択肢に基づいてカテゴリIDを設定
     $category_id = 0; // 初期化
@@ -82,14 +82,7 @@ function set_category_based_on_acf_radio( $post_id ) {
 
     // カテゴリIDが正しく取得できた場合、カテゴリを投稿に設定
     if ($category_id) {
-        // カテゴリを設定
-        wp_set_post_categories($post_id, array($category_id), true);
-        
-        // デバッグ用：カテゴリIDを出力
-        error_log('カテゴリID: ' . $category_id);
-    } else {
-        // エラーメッセージを出力（必要なら）
-        error_log('カテゴリIDが設定できませんでした');
+        wp_set_post_categories( $post_id, array( $category_id ), true );
     }
 }
 add_action('save_post', 'set_category_based_on_acf_radio');

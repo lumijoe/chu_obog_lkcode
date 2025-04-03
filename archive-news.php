@@ -12,9 +12,9 @@
                 <p><?php echo get_the_date('Y年m月d日'); ?></p>
                 <!-- カテゴリ表示 -->
                 <p class="post-category">
-                    <?php
-                    // 投稿のカテゴリを表示
-                    $categories = get_the_category();
+                <?php
+                // 投稿のカテゴリを表示
+                    $categories = get_the_category(); // 投稿のカテゴリを取得
                     if (!empty($categories)) {
                         foreach ($categories as $category) {
                             echo '<span class="category-name">' . esc_html($category->name) . '</span>';
