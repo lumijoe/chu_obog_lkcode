@@ -23,7 +23,8 @@
         <nav>
             <ul>
                 <li>
-                    <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" target="_blank" rel="noopener noreferrer">お知らせ一覧</a>
+                    <a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
+                    <!-- <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" target="_blank" rel="noopener noreferrer">お知らせ一覧</a> -->
                 </li>
 
                 <li>
