@@ -50,6 +50,7 @@ function create_post_type_news()
 add_action('init', 'create_post_type_news');
 
 
+
 // 投稿一覧にカテゴリ列を追加
 function add_custom_columns($columns)
 {
