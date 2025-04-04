@@ -9,15 +9,18 @@
  */
 
 // 管理画面ロゴ設定 
-function my_login_logo() { ?>
+function my_login_logo()
+{ ?>
     <style type="text/css">
-        #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_template_directory_uri(); ?>/images/logo.svg);
-            margin:0!important;
-            width:100%;
-        }
+        #login h1 a,
         .login h1 a {
-            background-size:100%!important;
+            background-image: url(<?php echo get_template_directory_uri(); ?>/images/logo.svg);
+            margin: 0 !important;
+            width: 100%;
+        }
+
+        .login h1 a {
+            background-size: 100% !important;
         }
     </style>
 <?php }
@@ -25,7 +28,8 @@ add_action('login_enqueue_scripts', 'my_login_logo');
 
 
 // 投稿タイプ
-function create_post_type_news() {
+function create_post_type_news()
+{
     register_post_type(
         'news',
         array(
@@ -47,7 +51,8 @@ add_action('init', 'create_post_type_news');
 
 
 // 投稿一覧にカテゴリ列を追加
-function add_custom_columns($columns) {
+function add_custom_columns($columns)
+{
     // カテゴリ列を追加
     $columns['category'] = 'カテゴリ'; // 'category' は表示する列のキー、'カテゴリ' は列のタイトル
 
@@ -56,7 +61,8 @@ function add_custom_columns($columns) {
 add_filter('manage_news_posts_columns', 'add_custom_columns');
 
 // 投稿一覧のカテゴリ列にカテゴリ名を表示
-function show_custom_column_data($column, $post_id) {
+function show_custom_column_data($column, $post_id)
+{
     if ($column == 'category') {
         // 投稿に関連するカテゴリを取得
         $terms = get_the_terms($post_id, 'newscategory');
@@ -75,7 +81,8 @@ add_action('manage_news_posts_custom_column', 'show_custom_column_data', 10, 2);
 
 
 // 投稿一覧ページにカテゴリフィルタを追加
-function add_category_filter_to_posts() {
+function add_category_filter_to_posts()
+{
     global $typenow;
 
     // 'news' カスタム投稿タイプの場合のみフィルタを表示
@@ -101,7 +108,8 @@ function add_category_filter_to_posts() {
 add_action('restrict_manage_posts', 'add_category_filter_to_posts');
 
 // 投稿一覧のクエリに絞り込み条件を追加
-function filter_news_by_category($query) {
+function filter_news_by_category($query)
+{
     global $pagenow;
 
     // 'news' カスタム投稿タイプの場合
@@ -119,12 +127,24 @@ function filter_news_by_category($query) {
 add_filter('pre_get_posts', 'filter_news_by_category');
 
 
+// taxonomyリライト設定
+function custom_taxonomy_rewrite_rule()
+{
+    // カスタムタクソノミーのURL構造を変更したい場合に使う
+    add_rewrite_rule(
+        '^news/([^/]+)/?$',
+        'index.php?newscategory=$matches[1]',
+        'top'
+    );
+}
+add_action('init', 'custom_taxonomy_rewrite_rule');
+
 
 
 
 // ビジュアルエディタの非表示設定
-function remove_editor_from_custom_post_type() {
+function remove_editor_from_custom_post_type()
+{
     remove_post_type_support('news', 'editor'); // 'news' カスタム投稿タイプの名前、その投稿の時は非表示
 }
 add_action('init', 'remove_editor_from_custom_post_type');
-
