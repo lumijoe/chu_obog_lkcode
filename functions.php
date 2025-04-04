@@ -128,16 +128,14 @@ add_filter('pre_get_posts', 'filter_news_by_category');
 
 
 // taxonomyリライト設定
-function custom_taxonomy_rewrite_rule()
+function filter_news_by_category($query)
 {
-    // カスタムタクソノミーのURL構造を変更したい場合に使う
-    add_rewrite_rule(
-        '^news/([^/]+)/?$',
-        'index.php?newscategory=$matches[1]',
-        'top'
-    );
+    if ($query->is_main_query() && !is_admin() && is_tax('newscategory')) {
+        // クエリがmainで、タクソノミーがnewscategoryの場合にタクソノミーのフィルタリングを行う
+        $query->set('post_type', 'news'); // 'news'投稿タイプを指定
+    }
 }
-add_action('init', 'custom_taxonomy_rewrite_rule');
+add_action('pre_get_posts', 'filter_news_by_category');
 
 
 

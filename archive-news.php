@@ -8,7 +8,7 @@
             <li>
                 <!-- ACFタイトル -->
                 <?php if (get_field('post_title')) : ?>
-                    <a href="<?php the_permalink(); ?>">テスト投稿：<?php the_field('post_title'); ?></a>
+                    <a href="<?php the_permalink(); ?>">TEST投稿：<?php the_field('post_title'); ?></a>
                 <?php endif; ?>
 
                 <!-- ACF投稿日時 -->
@@ -36,11 +36,11 @@
 
                 <!-- 画像 -->
                 <?php if (get_field('post_image')) : ?>
-                    <img src="<?php the_field('post_image'); ?>" 
-                        alt="ニュース画像" 
-                        width="300" 
-                        data-src="<?php the_field('post_image'); ?>" 
-                        decoding="async" 
+                    <img src="<?php the_field('post_image'); ?>"
+                        alt="ニュース画像"
+                        width="300"
+                        data-src="<?php the_field('post_image'); ?>"
+                        decoding="async"
                         class="lazyloaded">
                 <?php endif; ?>
             </li>
@@ -48,7 +48,7 @@
     </ul>
 
     <?php the_posts_pagination(); ?>
-    
+
 <?php else : ?>
     <p>お知らせはありません。</p>
 <?php endif; ?>
