@@ -1,6 +1,13 @@
 <!-- カスタム投稿の一覧 -->
 <?php get_header(); ?>
 <h1>ニュース一覧</h1>
+<div>
+    <button><a href="<?php echo home_url('/news'); ?>">すべて</a></button>
+    <button><a href="<?php echo home_url('/newscategory/allevent/'); ?>">全体行事</a></button>
+    <button><a href="<?php echo home_url('/newscategory/company/'); ?>">会社だより</a></button>
+    <button><a href="<?php echo home_url('/newscategory/obog/'); ?>">OBOG会だより</a></button>
+    <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
+</div>
 
 <?php if (have_posts()) : ?>
     <ul>

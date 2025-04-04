@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+<div>
+    <button><a href="<?php echo home_url('/news'); ?>">すべて</a></button>
+    <button><a href="<?php echo home_url('/newscategory/allevent/'); ?>">全体行事</a></button>
+    <button><a href="<?php echo home_url('/newscategory/company/'); ?>">会社だより</a></button>
+    <button><a href="<?php echo home_url('/newscategory/obog/'); ?>">OBOG会だより</a></button>
+    <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
+</div>
 
 <h1>（<?php single_term_title(); ?>）のニュース一覧</h1>
 
