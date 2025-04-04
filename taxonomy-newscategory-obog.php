@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<?php
+echo 'This is the taxonomy-newscategory-obog.php template';
+?>
+
 <h1>OBOG会だより（<?php single_term_title(); ?>）のニュース一覧</h1>
 
 <?php if (have_posts()) : ?>
