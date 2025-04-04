@@ -1,21 +1,17 @@
 <!-- タクソノミー共通レイアウト -->
 <?php get_header(); ?>
 
-<h1>
-    <?php
-    // 現在のタクソノミー（カテゴリ）情報を取得してタイトルに表示
-    $term = get_queried_object();
-    echo esc_html($term->name);
-    ?> のニュース一覧
-</h1>
+<h1>（<?php single_term_title(); ?>）のニュース一覧</h1>
 
-<?php if (have_posts()) : ?>
+<?php
+// タクソノミーに関連する投稿があるかチェック
+if (have_posts()) : ?>
     <ul>
         <?php while (have_posts()) : the_post(); ?>
             <li>
                 <!-- ACFタイトル -->
                 <?php if (get_field('post_title')) : ?>
-                    <a href="<?php the_permalink(); ?>">テスト投稿：<?php the_field('post_title'); ?></a>
+                    <a href="<?php the_permalink(); ?>">TEST投稿：<?php the_field('post_title'); ?></a>
                 <?php endif; ?>
 
                 <!-- ACF投稿日時 -->
@@ -23,15 +19,16 @@
 
                 <!-- カテゴリ表示 -->
                 <?php
+                // 投稿が所属しているタクソノミー 'newscategory' のカテゴリを取得
                 $terms = get_the_terms(get_the_ID(), 'newscategory');
                 if ($terms && !is_wp_error($terms)) : ?>
                     <p class="post-category">
                         <?php
                         $term_list = array();
                         foreach ($terms as $term) {
-                            $term_list[] = $term->name;
+                            $term_list[] = $term->name; // カテゴリ名を取得
                         }
-                        echo implode(', ', $term_list);
+                        echo implode(', ', $term_list); // 複数カテゴリがあればカンマ区切りで表示
                         ?>
                     </p>
                 <?php endif; ?>
@@ -54,9 +51,11 @@
         <?php endwhile; ?>
     </ul>
 
+    <!-- 投稿のページネーション -->
     <?php the_posts_pagination(); ?>
 
 <?php else : ?>
+    <!-- 投稿がない場合のメッセージ -->
     <p>お知らせはありません。</p>
 <?php endif; ?>
 
