@@ -20,6 +20,7 @@
 <?php get_footer(); ?> -->
 
 ## 固定ページテンプレート
+
 <?php
 
 /**
@@ -40,6 +41,7 @@ get_header();
 ?> -->
 
 ## archive
+
 <?php
 /*******************************************
  * archive
@@ -70,7 +72,7 @@ get_header();
 		</div>
 	</nav>
 
-	<section class="main__block news__content">
+    <section class="main__block news__content">
     <div class="main__container news-col02">
 
       <!-- 一覧 -->
@@ -93,12 +95,12 @@ get_header();
         </div>
         <div class="news__grid">
           <ul class="news__list">
-            <?php 
+            <?php
             if (have_posts()) :
             while (have_posts()) : the_post(); ?>
               <li class="news__list--item">
                 <time datetime="<?php the_time('Y-m-d'); ?>" class="date"><?php the_time('Y.m.d'); ?></time>
-                <?php 
+                <?php
                 $terms = get_the_terms($post->ID, $taxonomy);
                 if (!empty($terms) && !is_wp_error($terms)) {
                   echo '<a href="' . get_term_link($terms[0]->slug, $taxonomy) . '" class="tag">' . $terms[0]->name . '</a>';
@@ -112,7 +114,7 @@ get_header();
                   echo '<span class="tag_new">NEW</span>';
                 }
                 ?>
-                
+
                 <?php
                 if(get_locale() == 'en_US') {
                   if(get_field('pdf_file_en')) {
@@ -138,8 +140,8 @@ get_header();
             <?php endwhile; ?>
             <?php else : ?>
               <div class="no-result">
-								<p>記事がありません</p>
-							</div>
+    							<p>記事がありません</p>
+    						</div>
             <?php endif; ?>
           </ul>
         </div>
@@ -174,14 +176,44 @@ get_header();
         </div>
       </div>
     </div>
+
   </section>
 <?php get_footer(); ?>
 
-## 関連リンクACF
-<p>関連リンク: <a href="<?php the_field('related_link'); ?>" target="_blank">詳細はこちら</a></p>     
+## 関連リンク ACF
+
+<p>関連リンク: <a href="<?php the_field('related_link'); ?>" target="_blank">詳細はこちら</a></p>
 
 ## ビジュアルエディタを非表示にする方法
+
 function remove_editor_from_custom_post_type() {
-    remove_post_type_support('news', 'editor'); // 'news' はカスタム投稿タイプの名前
+remove_post_type_support('news', 'editor'); // 'news' はカスタム投稿タイプの名前
 }
 add_action('init', 'remove_editor_from_custom_post_type');
+
+## taxonomy リライト設定？コードの場合（効いてなかった気がする）
+
+// taxonomy アーカイブテンプレートの存在
+function force_taxonomy_archive_template($template)
+{
+    if (is_tax('newscategory')) {
+        $new_template = locate_template(array('taxonomy-newscategory-member.php', 'taxonomy-newscategory.php', 'taxonomy.php'));
+        if (!empty($new_template)) {
+return $new_template;
+}
+}
+return $template;
+}
+add_filter('template_include', 'force_taxonomy_archive_template');
+
+// taxonomy リライト設定
+function custom_taxonomy_rewrite_rule()
+{
+// カスタムタクソノミーの URL 構造を変更したい場合に使う
+add_rewrite_rule(
+'^news/([^/]+)/?$',
+        'index.php?newscategory=$matches[1]',
+'top'
+);
+}
+add_action('init', 'custom_taxonomy_rewrite_rule');
