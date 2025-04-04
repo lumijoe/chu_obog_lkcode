@@ -126,19 +126,31 @@ function filter_news_by_category($query)
 }
 add_filter('pre_get_posts', 'filter_news_by_category');
 
+//  taxonomyアーカイブテンプレートの存在
+function force_taxonomy_archive_template($template)
+{
+    if (is_tax('newscategory')) {
+        $new_template = locate_template(array('taxonomy-newscategory-member.php', 'taxonomy-newscategory.php', 'taxonomy.php'));
+        if (!empty($new_template)) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'force_taxonomy_archive_template');
+
 
 // taxonomyリライト設定
-function filter_news_by_category($query)
+function custom_taxonomy_rewrite_rule()
 {
-    if ($query->is_main_query() && !is_admin() && is_tax('newscategory')) {
-        // クエリがmainで、タクソノミーがnewscategoryの場合にタクソノミーのフィルタリングを行う
-        $query->set('post_type', 'news'); // 'news'投稿タイプを指定
-    }
+    // カスタムタクソノミーのURL構造を変更したい場合に使う
+    add_rewrite_rule(
+        '^news/([^/]+)/?$',
+        'index.php?newscategory=$matches[1]',
+        'top'
+    );
 }
-add_action('pre_get_posts', 'filter_news_by_category');
-
-
-
+add_action('init', 'custom_taxonomy_rewrite_rule');
 
 // ビジュアルエディタの非表示設定
 function remove_editor_from_custom_post_type()
