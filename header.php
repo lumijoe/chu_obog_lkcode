@@ -19,16 +19,16 @@
 
 <body>
     <header id="header" class="header">
-        <h1>header</h1>
+        <button><a href="<?php echo home_url('/news'); ?>">中外炉工業OBOGクラブ</a></button>
         <nav>
             <ul>
                 <li>
-                    <a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
+                    <button><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a></button>
                     <!-- <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" target="_blank" rel="noopener noreferrer">お知らせ一覧</a> -->
                 </li>
 
                 <li>
-                    <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" target="_blank" rel="noopener noreferrer">OBOGクラブについて</a>
+                    <button><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" target="_blank" rel="noopener noreferrer">OBOGクラブについて</a></button>
                 </li>
             </ul>
         </nav>
