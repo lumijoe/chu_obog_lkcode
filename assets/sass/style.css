@@ -11,10 +11,9 @@
  *  ヘッダー
  * ===========================================
  */
-.header-title {
-  color: aquamarine;
-}
-
 .header {
   background: red;
+}
+.header-title {
+  color: aquamarine;
 }/*# sourceMappingURL=style.css.map */

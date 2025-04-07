@@ -2,6 +2,9 @@
  *  ヘッダー
  * ===========================================
  */
-.header-title {
-    color: aquamarine;
+.header {
+    background: red;
+        &-title {
+            color: aquamarine;
+        }
 }
