@@ -49,4 +49,10 @@
  */
 .header {
   background: red;
+}
+
+.l-breadcrumb {
+  height: 32px;
+  width: 100%;
+  background-color: aqua;
 }/*# sourceMappingURL=style.css.map */

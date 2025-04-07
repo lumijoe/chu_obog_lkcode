@@ -1,5 +1,13 @@
 <!-- カスタム投稿の一覧 -->
 <?php get_header(); ?>
+<section class="l-breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">TOP</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
+        </ol>
+    </nav>
+</section>
 <h1>ニュース一覧</h1>
 <div>
     <button><a href="<?php echo home_url('/news'); ?>">すべて</a></button>

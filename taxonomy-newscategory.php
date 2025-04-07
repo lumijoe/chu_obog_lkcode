@@ -1,5 +1,13 @@
 <!-- タクソノミー共通レイアウト -->
 <?php get_header(); ?>
+<section class="l-breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
+        </ol>
+    </nav>
+</section>
 <div>
     <button><a href="<?php echo home_url('/news'); ?>">すべて</a></button>
     <button><a href="<?php echo home_url('/newscategory/allevent/'); ?>">全体行事</a></button>
