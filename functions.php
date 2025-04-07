@@ -11,7 +11,7 @@
 // スタイル設定
 function custom_theme_enqueue_styles() {
     wp_enqueue_style(
-        'custom-style', // ハンドル名（任意の識別子）
+        'custom-style', 
         get_template_directory_uri() . '/assets/sass/style.css', 
         array(), 
         filemtime(get_template_directory() . '/assets/sass/style.css')
