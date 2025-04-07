@@ -18,6 +18,7 @@
 
 
 <body>
+    
     <header id="header" class="header">
         <button><a class="header-title" href="<?php echo home_url('/news'); ?>">中外炉工業OBOGクラブ</a></button>
         <nav>
