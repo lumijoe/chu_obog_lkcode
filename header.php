@@ -20,19 +20,52 @@
 <body>
     
     <header id="header" class="header">
-        <button><a class="header-title" href="<?php echo home_url('/news'); ?>">中外炉工業OBOGクラブ</a></button>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="<?php echo home_url('/'); ?>">中外炉工業OBOGクラブ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo home_url('/newscategory/allevent'); ?>">全体行事</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo home_url('/newscategory/company'); ?>">会社だより</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo home_url('/newscategory/obog'); ?>">OBOG会だより</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
+                    </li>
+                    </ul>
+                    <button class="btn btn-outline-success" type="submit">
+                        <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">OBOGクラブについて</a>
+                    </button>
+                    <button class="btn btn-outline-success" type="submit">会員専用ページ</button>
+                    <button class="btn btn-outline-success" type="submit">
+                        <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">弔事のご連絡について</a>
+                    </button>
+                    <button class="btn btn-outline-success" type="submit">ご入稿について（会員限定）</button>
+                </div>
+            </div>
+    </nav>
+        <!-- <button><a class="header-title" href="<?php echo home_url('/news'); ?>">中外炉工業OBOGクラブ</a></button>
         <nav>
             <ul>
                 <li>
                     <button><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a></button>
-                    <!-- <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" target="_blank" rel="noopener noreferrer">お知らせ一覧</a> -->
                 </li>
-
                 <li>
                     <button><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" target="_blank" rel="noopener noreferrer">OBOGクラブについて</a></button>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
 
     </header>
     <main class="main">
