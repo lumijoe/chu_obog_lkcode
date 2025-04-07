@@ -2,9 +2,11 @@
  *  ヘッダー
  * ===========================================
  */
+@use '../setting/config' as *;
+
 .header {
     background: red;
         &-title {
-            color: aquamarine;
+            color: $primary;
         }
 }
