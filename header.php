@@ -73,7 +73,7 @@
                     </div>
                     <!-- モーダルここまで -->
                     <button class="btn btn-outline-success" type="submit">
-                        <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">弔事のご連絡について</a>
+                    <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a>
                     </button>
                     <button class="btn btn-outline-success" type="submit">ご入稿について（会員限定）</button>
                 </div>

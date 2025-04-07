@@ -60,6 +60,8 @@ get_header();
 <!-- お知らせ新着 -->
 <section class="l-news-latest">
     <h2>お知らせ新着</h2>
+    
+    
     <p>ここに最新記事が表示されます</p>
     <button class="btn btn-primay add-icon"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧へ</a></button>
 </section>
@@ -107,7 +109,7 @@ get_header();
         <figure class="grid-item">
             <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
                 <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
-                <figcaption>弔事のご連絡について<br><span class="is-figspan">弔事のご連絡は、右下のボタンより記入様式を印刷し、各項目にご記入のうえFAXでご連絡願います。なお、土日祝日は担当者不在につき、ご対応が遅れる場合もあることを、予めご了承願います。</span></figcaption>
+                <figcaption>弔事のご連絡について<br><span class="is-figspan">弔事のご連絡は、記入様式を印刷し、各項目にご記入のうえFAXでご連絡願います。なお、土日祝日は担当者不在につき、ご対応が遅れる場合もあることを、予めご了承願います。</span></figcaption>
             </a>
         </figure>
         
