@@ -8,6 +8,18 @@
  * @package custom_theme
  */
 
+// スタイル設定
+function custom_theme_enqueue_styles() {
+    wp_enqueue_style(
+        'custom-style', // ハンドル名（任意の識別子）
+        get_template_directory_uri() . '/assets/sass/style.css', 
+        array(), 
+        filemtime(get_template_directory() . '/assets/sass/style.css')
+    );
+}
+add_action('wp_enqueue_scripts', 'custom_theme_enqueue_styles');
+
+
 // 管理画面ロゴ設定 
 function my_login_logo()
 { ?>

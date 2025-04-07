@@ -6,7 +6,7 @@
 ?>
 
 </main> <!-- END .main -->
-<footer>
+<footer class="footer">
     フッター
 </footer>
 <a href="#" id="pageTop"></a>
