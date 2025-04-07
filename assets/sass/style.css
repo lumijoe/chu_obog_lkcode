@@ -61,6 +61,8 @@
   height: auto;
   width: 100%;
   background-color: rgb(215, 242, 242);
+  text-align: center;
+  margin: 65px auto;
 }
 .l-news-latest .add-icon {
   border: 1px solid #232323;
@@ -78,4 +80,27 @@
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
+}
+
+.l-pagebanner-inner {
+  max-width: 890px;
+  height: auto;
+  margin: 65px auto;
+  display: grid;
+}
+.l-pagebanner-inner .grid-item {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.l-pagebanner .grid-container {
+  grid-template-columns: 1fr;
+}
+.l-pagebanner .grid-container2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+}
+.l-pagebanner .grid-container2 .is-figspan {
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */

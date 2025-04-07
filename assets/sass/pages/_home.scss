@@ -7,6 +7,8 @@
     height: auto;
     width: 100%;
     background-color: rgb(215, 242, 242);
+    text-align: center;
+    margin: 65px auto;
     .add-icon {
         border: 1px solid #232323;
         border-radius: 60px;
@@ -23,5 +25,31 @@
         background-size: contain;
         background-repeat: no-repeat;
         vertical-align: middle;
+    }
+}
+.l-pagebanner {
+    &-inner {
+        max-width: 890px;
+        height: auto;
+        margin: 65px auto;
+        display: grid;
+        .grid-item {
+            // max-width: 100%;
+            // height: auto;
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .grid-container2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 65px;
+        .is-figspan {
+            font-size: 12px;
+        }
     }
 }

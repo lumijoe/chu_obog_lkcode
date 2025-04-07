@@ -16,7 +16,8 @@ get_header();
 
 <!-- スライダー -->
 <section>
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -60,11 +61,57 @@ get_header();
 <section class="l-news-latest">
     <h2>お知らせ新着</h2>
     <p>ここに最新記事が表示されます</p>
-    <button class="btn btn-primay add-icon">お知らせ一覧へ</button>
+    <button class="btn btn-primay add-icon"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧へ</a></button>
 </section>
 
+<!-- 各ニュース -->
+<section class="l-pagebanner">
+    <div class="l-pagebanner-inner grid-container">
+        <figure class="grid-item">
+            <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">
+            <img src="https://dummyimage.com/766x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+            <figcaption>中外炉OBOGクラブについて</figcaption></a>
+        </figure>
+    </div>
+    <div class="l-pagebanner-inner grid-container2">
+        <figure class="grid-item">
+            <a href="<?php echo home_url('/newscategory/allevent'); ?>"><img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+            <figcaption>全体行事</figcaption></a>
+        </figure>
+        <figure class="grid-item">
+            <a href="<?php echo home_url('/newscategory/company'); ?>">
+            <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+            <figcaption>会社だより</figcaption></a>
+        </figure>
+        <figure class="grid-item">
+            <a href="<?php echo home_url('/newscategory/obog'); ?>">
+            <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+            <figcaption>OBOGだより</figcaption></a>
+        </figure>
+        <figure class="grid-item">
+            <a href="<?php echo home_url('/newscategory/member'); ?>">
+            <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+            <figcaption>会員だより</figcaption></a>
+        </figure>
+    </div>
+</section>
 
-<h1>OBOGクラブ</h1>
-
+<!-- OBOGの皆さまへ -->
+<h1>OBOGの皆さまへ</h1>
+<section class="l-pagebanner">
+    <div class="l-pagebanner-inner grid-container2">
+        <figure class="grid-item">
+            <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+            <figcaption>ご入稿について（会員限定）<br><span class="is-figspan">サイト内の「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。OBOG会の予定案内や開催後の楽しいレポートのほか、ぜひ皆さまの近況報告や随想などをご入稿ください。</span></figcaption>
+        </figure>
+        <figure class="grid-item">
+            <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
+                <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+                <figcaption>弔事のご連絡について<br><span class="is-figspan">弔事のご連絡は、右下のボタンより記入様式を印刷し、各項目にご記入のうえFAXでご連絡願います。なお、土日祝日は担当者不在につき、ご対応が遅れる場合もあることを、予めご了承願います。</span></figcaption>
+            </a>
+        </figure>
+        
+    </div>
+</section>
 
 <?php get_footer(); ?>
