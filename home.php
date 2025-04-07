@@ -57,6 +57,11 @@ get_header();
 </section>
 
 <!-- お知らせ新着 -->
+<section class="l-news-latest">
+    <h2>お知らせ新着</h2>
+    <p>ここに最新記事が表示されます</p>
+    <button class="btn btn-primay add-icon">お知らせ一覧へ</button>
+</section>
 
 
 <h1>OBOGクラブ</h1>

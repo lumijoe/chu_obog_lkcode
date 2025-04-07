@@ -55,4 +55,21 @@
   height: 32px;
   width: 100%;
   background-color: aqua;
+}
+
+.l-news-latest {
+  height: auto;
+  width: 100%;
+  background-color: rgb(215, 242, 242);
+}
+.l-news-latest .add-icon::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5em;
+  background-image: url("/assets/images/common/icon_right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
 }/*# sourceMappingURL=style.css.map */
