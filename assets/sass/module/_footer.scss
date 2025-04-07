@@ -4,4 +4,44 @@
  */
  .footer {
     background-color: #454545;
+    section {
+        .is-corporate {
+            figcaption {
+                font-size: 12px;
+                text-align: end;
+                margin-right: 10px;
+                margin-bottom: 3px;
+            }
+            img {
+                width: 300px;
+                height: auto;
+            }
+        }
+    }
+    .footer-upper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;    
+    }
+    .footer-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .is-row {
+            display: flex;
+            gap: 8px;
+            .is-footer-logo {
+                height: 28px;
+                width: auto;
+            }
+            img {
+                height: 25px;
+                width: auto;
+            }
+        }
+        .is-copy {
+            font-size: 10px;
+        }
+    }
 }
