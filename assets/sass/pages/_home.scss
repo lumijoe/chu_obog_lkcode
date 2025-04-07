@@ -7,13 +7,19 @@
     height: auto;
     width: 100%;
     background-color: rgb(215, 242, 242);
+    .add-icon {
+        border: 1px solid #232323;
+        border-radius: 60px;
+        background-color: #fff;
+        color: #232323;
+    }
     .add-icon::after {
         content: '';
         display: inline-block;
         width: 1em;
         height: 1em;
         margin-left: 0.5em;
-        background-image: url('/assets/images/common/icon_right.svg');
+        background-image: url('../../images/common/icon_right.svg');
         background-size: contain;
         background-repeat: no-repeat;
         vertical-align: middle;
