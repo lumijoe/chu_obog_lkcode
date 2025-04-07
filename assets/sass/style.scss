@@ -1,4 +1,13 @@
 @charset "UTF-8";
 
+// ベーススタイル
+// ＠use 'base';
+
+// 共通モジュール
 @use 'module';
 
+// ページ単位で定義
+// @use 'page';
+
+// 初期設定パラメータや変数
+@use 'setting';

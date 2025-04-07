@@ -1,0 +1,41 @@
+// ======================================
+// 変数
+// ======================================
+// Typography
+$font-size-root: 62.5% !default;
+$font-size-base: 1.6rem !default;
+$font-family-sans-serif: -apple-system,BlinkMacSystemFont,Helvetica Neue,YuGothic,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Arial,メイリオ,Meiryo,sans-serif !default;
+$font-family-serif: "Noto Serif JP", serif !default;
+$font-family-monospace: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
+$ZenKakuGothic: "Zen Kaku Gothic New", sans-serif;
+$ZenOldMincho: "Zen Old Mincho", serif;
+$TrajanPro: "Trajan Pro", serif;
+$ShipporiMincho: "Shippori Mincho", serif;
+$CormorantGaramond: "Cormorant Garamond", serif;
+$NotoSans: "Noto Sans JP", sans-serif;
+$Roboto: "Roboto", sans-serif;
+$Poppins: "Poppins", sans-serif;
+
+// Color
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #c50000 !default;
+$orange: #dd5e25 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+$white: #fff !default;
+$black: #000 !default;
+
+// ======================================
+// フォントサイズ
+// ======================================
+$h1-font-size: $font-size-base * 3 !default;
+$h2-font-size: $font-size-base * 2.625 !default;
+$h3-font-size: $font-size-base * 2.25 !default;
+$h4-font-size: $font-size-base * 2 !default;
+$h5-font-size: $font-size-base * 1.75 !default;
+$h6-font-size: $font-size-base * 1.5 !default;
