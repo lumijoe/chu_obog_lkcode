@@ -54,18 +54,6 @@
                     <button class="btn btn-outline-success" type="submit">ご入稿について（会員限定）</button>
                 </div>
             </div>
-    </nav>
-        <!-- <button><a class="header-title" href="<?php echo home_url('/news'); ?>">中外炉工業OBOGクラブ</a></button>
-        <nav>
-            <ul>
-                <li>
-                    <button><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a></button>
-                </li>
-                <li>
-                    <button><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" target="_blank" rel="noopener noreferrer">OBOGクラブについて</a></button>
-                </li>
-            </ul>
-        </nav> -->
-
+        </nav>
     </header>
     <main class="main">
