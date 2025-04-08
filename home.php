@@ -93,9 +93,9 @@ get_header();
 
             <!-- タイトル（ACF post_title） -->
             <?php if (get_field('post_title')) : ?>
-              <p><?php the_field('post_title'); ?></p>
+              <p><a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a></p>
             <?php else : ?>
-              <p><?php the_title(); ?></p>
+              <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
             <?php endif; ?>
           </li>
         <?php endwhile; ?>
