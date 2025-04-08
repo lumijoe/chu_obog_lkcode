@@ -92,6 +92,58 @@ get_header();
   <button class="btn btn-primay add-icon"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧へ</a></button>
 </section>
 
+<section class="l-news-latest">
+  <div class="l-news-latest-wrapper">
+    <?php
+    $args = array(
+      'post_type'      => 'news',
+      'posts_per_page' => 5,
+      'post_status'    => 'publish',
+    );
+
+    $news_query = new WP_Query($args);
+
+    if ($news_query->have_posts()) : ?>
+      <ul>
+        <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+          <li>
+            <!-- 日付 -->
+            <date><?php echo get_the_date('Y.m.d'); ?></date>
+
+            <!-- カテゴリ -->
+            <?php
+            $terms = get_the_terms(get_the_ID(), 'newscategory');
+            if ($terms && !is_wp_error($terms)) :
+              $term_names = array_map(function ($term) {
+                return $term->name;
+              }, $terms);
+              $category_output = implode(', ', $term_names);
+            else :
+              $category_output = 'カテゴリなし';
+            endif;
+            ?>
+            <p class="item-category"><?php echo esc_html($category_output); ?></p>
+
+            <!-- タイトル（ACF post_title） -->
+            <?php if (get_field('post_title')) : ?>
+              <p><?php the_field('post_title'); ?></p>
+            <?php else : ?>
+              <p><?php the_title(); ?></p>
+            <?php endif; ?>
+          </li>
+        <?php endwhile; ?>
+      </ul>
+      <?php wp_reset_postdata(); ?>
+    <?php else : ?>
+      <p>お知らせはまだありません。</p>
+    <?php endif; ?>
+  </div>
+  <button class="btn btn-primay add-icon"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧へ</a></button>
+</section>
+
+
+
+
 <!-- 各ニュース -->
 <section class="l-pagebanner">
   <div class="l-pagebanner-inner grid-container">
