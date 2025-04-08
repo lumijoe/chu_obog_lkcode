@@ -155,12 +155,18 @@
 .l-pagebanner .grid-container {
   grid-template-columns: 1fr;
 }
+.l-pagebanner .grid-container img {
+  max-width: 100%;
+}
 .l-pagebanner .grid-container2 {
   grid-template-columns: 1fr 1fr;
   gap: 65px;
 }
 .l-pagebanner .grid-container2 .is-figspan {
   font-size: 12px;
+}
+.l-pagebanner .grid-container2 img {
+  max-width: 100%;
 }
 
 .l-titleview {
@@ -181,6 +187,32 @@
   color: #232323;
   font-size: 20px;
   margin-bottom: 0 !important;
+}
+
+.l-category-tab {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.l-category-tab button {
+  background-color: rgb(180, 180, 180);
+  color: white;
+  border: none;
+  padding: 3px;
+  min-width: 140px;
+  max-width: 140px;
+}
+.l-category-tab button a {
+  text-decoration: none;
+  color: white;
+}
+
+.l-article ul {
+  padding: 2rem;
 }
 
 li, ol, ul {

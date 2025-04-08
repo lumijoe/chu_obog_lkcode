@@ -101,12 +101,18 @@
     }
     .grid-container {
         grid-template-columns: 1fr;
+        img {
+            max-width: 100%;
+        }
     }
     .grid-container2 {
         grid-template-columns: 1fr 1fr;
         gap: 65px;
         .is-figspan {
             font-size: 12px;
+        }
+        img {
+            max-width: 100%;
         }
     }
 }
