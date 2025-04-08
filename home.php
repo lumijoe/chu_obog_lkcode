@@ -75,7 +75,7 @@ get_header();
         <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
           <li>
             <!-- 日付 -->
-            <date><?php echo get_the_date('Y.m.d'); ?></date>
+            <date class="post-date"><?php echo get_the_date('Y.m.d'); ?></date>
 
             <!-- カテゴリ -->
             <?php

@@ -27,7 +27,7 @@
                 <?php endif; ?>
 
                 <!-- ACF投稿日時 -->
-                <p><?php echo get_the_date('Y年m月d日'); ?></p>
+                <p class="post-date"><?php echo get_the_date('Y年m月d日'); ?></p>
 
                 <!-- カテゴリ表示 -->
                 <?php

@@ -47,7 +47,9 @@
                 text-align: center;
                 
             }
-            .new-badge {
+            .new-badge::before {
+                content: "NEW";
+                display: inline-block;
                 color: white;
                 background-color: rgb(252, 177, 17);
                 width: 80px;
