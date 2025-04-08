@@ -23,8 +23,8 @@
             </ul>
             <ul>
                 <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">OBOGクラブについて</a></li>
-                <li>ご入稿について（会員限定）</li>
-                <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">弔事のご連絡について</a></li>
+                <li><a href="<?php echo home_url('/about#memberpost'); ?>">ご入稿について（会員限定）</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a></li>
             </ul>
         </div>
         <figure class="is-corporate">

@@ -215,6 +215,12 @@
   padding: 2rem;
 }
 
+.l-about {
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
 li, ol, ul {
   text-decoration: none;
   list-style-type: none;

@@ -17,7 +17,7 @@
 </head>
 
 
-<body>  
+<body>
     <header id="header" class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -27,21 +27,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo home_url('/newscategory/allevent'); ?>">全体行事</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo home_url('/newscategory/company'); ?>">会社だより</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo home_url('/newscategory/obog'); ?>">OBOG会だより</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo home_url('/newscategory/allevent'); ?>">全体行事</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo home_url('/newscategory/company'); ?>">会社だより</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo home_url('/newscategory/obog'); ?>">OBOG会だより</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
+                        </li>
                     </ul>
                     <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">OBOGクラブについて</a>
@@ -73,9 +73,11 @@
                     </div>
                     <!-- モーダルここまで -->
                     <button class="btn btn-outline-success" type="submit">
-                    <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a>
+                        <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a>
                     </button>
-                    <button class="btn btn-outline-success" type="submit">ご入稿について（会員限定）</button>
+                    <button class="btn btn-outline-success" type="submit">
+                        <a href="<?php echo home_url('/about#memberpost'); ?>">ご入稿について（会員限定）</a>
+                    </button>
                 </div>
             </div>
         </nav>
