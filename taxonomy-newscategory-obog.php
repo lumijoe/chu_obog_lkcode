@@ -62,6 +62,24 @@ if (have_posts()) : ?>
                         decoding="async"
                         class="lazyloaded">
                 <?php endif; ?>
+
+                <!-- PDF -->
+                <?php if (get_field('post_pdf') && get_field('post_pdf_title')) : ?>
+                    <p class="pdf-title">
+                        <a href="<?php the_field('post_pdf'); ?>" target="_blank" rel="noopener noreferrer">
+                            <?php the_field('post_pdf_title'); ?>
+                        </a>
+                    </p>
+                <?php endif; ?>
+
+                <!-- 外部リンク -->
+                <?php if (get_field('post_url')) : ?>
+                    <p class="post-url">
+                        <a href="<?php the_field('post_url'); ?>" target="_blank" rel="noopener noreferrer">
+                            <?php the_field('post_url'); ?>
+                        </a>
+                    </p>
+                <?php endif; ?>
             </li>
         <?php endwhile; ?>
     </ul>
