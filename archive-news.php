@@ -8,7 +8,14 @@
         </ol>
     </nav>
 </section>
-<h1>ニュース一覧</h1>
+
+<!-- titleview -->
+<section class="l-titleview">
+    <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
+    <p>お知らせ一覧</p>
+</section>
+
+
 <div>
     <button><a href="<?php echo home_url('/news'); ?>">すべて</a></button>
     <button><a href="<?php echo home_url('/newscategory/allevent/'); ?>">全体行事</a></button>

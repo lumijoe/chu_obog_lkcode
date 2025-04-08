@@ -42,6 +42,11 @@
 .footer .footer-bottom .is-copy {
   font-size: 10px;
 }
+.footer #pageTop {
+  display: flex;
+  margin-right: 8px;
+  justify-content: flex-end;
+}
 
 /* ===========================================
  *  ヘッダー
@@ -54,7 +59,7 @@
 .l-breadcrumb {
   height: 32px;
   width: 100%;
-  background-color: aqua;
+  background-color: rgb(194, 194, 194);
 }
 
 .l-news-latest {
