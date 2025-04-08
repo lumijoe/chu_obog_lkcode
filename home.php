@@ -61,39 +61,6 @@ get_header();
 <section class="l-news-latest">
   <div class="l-news-latest-wrapper">
     <h2>お知らせ新着</h2>
-    <ul>
-      <li>
-        <date>2025.03.28</date>
-        <p class="item-category">会員だより</p>
-        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-      </li>
-      <li>
-        <date>2025.03.28</date>
-        <p class="item-category">OBOG会だより</p>
-        <p>ホームページリニューアルのお知らせ</p>
-      </li>
-      <li>
-        <date>2025.03.28</date>
-        <p class="item-category">全体行事</p>
-        <p>テキストが入りますテキストが入ります</p>
-      </li>
-      <li>
-        <date>2025.03.28</date>
-        <p class="item-category">会社だより</p>
-        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-      </li>
-      <li>
-        <date>2025.03.28</date>
-        <p class="item-category">OBOG会だより</p>
-        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-      </li>
-    </ul>
-  </div>
-  <button class="btn btn-primay add-icon"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧へ</a></button>
-</section>
-
-<section class="l-news-latest">
-  <div class="l-news-latest-wrapper">
     <?php
     $args = array(
       'post_type'      => 'news',
