@@ -3,7 +3,7 @@
 <section class="l-breadcrumb">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">TOP</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
             <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
         </ol>
     </nav>
@@ -12,7 +12,7 @@
 <!-- titleview -->
 <section class="l-titleview">
     <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
-    <p>お知らせ一覧</p>
+    <p>お知らせ一覧ページ</p>
 </section>
 
 

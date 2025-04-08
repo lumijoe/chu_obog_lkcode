@@ -9,6 +9,12 @@
         </ol>
     </nav>
 </section>
+
+<!-- titleview -->
+<section class="l-titleview">
+    <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
+    <p>（<?php single_term_title(); ?>）ページ</p>
+</section>
 <div>
     <button><a href="<?php echo home_url('/news'); ?>">すべて</a></button>
     <button><a href="<?php echo home_url('/newscategory/allevent/'); ?>">全体行事</a></button>
@@ -16,8 +22,6 @@
     <button><a href="<?php echo home_url('/newscategory/obog/'); ?>">OBOG会だより</a></button>
     <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
-
-<h1>（<?php single_term_title(); ?>）のニュース一覧</h1>
 
 <?php
 // タクソノミーに関連する投稿があるかチェック

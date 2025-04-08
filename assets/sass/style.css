@@ -163,6 +163,26 @@
   font-size: 12px;
 }
 
+.l-titleview {
+  height: 110px;
+  width: 100%;
+  position: relative;
+}
+.l-titleview img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 110px;
+}
+.l-titleview p {
+  position: absolute;
+  top: 38%;
+  left: 2rem;
+  color: #232323;
+  font-size: 20px;
+  margin-bottom: 0 !important;
+}
+
 li, ol, ul {
   text-decoration: none;
   list-style-type: none;
