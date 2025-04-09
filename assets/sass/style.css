@@ -224,6 +224,11 @@
   padding: 2rem;
 }
 
+.l-side-grid {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr;
+}
+
 .l-about {
   max-width: 800px;
   padding: 2rem;
