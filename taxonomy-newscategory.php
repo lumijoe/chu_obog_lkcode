@@ -11,7 +11,8 @@
 <!-- titleview -->
 <section class="l-titleview">
     <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
-    <p>（<?php single_term_title(); ?>）ページ</p>
+    <p><?php single_term_title(); ?>ページ</p>
+    <!-- <small>ページの内容を説明しています</small> -->
 </section>
 
 <!-- カテゴリタブ -->

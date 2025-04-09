@@ -12,13 +12,17 @@
 <!-- titleview -->
 <section class="l-titleview">
     <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
-    <p>（<?php single_term_title(); ?>）ページ</p>
+    <div class="l-titleview-ttl">
+        <p><?php single_term_title(); ?>ページ</p>
+        <small>会社からのお知らせや近況等を掲載しています</small>
+    </div>
 </section>
+
 <!-- カテゴリタブ -->
 <div class="l-category-tab">
     <button><a href="<?php echo home_url('/news'); ?>">すべて</a></button>
     <button><a href="<?php echo home_url('/newscategory/allevent/'); ?>">全体行事</a></button>
-    <button><a href="<?php echo home_url('/newscategory/company/'); ?>">会社だより</a></button>
+    <button class="is-current"><a href="<?php echo home_url('/newscategory/company/'); ?>">会社だより</a></button>
     <button><a href="<?php echo home_url('/newscategory/obog/'); ?>">OBOG会だより</a></button>
     <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
