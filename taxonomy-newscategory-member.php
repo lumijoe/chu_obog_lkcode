@@ -27,6 +27,8 @@
     <button class="is-current"><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
 
+<!-- サイドバー -->
+<div class="l-side-grid">
 <!-- 記事セクション -->
 <section class="l-article">
     <?php
@@ -103,6 +105,13 @@
         <p>お知らせはありません。</p>
     <?php endif; ?>
 </section>
+
+<!-- サイトバー設定 -->
+<section>
+<?php get_sidebar('news'); ?> <!-- sidebar-news.php を読み込む -->
+</section>
+
+</div>
 
 <!-- OBOGの皆さまへ -->
 <h1>OBOGの皆さまへ</h1>
