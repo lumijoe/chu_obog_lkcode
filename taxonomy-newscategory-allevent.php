@@ -102,4 +102,22 @@
         <p>お知らせはありません。</p>
     <?php endif; ?>
 </section>
+
+<!-- OBOGの皆さまへ -->
+<h1>OBOGの皆さまへ</h1>
+<section class="l-pagebanner">
+  <div class="l-pagebanner-inner grid-container2">
+    <figure class="grid-item">
+      <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+      <figcaption>ご入稿について（会員限定）<br><span class="is-figspan">サイト内の「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。OBOG会の予定案内や開催後の楽しいレポートのほか、ぜひ皆さまの近況報告や随想などをご入稿ください。</span></figcaption>
+    </figure>
+    <figure class="grid-item">
+      <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
+        <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+        <figcaption>弔事のご連絡について<br><span class="is-figspan">弔事のご連絡は、記入様式を印刷し、各項目にご記入のうえFAXでご連絡願います。なお、土日祝日は担当者不在につき、ご対応が遅れる場合もあることを、予めご了承願います。</span></figcaption>
+      </a>
+    </figure>
+
+  </div>
+</section>
 <?php get_footer(); ?>
