@@ -68,3 +68,11 @@
     padding-bottom: 2rem;
     padding-right: 12px;
 }
+
+// ＠media 800pxの時
+@media (max-width: 800px) {
+    .l-side-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+  }
