@@ -15,12 +15,14 @@ get_header();
         </ol>
     </nav>
 </section>
-
 <!-- titleview -->
 <section class="l-titleview">
     <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
-    <p>OBOGクラブについて</p>
+    <div class="l-titleview-ttl">
+        <p>OBOGクラブについて</p>
+    </div>
 </section>
+
 <section class="l-about">
     <section id="club">
         <h1>「中外炉OBOGクラブ」のご案内</h1>
