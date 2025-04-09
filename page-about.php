@@ -71,6 +71,7 @@ get_header();
             ≪掲載時期≫<br>
             毎月25日までにご入稿頂いた原稿は、翌月10日頃までに掲載させていただきます。</p>
     </section>
+    <button class="btn btn-primay add-icon"><a href="<?php echo home_url('/'); ?>">トップへ戻る</a></button>
 
 
 </section>

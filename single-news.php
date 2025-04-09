@@ -12,7 +12,9 @@
 <!-- titleview -->
 <section class="l-titleview">
     <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
-    <p>お知らせ詳細ページ</p>
+    <div class="l-titleview-ttl">
+        <p>お知らせ詳細ページ</p>
+    </div>
 </section>
 <!-- 記事セクション -->
 <section class="l-article">
