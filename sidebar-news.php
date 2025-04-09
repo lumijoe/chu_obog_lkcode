@@ -1,5 +1,5 @@
-<aside id="sidebar-news" class="widget-area">
-    <h2>ニュースアーカイブ</h2>
+<aside id="sidebar-news" class="widget-area aside-area">
+    <h3 class="archive-label">アーカイブ</h3>
     <ul>
         <?php
         wp_get_archives(array(
