@@ -13,6 +13,13 @@
     <meta name="robots" content="noindex">
     <title>OBOGクラブ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- OGP Meta　Tags -->
+    <meta property="og:title" content="OBOGクラブ">
+    <meta property="og:description" content="中外炉工業株式会社を退職されたOBOGの皆さまのためのコミュニティークラブです。所定の基準を満たす中外炉OBOGの皆さまなら、だれでも入会できるメンバーズクラブです。">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/ogp.png">
+    <meta property="og:url" content="<?php echo home_url('/'); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="OBOGクラブ">
     <?php wp_head(); ?>
 </head>
 

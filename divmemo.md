@@ -220,5 +220,6 @@ add_action('init', 'custom_taxonomy_rewrite_rule');
 
 ## リンク
 href="<?php echo home_url('/news'); ?>">中外炉工業OBOGクラブ
- href="<?php echo get_post_type_archive_link('news'); ?>">
-  href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" 
+href="<?php echo get_post_type_archive_link('news'); ?>">
+href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" 
+<a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank"></a>
