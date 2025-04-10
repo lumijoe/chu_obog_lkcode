@@ -4,7 +4,18 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
             <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
-            <li class="breadcrumb-item">お知らせ詳細</li>
+            <?php
+            $terms = get_the_terms(get_the_ID(), 'newscategory');
+            if ($terms && !is_wp_error($terms)) :
+                // 最初のカテゴリだけ使う
+                $first_term = $terms[0];
+                $term_link = get_term_link($first_term);
+                ?>
+                <li class="breadcrumb-item">
+                    <a href="<?php echo esc_url($term_link); ?>"><?php echo esc_html($first_term->name); ?></a>
+                </li>
+            <?php endif; ?>
+            <li class="breadcrumb-item"><?php the_field('post_title'); ?></li>
 
         </ol>
     </nav>
@@ -13,7 +24,7 @@
 <section class="l-titleview">
     <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
     <div class="l-titleview-ttl">
-        <p>お知らせ詳細ページ</p>
+        <p>お知らせ詳細</p>
     </div>
 </section>
 <!-- 記事セクション -->
@@ -24,6 +35,20 @@
                 <h2><?php the_field('post_title'); ?></h2>
                 <!-- ACF投稿日時 -->
                 <p><?php echo get_the_date('Y年m月d日'); ?></p>
+                <!-- ACFカテゴリ -->
+                <?php
+                    $terms = get_the_terms(get_the_ID(), 'newscategory');
+                    if ($terms && !is_wp_error($terms)) : ?>
+                        <p class="post-category">
+                            <?php
+                            $term_list = array();
+                            foreach ($terms as $term) {
+                                $term_list[] = $term->name; 
+                            }
+                            echo implode(', ', $term_list); 
+                            ?>
+                        </p>
+                    <?php endif; ?>
                 <!-- ACF本文 -->
                 <p><?php the_field('post_text'); ?></p>
                 <!-- 画像 -->
