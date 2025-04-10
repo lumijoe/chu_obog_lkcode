@@ -147,3 +147,18 @@ function remove_editor_from_custom_post_type()
     remove_post_type_support('news', 'editor'); // 'news' カスタム投稿タイプの名前、その投稿の時は非表示
 }
 add_action('init', 'remove_editor_from_custom_post_type');
+
+// ビジュアルエディタテキストタブ背景色
+function custom_admin_styles() {
+    echo '<style>
+        /* テキストタブの背景を黒に変更 */
+        .wp-editor-area {
+            background-color: #353535 !important;
+            color: #fff !important; /* テキスト色を白に変更 */
+        }
+        .wp-editor-tabs .wp-tab-active {
+            background-color: #333 !important; /* アクティブタブの背景色 */
+        }
+    </style>';
+}
+add_action('admin_head', 'custom_admin_styles');
