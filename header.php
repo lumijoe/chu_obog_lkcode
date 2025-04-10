@@ -66,8 +66,8 @@
                                 <div class="modal-body">
                                     <form id="loginForm">
                                         <div class="mb-3">
-                                            <label for="email" class="form-label">メールアドレス</label>
-                                            <input type="email" class="form-control" id="email" placeholder="example@example.com">
+                                        <label for="username" class="form-label">ユーザー名</label>
+                                        <input type="text" class="form-control" id="username" placeholder="username">
                                         </div>
                                         <div class="mb-3">
                                             <label for="password" class="form-label">パスワード</label>
