@@ -223,3 +223,49 @@ href="<?php echo home_url('/news'); ?>">中外炉工業OBOGクラブ
 href="<?php echo get_post_type_archive_link('news'); ?>">
 href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" 
 <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank"></a>
+
+
+## 認証
+<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">会員専用ページ</button>
+                    <!-- ログインモーダル -->
+                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="loginModalLabel">会員ログイン</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="loginForm">
+                                        <div class="mb-3">
+                                        <label for="username" class="form-label">ユーザー名</label>
+                                        <input type="text" class="form-control" id="username" placeholder="username">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">パスワード</label>
+                                            <input type="password" class="form-control" id="password" placeholder="••••••••">
+                                        </div>
+                                        <button type="button" class="btn btn-primary w-100" id="loginBtn">ログイン</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- モーダルここまで -->
+<script>
+    document.getElementById("loginBtn").addEventListener("click", function() {
+        // ユーザー名とパスワードの値を取得
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        // 認証成功条件（ユーザー名「crobc」、パスワード一致）
+        if (username === "crobc" && password === "1922") {
+            // 認証成功 → 遷移先のページへ
+            window.location.href = "<?php echo home_url('/'); ?>";
+        } else {
+            // 認証失敗 → エラーメッセージを表示
+            alert("ユーザー名またはパスワードが間違っています。");
+        }
+    });
+</script>
+
