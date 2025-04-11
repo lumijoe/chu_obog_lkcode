@@ -162,3 +162,17 @@ function custom_admin_styles() {
     </style>';
 }
 add_action('admin_head', 'custom_admin_styles');
+
+// 環境変数
+function load_env() {
+    $env_path = ABSPATH . '.env'; // public/.env のパス（ABSPATH は WordPressルートのパス）
+    if (file_exists($env_path)) {
+        $lines = file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $line) {
+            if (strpos(trim($line), '#') === 0) continue;
+            list($name, $value) = explode('=', $line, 2);
+            $_ENV[trim($name)] = trim($value);
+        }
+    }
+}
+add_action('init', 'load_env');
