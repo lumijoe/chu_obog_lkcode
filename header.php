@@ -14,6 +14,7 @@
     <meta name="description" content="中外炉工業株式会社の退職者コミュニティーです">
     <title>中外炉工業OBOGクラブ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- OGP Meta　Tags -->
     <meta property="og:title" content="中外炉工業OBOGクラブ">
     <meta property="og:description" content="中外炉工業株式会社を退職されたOBOGの皆さまのためのコミュニティークラブです。所定の基準を満たす中外炉OBOGの皆さまなら、だれでも入会できるメンバーズクラブです。">
@@ -54,8 +55,8 @@
                     <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">OBOGクラブについて</a>
                     </button>
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">会員専用ページ</button>
                     <!-- ログインモーダル -->
+                    <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">会員専用ページ</button> 
                     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -78,7 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- モーダルここまで -->
                     <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a>
@@ -89,5 +90,67 @@
                 </div>
             </div>
         </nav>
+        <!-- ログインボタン -->
+<!-- ログインボタン -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+  ログイン
+</button>
+
+<!-- ログインモーダル -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">ログイン</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">ユーザー名</label>
+            <input type="text" class="form-control" id="username" placeholder="ユーザー名を入力">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">パスワード</label>
+            <input type="password" class="form-control" id="password" placeholder="パスワードを入力">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">ログイン</button>
+        </form>
+        <div id="error-message" class="text-danger mt-2" style="display: none;">
+          ユーザー名またはパスワードが間違っています。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// フォーム送信時にAJAXでログイン処理をサーバーにリクエスト
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const usernameInput = document.getElementById('username').value;
+    const passwordInput = document.getElementById('password').value;
+
+    const data = {
+        action: 'login_check',
+        username: usernameInput,
+        password: passwordInput
+    };
+
+    jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', data, function(response) {
+        if (response.success) {
+            alert('ログイン成功');
+
+            // Bootstrap 5 モーダルを閉じる方法
+            const modalEl = document.getElementById('loginModal');
+            const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+            modal.hide();
+        } else {
+            document.getElementById('error-message').style.display = 'block';
+        }
+    });
+});
+</script>
     </header>
     <main class="main">

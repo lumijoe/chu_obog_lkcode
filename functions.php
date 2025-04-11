@@ -176,3 +176,28 @@ function load_env() {
     }
 }
 add_action('init', 'load_env');
+
+// AJAXでログイン認証処理
+function handle_login_check() {
+    // .env ファイルからユーザー名とパスワードを読み込む
+    $username = $_ENV['CROBC_USERNAME'] ?? 'crobc';
+    $password = $_ENV['CROBC_PASSWORD'] ?? '4649';
+
+    // POSTデータで送られてきたユーザー名とパスワードをチェック
+    $input_username = isset($_POST['username']) ? sanitize_text_field($_POST['username']) : '';
+    $input_password = isset($_POST['password']) ? sanitize_text_field($_POST['password']) : '';
+
+    // 認証処理
+    if ($input_username === $username && $input_password === $password) {
+        // 認証成功
+        wp_send_json_success(); // 成功
+    } else {
+        // 認証失敗
+        wp_send_json_error(); // エラー
+    }
+
+    wp_die(); // AJAX終了
+}
+
+add_action('wp_ajax_login_check', 'handle_login_check');
+add_action('wp_ajax_nopriv_login_check', 'handle_login_check');
