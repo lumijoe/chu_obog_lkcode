@@ -4,3 +4,5 @@
 bkup-*
 
 *.map
+
+.env
