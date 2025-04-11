@@ -180,8 +180,10 @@ add_action('init', 'load_env');
 // AJAXでログイン認証処理
 function handle_login_check() {
     // .env ファイルからユーザー名とパスワードを読み込む
-    $username = $_ENV['CROBC_USERNAME'] ?? 'crobc';
-    $password = $_ENV['CROBC_PASSWORD'] ?? '4649';
+    $username = $_ENV['CROBC_USERNAME'] ?? '';
+    $password = $_ENV['CROBC_PASSWORD'] ?? '';
+    // $username = $_ENV['CROBC_USERNAME'] ?? 'crobc';
+    // $password = $_ENV['CROBC_PASSWORD'] ?? '4649';
 
     // POSTデータで送られてきたユーザー名とパスワードをチェック
     $input_username = isset($_POST['username']) ? sanitize_text_field($_POST['username']) : '';
