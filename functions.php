@@ -9,11 +9,12 @@
  */
 
 // スタイル設定
-function custom_theme_enqueue_styles() {
+function custom_theme_enqueue_styles()
+{
     wp_enqueue_style(
-        'custom-style', 
-        get_template_directory_uri() . '/assets/sass/style.css', 
-        array(), 
+        'custom-style',
+        get_template_directory_uri() . '/assets/sass/style.css',
+        array(),
         filemtime(get_template_directory() . '/assets/sass/style.css')
     );
 }
@@ -149,7 +150,8 @@ function remove_editor_from_custom_post_type()
 add_action('init', 'remove_editor_from_custom_post_type');
 
 // ビジュアルエディタテキストタブ背景色
-function custom_admin_styles() {
+function custom_admin_styles()
+{
     echo '<style>
         /* テキストタブの背景を黒に変更 */
         .wp-editor-area {
@@ -164,7 +166,11 @@ function custom_admin_styles() {
 add_action('admin_head', 'custom_admin_styles');
 
 // 環境変数
-function load_env() {
+// ========================
+// .env を読み込む関数
+// ========================
+function load_env()
+{
     $env_path = ABSPATH . '.env'; // public/.env のパス（ABSPATH は WordPressルートのパス）
     if (file_exists($env_path)) {
         $lines = file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -177,27 +183,70 @@ function load_env() {
 }
 add_action('init', 'load_env');
 
-// AJAXでログイン認証処理
-function handle_login_check() {
-    // .env ファイルからユーザー名とパスワードを読み込む
+// ========================
+// セッションスタート（必須）
+// ========================
+function start_session()
+{
+    if (!session_id()) {
+        session_start();
+    }
+}
+add_action('init', 'start_session', 1);
+
+// ========================
+// ログインチェック（Ajax）
+// ========================
+function handle_login_check()
+{
     $username = $_ENV['CROBC_USERNAME'] ?? '';
     $password = $_ENV['CROBC_PASSWORD'] ?? '';
 
-    // POSTデータで送られてきたユーザー名とパスワードをチェック
-    $input_username = isset($_POST['username']) ? sanitize_text_field($_POST['username']) : '';
-    $input_password = isset($_POST['password']) ? sanitize_text_field($_POST['password']) : '';
+    $input_username = sanitize_text_field($_POST['username'] ?? '');
+    $input_password = sanitize_text_field($_POST['password'] ?? '');
 
-    // 認証処理
     if ($input_username === $username && $input_password === $password) {
-        // 認証成功
-        wp_send_json_success(); // 成功
+        // ✅ セッションにログイン状態を保存
+        $_SESSION['logged_in'] = true;
+        wp_send_json_success();
     } else {
-        // 認証失敗
-        wp_send_json_error(); // エラー
+        wp_send_json_error();
     }
 
-    wp_die(); // AJAX終了
+    wp_die();
 }
-
 add_action('wp_ajax_login_check', 'handle_login_check');
 add_action('wp_ajax_nopriv_login_check', 'handle_login_check');
+
+// ========================
+// ログイン状態確認関数（テンプレートなどで使う用）
+// ========================
+function is_logged_in()
+{
+    return isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
+}
+
+function restrict_pages_if_not_logged_in()
+{
+    if (
+        !is_logged_in() &&                         // ログインしていない
+        !is_front_page() &&                        // トップページではない
+        !is_admin() &&                             // 管理画面ではない
+        !defined('DOING_AJAX')                     // AJAX通信中ではない
+    ) {
+        wp_redirect(home_url());                  // トップにリダイレクト
+        exit;
+    }
+}
+add_action('template_redirect', 'restrict_pages_if_not_logged_in');
+
+// ログアウト処理（GETでログアウト）
+function handle_custom_logout()
+{
+    if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+        $_SESSION['logged_in'] = false;
+        wp_redirect(home_url('/'));
+        exit;
+    }
+}
+add_action('init', 'handle_custom_logout');

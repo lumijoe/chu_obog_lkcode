@@ -26,7 +26,10 @@
 </head>
 
 
-<body>
+<body <?php body_class(); ?>>
+    <?php if (!is_logged_in()) : ?>
+        <?php get_template_part('template-parts/modal-login'); ?>
+    <?php endif; ?>
     <header id="header" class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -91,66 +94,71 @@
             </div>
         </nav>
         <!-- ログインボタン -->
-<!-- ログインボタン -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-  ログイン
-</button>
+        <!-- ログインボタン -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+            ログイン
+        </button>
 
-<!-- ログインモーダル -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="loginModalLabel">ログイン</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
-      </div>
-      <div class="modal-body">
-        <form id="loginForm">
-          <div class="mb-3">
-            <label for="username" class="form-label">ユーザー名</label>
-            <input type="text" class="form-control" id="username" placeholder="ユーザー名を入力">
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">パスワード</label>
-            <input type="password" class="form-control" id="password" placeholder="パスワードを入力">
-          </div>
-          <button type="submit" class="btn btn-primary w-100">ログイン</button>
-        </form>
-        <div id="error-message" class="text-danger mt-2" style="display: none;">
-          ユーザー名またはパスワードが間違っています。
+        <!-- ログインモーダル -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">ログイン</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">ユーザー名</label>
+                                <input type="text" class="form-control" id="username" placeholder="ユーザー名を入力">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">パスワード</label>
+                                <input type="password" class="form-control" id="password" placeholder="パスワードを入力">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">ログイン</button>
+                        </form>
+                        <div id="error-message" class="text-danger mt-2" style="display: none;">
+                            ユーザー名またはパスワードが間違っています。
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <?php if (is_logged_in()) : ?>
+            <p style="color: green;">ログイン中です | <a href="<?php echo home_url('/?action=logout'); ?>">ログアウト</a></p>
+        <?php else : ?>
+            <p style="color: red;">ログアウト状態です</p>
+        <?php endif; ?>
 
-<script>
-// フォーム送信時にAJAXでログイン処理をサーバーにリクエスト
-document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+        <script>
+            // フォーム送信時にAJAXでログイン処理をサーバーにリクエスト
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
 
-    const usernameInput = document.getElementById('username').value;
-    const passwordInput = document.getElementById('password').value;
+                const usernameInput = document.getElementById('username').value;
+                const passwordInput = document.getElementById('password').value;
 
-    const data = {
-        action: 'login_check',
-        username: usernameInput,
-        password: passwordInput
-    };
+                const data = {
+                    action: 'login_check',
+                    username: usernameInput,
+                    password: passwordInput
+                };
 
-    jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', data, function(response) {
-        if (response.success) {
-            alert('ログイン成功');
+                jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', data, function(response) {
+                    if (response.success) {
+                        alert('ログイン成功');
 
-            // Bootstrap 5 モーダルを閉じる方法
-            const modalEl = document.getElementById('loginModal');
-            const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
-            modal.hide();
-        } else {
-            document.getElementById('error-message').style.display = 'block';
-        }
-    });
-});
-</script>
+                        // Bootstrap 5 モーダルを閉じる方法
+                        const modalEl = document.getElementById('loginModal');
+                        const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                        modal.hide();
+                    } else {
+                        document.getElementById('error-message').style.display = 'block';
+                    }
+                });
+            });
+        </script>
     </header>
     <main class="main">
