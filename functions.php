@@ -206,7 +206,7 @@ function handle_login_check()
     $input_password = sanitize_text_field($_POST['password'] ?? '');
 
     if ($input_username === $username && $input_password === $password) {
-        // ✅ セッションにログイン状態を保存
+        // セッションにログイン状態を保存
         $_SESSION['logged_in'] = true;
         wp_send_json_success();
     } else {
