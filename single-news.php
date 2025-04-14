@@ -10,7 +10,7 @@
                 // 最初のカテゴリだけ使う
                 $first_term = $terms[0];
                 $term_link = get_term_link($first_term);
-                ?>
+            ?>
                 <li class="breadcrumb-item">
                     <a href="<?php echo esc_url($term_link); ?>"><?php echo esc_html($first_term->name); ?></a>
                 </li>
@@ -37,18 +37,18 @@
                 <p><?php echo get_the_date('Y年m月d日'); ?></p>
                 <!-- ACFカテゴリ -->
                 <?php
-                    $terms = get_the_terms(get_the_ID(), 'newscategory');
-                    if ($terms && !is_wp_error($terms)) : ?>
-                        <p class="post-category">
-                            <?php
-                            $term_list = array();
-                            foreach ($terms as $term) {
-                                $term_list[] = $term->name; 
-                            }
-                            echo implode(', ', $term_list); 
-                            ?>
-                        </p>
-                    <?php endif; ?>
+                $terms = get_the_terms(get_the_ID(), 'newscategory');
+                if ($terms && !is_wp_error($terms)) : ?>
+                    <p class="post-category">
+                        <?php
+                        $term_list = array();
+                        foreach ($terms as $term) {
+                            $term_list[] = $term->name;
+                        }
+                        echo implode(', ', $term_list);
+                        ?>
+                    </p>
+                <?php endif; ?>
                 <!-- ACF本文 -->
                 <p><?php the_field('post_text'); ?></p>
                 <!-- 画像 -->
@@ -77,6 +77,7 @@
                         </a>
                     </p>
                 <?php endif; ?>
+                <hr>
             </article>
 
             <!-- 前後の記事ナビゲーション -->

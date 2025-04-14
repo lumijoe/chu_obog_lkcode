@@ -93,6 +93,7 @@
                                 </a>
                             </p>
                         <?php endif; ?>
+                        <hr>
                     </li>
                 <?php endwhile; ?>
             </ul>
