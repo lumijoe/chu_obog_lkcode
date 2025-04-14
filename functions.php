@@ -8,7 +8,9 @@
  * @package custom_theme
  */
 
+// ========================
 // スタイル設定
+// ========================
 function custom_theme_enqueue_styles()
 {
     wp_enqueue_style(
@@ -21,7 +23,9 @@ function custom_theme_enqueue_styles()
 add_action('wp_enqueue_scripts', 'custom_theme_enqueue_styles');
 
 
-// 管理画面ロゴ設定 
+// ========================
+// 管理画面：ロゴ設定
+// ========================
 function my_login_logo()
 { ?>
     <style type="text/css">
@@ -40,7 +44,9 @@ function my_login_logo()
 add_action('login_enqueue_scripts', 'my_login_logo');
 
 
-// 投稿タイプ
+// ========================
+// 管理画面：投稿タイプ
+// ========================
 function create_post_type_news()
 {
     register_post_type(
@@ -63,8 +69,9 @@ function create_post_type_news()
 add_action('init', 'create_post_type_news');
 
 
-
-// 投稿一覧にカテゴリ列を追加
+// ========================
+// 管理画面：投稿一覧にカテゴリ表示
+// ========================
 function add_custom_columns($columns)
 {
     // カテゴリ列を追加
@@ -74,7 +81,10 @@ function add_custom_columns($columns)
 }
 add_filter('manage_news_posts_columns', 'add_custom_columns');
 
-// 投稿一覧のカテゴリ列にカテゴリ名を表示
+
+// ========================
+// 管理画面：投稿一覧のカテゴリ列にカテゴリ名を表示
+// ========================
 function show_custom_column_data($column, $post_id)
 {
     if ($column == 'category') {
@@ -94,7 +104,9 @@ function show_custom_column_data($column, $post_id)
 add_action('manage_news_posts_custom_column', 'show_custom_column_data', 10, 2);
 
 
-// 投稿一覧ページにカテゴリフィルタを追加
+// ========================
+// 管理画面：投稿一覧にカテゴリフィルタを追加
+// ========================
 function add_category_filter_to_posts()
 {
     global $typenow;
@@ -121,7 +133,11 @@ function add_category_filter_to_posts()
 }
 add_action('restrict_manage_posts', 'add_category_filter_to_posts');
 
-// 投稿一覧のクエリに絞り込み条件を追加
+
+
+// ========================
+// 管理画面：投稿一覧のクエリに絞り込み条件を追加
+// ========================
 function filter_news_by_category($query)
 {
     global $pagenow;
@@ -142,13 +158,14 @@ add_filter('pre_get_posts', 'filter_news_by_category');
 
 
 
+// ========================
 // ビジュアルエディタの非表示設定
+// ========================
 function remove_editor_from_custom_post_type()
 {
     remove_post_type_support('news', 'editor'); // 'news' カスタム投稿タイプの名前、その投稿の時は非表示
 }
 add_action('init', 'remove_editor_from_custom_post_type');
-
 // ビジュアルエディタテキストタブ背景色
 function custom_admin_styles()
 {
@@ -165,9 +182,9 @@ function custom_admin_styles()
 }
 add_action('admin_head', 'custom_admin_styles');
 
-// 環境変数
+
 // ========================
-// .env を読み込む関数
+// 認証：.env を読み込む関数、環境変数
 // ========================
 function load_env()
 {
@@ -183,8 +200,9 @@ function load_env()
 }
 add_action('init', 'load_env');
 
+
 // ========================
-// セッションスタート（必須）
+// 認証：セッションスタート（必須）
 // ========================
 function start_session()
 {
@@ -194,8 +212,9 @@ function start_session()
 }
 add_action('init', 'start_session', 1);
 
+
 // ========================
-// ログインチェック（Ajax）
+// 認証：ログインチェック（Ajax）
 // ========================
 function handle_login_check()
 {
@@ -218,8 +237,9 @@ function handle_login_check()
 add_action('wp_ajax_login_check', 'handle_login_check');
 add_action('wp_ajax_nopriv_login_check', 'handle_login_check');
 
+
 // ========================
-// ログイン状態確認関数（テンプレートなどで使う用）
+// 認証：ログイン状態確認関数（テンプレートなどで使う用）
 // ========================
 function is_logged_in()
 {
@@ -240,7 +260,10 @@ function restrict_pages_if_not_logged_in()
 }
 add_action('template_redirect', 'restrict_pages_if_not_logged_in');
 
-// ログアウト処理（GETでログアウト）
+
+// ========================
+// 認証：ログアウト処理（GETでログアウト）
+// ========================
 function handle_custom_logout()
 {
     if (isset($_GET['action']) && $_GET['action'] === 'logout') {
