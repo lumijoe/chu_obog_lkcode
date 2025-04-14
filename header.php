@@ -58,32 +58,6 @@
                     <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">OBOGクラブについて</a>
                     </button>
-                    <!-- ログインモーダル -->
-                    <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">会員専用ページ</button> 
-                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="loginModalLabel">会員ログイン</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="loginForm">
-                                        <div class="mb-3">
-                                        <label for="username" class="form-label">ユーザー名</label>
-                                        <input type="text" class="form-control" id="username" placeholder="username">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="password" class="form-label">パスワード</label>
-                                            <input type="password" class="form-control" id="password" placeholder="••••••••">
-                                        </div>
-                                        <button type="button" class="btn btn-primary w-100" id="loginBtn">ログイン</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- モーダルここまで -->
                     <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a>
                     </button>
@@ -94,11 +68,9 @@
             </div>
         </nav>
         <!-- ログインボタン -->
-        <!-- ログインボタン -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
             ログイン
         </button>
-
         <!-- ログインモーダル -->
         <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
