@@ -56,6 +56,26 @@
   background: red;
   height: 110px;
 }
+.header .btn {
+  background-color: #29318a;
+  color: white;
+  border-radius: 0px !important;
+  margin: 0 !important;
+}
+.header .btn a {
+  color: white;
+  text-decoration: none !important;
+  font-size: 14px;
+}
+.header .btn:hover {
+  opacity: 0.8;
+}
+.header h1 {
+  color: #29318a;
+}
+.header .btn + .btn {
+  margin-left: 1px !important;
+}
 
 .l-breadcrumb {
   height: 32px;

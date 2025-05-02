@@ -25,22 +25,21 @@ get_header();
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/home/mv01.jpg" class="d-block w-100" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
         <div class="carousel-caption d-none d-md-block">
-          <!-- <h5>1つ目のスライド</h5>
-        <p>中外炉工業OBOGクラブは
+          <p>中外炉OBOGクラブは
             中外炉工業株式会社を退職された
-            OBOGの皆さまのためのコミュニティクラブです</p> -->
+            OBOGの皆さまのためのコミュニティクラブです</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/home/mv01.jpg" class="d-block w-100" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
         <div class="carousel-caption d-none d-md-block">
           <!-- <h5>2つ目のスライド</h5> -->
         </div>
       </div>
       <div class="carousel-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/home/mv01.jpg" class="d-block w-100" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
         <div class="carousel-caption d-none d-md-block">
           <!-- <h5>3つ目のスライド</h5> -->
         </div>

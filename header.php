@@ -64,17 +64,17 @@
                     </button>
                 </div> -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <button class="btn btn-outline-success" type="submit">
+                    <button class="btn" type="submit">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_white.png " alt="" width="45" height="42" style="max-width:100%;">
-                            弔事の<br>ご連絡について
+                            <br>弔事の<br>ご連絡について
                         </a>
                     </button>
-                    <button class="btn btn-outline-success" type="submit">
+                    <button class="btn" type="submit">
                         <img>
                         <a href="<?php echo home_url('/about#memberpost'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_note_white.png " alt="" width="45" height="42" style="max-width:100%;">
-                            ご入稿について<br>（会員限定）
+                            <br>ご入稿について<br>（会員限定）
                         </a>
                     </button>
                 </div>

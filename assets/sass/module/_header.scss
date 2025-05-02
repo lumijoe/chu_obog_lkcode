@@ -7,4 +7,24 @@
 .header {
     background: red;
     height: 110px;
+    .btn {
+        background-color:#29318a;
+        color: white;
+        border-radius: 0px!important;
+        margin: 0!important;
+        a {
+            color: white;
+            text-decoration: none!important;
+            font-size: 14px;
+        }
+    }
+    .btn:hover {
+        opacity: 0.8;
+    }
+    h1 {
+        color: #29318a;
+    }
+    .btn+.btn {
+        margin-left: 1px!important;
+    }
 }
