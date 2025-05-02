@@ -85,18 +85,25 @@
     }
 }
 .l-pagebanner {
+    max-width: 800px;
+    margin: 0 auto;
     &-inner {
-        max-width: 890px;
+        max-width: 100%;
         height: auto;
         margin: 65px auto;
         display: grid;
         .grid-item {
-            // max-width: 100%;
-            // height: auto;
-            background-color: lightblue;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #ccc;
+            text-align: start;
+        }
+        .img-wide {
+            max-width: 800px;
+            max-height: 200px;
+            height: auto;
+        }
+        .img-tight {
+            max-width: 370px;
+            max-height: 200px;
+            height: auto;
         }
     }
     .grid-container {
@@ -113,6 +120,11 @@
         }
         img {
             max-width: 100%;
+        }
+        a {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 }

@@ -15,7 +15,7 @@ get_header();
 </section>
 
 <!-- スライダー -->
-<section>
+<section id="home">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
     <div class="carousel-indicators">
@@ -115,32 +115,33 @@ get_header();
   <div class="l-pagebanner-inner grid-container">
     <figure class="grid-item">
       <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">
-        <img src="https://dummyimage.com/766x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_about.png" alt="" srcset="" class="is-wide img-wide">
         <figcaption>中外炉OBOGクラブについて</figcaption>
       </a>
     </figure>
   </div>
   <div class="l-pagebanner-inner grid-container2">
     <figure class="grid-item">
-      <a href="<?php echo home_url('/newscategory/allevent'); ?>"><img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+      <a href="<?php echo home_url('/newscategory/allevent'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_allevent.png" alt="" srcset="" class="is-wide img-tight">
         <figcaption>全体行事</figcaption>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
       </a>
     </figure>
     <figure class="grid-item">
       <a href="<?php echo home_url('/newscategory/company'); ?>">
-        <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_company.png" alt="" srcset="" class="is-wide img-tight">
         <figcaption>会社だより</figcaption>
       </a>
     </figure>
     <figure class="grid-item">
       <a href="<?php echo home_url('/newscategory/obog'); ?>">
-        <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_obog.png" alt="" srcset="" class="is-wide img-tight">
         <figcaption>OBOGだより</figcaption>
       </a>
     </figure>
     <figure class="grid-item">
       <a href="<?php echo home_url('/newscategory/member'); ?>">
-        <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_member.png" alt="" srcset="" class="is-wide img-tight">
         <figcaption>会員だより</figcaption>
       </a>
     </figure>
