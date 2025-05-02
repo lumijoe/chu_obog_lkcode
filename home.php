@@ -117,7 +117,9 @@ get_header();
       <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_about.png" alt="" srcset="" class="is-wide img-wide">
         <div class="is-row">
-          <figcaption>中外炉OBOGクラブについて</figcaption>
+          <figcaption>
+            <h2>中外炉OBOGクラブについて</h2>
+          </figcaption>
           <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
         </div>
       </a>
@@ -128,7 +130,9 @@ get_header();
       <a href="<?php echo home_url('/newscategory/allevent'); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_allevent.png" alt="" srcset="" class="is-wide img-tight">
         <div class="is-row">
-          <figcaption>全体行事</figcaption>
+          <figcaption>
+            <h2>全体行事</h2>
+          </figcaption>
           <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
         </div>
       </a>
@@ -137,7 +141,9 @@ get_header();
       <a href="<?php echo home_url('/newscategory/company'); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_company.png" alt="" srcset="" class="is-wide img-tight">
         <div class="is-row">
-          <figcaption>会社だより</figcaption>
+          <figcaption>
+            <h2>会社だより</h2>
+          </figcaption>
           <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
         </div>
       </a>
@@ -146,7 +152,9 @@ get_header();
       <a href="<?php echo home_url('/newscategory/obog'); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_obog.png" alt="" srcset="" class="is-wide img-tight">
         <div class="is-row">
-          <figcaption>OBOGだより</figcaption>
+          <figcaption>
+            <h2>OBOGだより</h2>
+          </figcaption>
           <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
         </div>
       </a>
@@ -155,7 +163,9 @@ get_header();
       <a href="<?php echo home_url('/newscategory/member'); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_member.png" alt="" srcset="" class="is-wide img-tight">
         <div class="is-row">
-          <figcaption>会員だより</figcaption>
+          <figcaption>
+            <h2>会員だより</h2>
+          </figcaption>
           <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
         </div>
       </a>
@@ -164,13 +174,16 @@ get_header();
 </section>
 
 <!-- OBOGの皆さまへ -->
-<h1>OBOGの皆さまへ</h1>
-<section class="l-pagebanner">
+<section class="l-pagebanner for-all">
+  <h2 class="section-ttl">OBOGの皆さまへ</h2>
   <div class="l-pagebanner-inner grid-container2">
-    <figure class="grid-item">
-      <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
-      <figcaption>ご入稿について（会員限定）<br><span class="is-figspan">サイト内の「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。OBOG会の予定案内や開催後の楽しいレポートのほか、ぜひ皆さまの近況報告や随想などをご入稿ください。</span></figcaption>
-    </figure>
+    <div class="grid-item">
+      <div class="banner-white">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_bgwhite.png" alt="" class="is-background">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_blue.svg" alt="" class="is-fronticon">
+      </div>
+      <h2>ご入稿について（会員限定）<br><span class="is-figspan">サイト内の「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。OBOG会の予定案内や開催後の楽しいレポートのほか、ぜひ皆さまの近況報告や随想などをご入稿ください。</span></h2>
+    </div>
     <figure class="grid-item">
       <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
         <img src="https://dummyimage.com/349x198/a4a4a4/fff.jpg" alt="" srcset="" class="is-wide">
