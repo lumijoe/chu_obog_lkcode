@@ -54,6 +54,7 @@
  */
 .header {
   background: red;
+  height: 110px;
 }
 
 .l-breadcrumb {
