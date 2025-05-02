@@ -33,11 +33,12 @@
     <header id="header" class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="<?php echo home_url('/'); ?>">中外炉工業OBOGクラブ</a>
+                <h1><a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.png" alt="" width="199" height="52" style="max-width:100%;">中外炉OBOGクラブ</a></h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- sp only -->
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
@@ -56,15 +57,12 @@
                         </li>
                     </ul>
                     <button class="btn btn-outline-success" type="submit">
-                        <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">OBOGクラブについて</a>
-                    </button>
-                    <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a>
                     </button>
                     <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo home_url('/about#memberpost'); ?>">ご入稿について（会員限定）</a>
                     </button>
-                </div>
+                </div> -->
             </div>
         </nav>
         <!-- ログインボタン -->
