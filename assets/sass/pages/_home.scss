@@ -99,6 +99,7 @@
         .grid-item {
             text-align: start;
             .is-row {
+                padding-top: 10px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;

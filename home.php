@@ -115,8 +115,8 @@ get_header();
   <div class="l-pagebanner-inner grid-container">
     <figure class="grid-item">
       <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_about.png" alt="" srcset="" class="is-wide img-wide">
         <div class="is-row">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_about.png" alt="" srcset="" class="is-wide img-wide">
           <figcaption>中外炉OBOGクラブについて</figcaption>
           <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
         </div>

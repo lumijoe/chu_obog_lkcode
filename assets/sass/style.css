@@ -162,6 +162,7 @@
   text-align: start;
 }
 .l-pagebanner-inner .grid-item .is-row {
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
