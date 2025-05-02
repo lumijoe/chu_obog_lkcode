@@ -154,8 +154,21 @@
   margin: 65px auto;
   display: grid;
 }
+.l-pagebanner-inner a {
+  text-decoration: none !important;
+  color: #0e1346;
+}
 .l-pagebanner-inner .grid-item {
   text-align: start;
+}
+.l-pagebanner-inner .grid-item .is-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.l-pagebanner-inner .grid-item .is-row figcaption {
+  font-size: clmap(13px, 3vw, 25px);
 }
 .l-pagebanner-inner .img-wide {
   max-width: 800px;
@@ -182,11 +195,6 @@
 }
 .l-pagebanner .grid-container2 img {
   max-width: 100%;
-}
-.l-pagebanner .grid-container2 a {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .l-titleview {

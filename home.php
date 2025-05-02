@@ -115,34 +115,49 @@ get_header();
   <div class="l-pagebanner-inner grid-container">
     <figure class="grid-item">
       <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_about.png" alt="" srcset="" class="is-wide img-wide">
-        <figcaption>中外炉OBOGクラブについて</figcaption>
+        <div class="is-row">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_about.png" alt="" srcset="" class="is-wide img-wide">
+          <figcaption>中外炉OBOGクラブについて</figcaption>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
+        </div>
       </a>
     </figure>
   </div>
   <div class="l-pagebanner-inner grid-container2">
     <figure class="grid-item">
-      <a href="<?php echo home_url('/newscategory/allevent'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_allevent.png" alt="" srcset="" class="is-wide img-tight">
-        <figcaption>全体行事</figcaption>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
+      <a href="<?php echo home_url('/newscategory/allevent'); ?>">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_allevent.png" alt="" srcset="" class="is-wide img-tight">
+        <div class="is-row">
+          <figcaption>全体行事</figcaption>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
+        </div>
       </a>
     </figure>
     <figure class="grid-item">
       <a href="<?php echo home_url('/newscategory/company'); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_company.png" alt="" srcset="" class="is-wide img-tight">
-        <figcaption>会社だより</figcaption>
+        <div class="is-row">
+          <figcaption>会社だより</figcaption>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
+        </div>
       </a>
     </figure>
     <figure class="grid-item">
       <a href="<?php echo home_url('/newscategory/obog'); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_obog.png" alt="" srcset="" class="is-wide img-tight">
-        <figcaption>OBOGだより</figcaption>
+        <div class="is-row">
+          <figcaption>OBOGだより</figcaption>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
+        </div>
       </a>
     </figure>
     <figure class="grid-item">
       <a href="<?php echo home_url('/newscategory/member'); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_member.png" alt="" srcset="" class="is-wide img-tight">
-        <figcaption>会員だより</figcaption>
+        <div class="is-row">
+          <figcaption>会員だより</figcaption>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
+        </div>
       </a>
     </figure>
   </div>

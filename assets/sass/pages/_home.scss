@@ -88,12 +88,25 @@
     max-width: 800px;
     margin: 0 auto;
     &-inner {
+        a {
+            text-decoration: none!important;
+            color: #0e1346;
+        }
         max-width: 100%;
         height: auto;
         margin: 65px auto;
         display: grid;
         .grid-item {
             text-align: start;
+            .is-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                figcaption {
+                    font-size: clmap(13px, 3vw, 25px);
+                }
+            }
         }
         .img-wide {
             max-width: 800px;
@@ -120,11 +133,6 @@
         }
         img {
             max-width: 100%;
-        }
-        a {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
         }
     }
 }
