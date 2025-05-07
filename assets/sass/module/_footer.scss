@@ -4,13 +4,23 @@
  */
  .footer {
     background-color: #0E1346;
+    position: relative;
     section {
         .is-corporate {
+            margin-bottom: 0!important;
             figcaption {
                 font-size: 12px;
                 text-align: end;
                 margin-right: 10px;
                 margin-bottom: 3px;
+                color: white;
+                text-decoration: none!important;
+                font-size: 16px;
+                padding-bottom: 6px;
+                a {
+                    color: white;
+                    text-decoration: none!important;
+                }
             }
             img {
                 width: 300px;
@@ -24,6 +34,8 @@
         justify-content: center;
         align-items: flex-end;    
         &-inner {
+            padding-top: 80px;
+            padding-bottom: 80px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -42,6 +54,20 @@
             }
             .ttl_m {
                 font-size: 16px;
+            }
+            .is-row {
+                display: flex;
+                flex-direction: row;
+                gap: 80px;
+                .nav-wrapper {
+                    margin-bottom: 0!important;
+                    li:first-child {
+                        padding-bottom: 18px!important;
+                    }
+                    li + li {
+                        padding-bottom: 15px!important;
+                    }
+                }
             }
         }
     }
@@ -83,7 +109,9 @@
     }
     #pageTop {
         display: flex;
-        margin-right: 8px;
         justify-content: flex-end;
+        position: fixed;
+        bottom: 93px;
+        right: 20px;
     }
 }

@@ -5,12 +5,24 @@
  */
 .footer {
   background-color: #0E1346;
+  position: relative;
+}
+.footer section .is-corporate {
+  margin-bottom: 0 !important;
 }
 .footer section .is-corporate figcaption {
   font-size: 12px;
   text-align: end;
   margin-right: 10px;
   margin-bottom: 3px;
+  color: white;
+  text-decoration: none !important;
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+.footer section .is-corporate figcaption a {
+  color: white;
+  text-decoration: none !important;
 }
 .footer section .is-corporate img {
   width: 300px;
@@ -23,6 +35,8 @@
   align-items: flex-end;
 }
 .footer .footer-upper-inner {
+  padding-top: 80px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,6 +56,20 @@
 }
 .footer .footer-upper-inner .ttl_m {
   font-size: 16px;
+}
+.footer .footer-upper-inner .is-row {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.footer .footer-upper-inner .is-row .nav-wrapper {
+  margin-bottom: 0 !important;
+}
+.footer .footer-upper-inner .is-row .nav-wrapper li:first-child {
+  padding-bottom: 18px !important;
+}
+.footer .footer-upper-inner .is-row .nav-wrapper li + li {
+  padding-bottom: 15px !important;
 }
 .footer .footer-bottom {
   background-color: white;
@@ -80,8 +108,10 @@
 }
 .footer #pageTop {
   display: flex;
-  margin-right: 8px;
   justify-content: flex-end;
+  position: fixed;
+  bottom: 93px;
+  right: 20px;
 }
 
 /* ===========================================

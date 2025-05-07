@@ -8,22 +8,22 @@
 </main> <!-- END .main -->
 <footer class="footer">
     <a href="#" id="pageTop">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
         </svg>
     </a>
     <section class="footer-upper">
         <div class="footer-upper-inner">
-            <div>
-                <ul>
+            <div class="is-row">
+                <ul class="nav-wrapper">
                     <li><a href="<?php echo get_post_type_archive_link('news'); ?>" class="ttl_l">お知らせ一覧</a></li>
                     <li><a href="<?php echo home_url('/newscategory/allevent'); ?>" class="ttl_m">全体行事</a></li>
                     <li><a href="<?php echo home_url('/newscategory/company'); ?>" class="ttl_m">会社だより</a></li>
                     <li><a href="<?php echo home_url('/newscategory/obog'); ?>" class="ttl_m">OBOG会だより</a></li>
                     <li><a href="<?php echo home_url('/newscategory/member'); ?>" class="ttl_m">会員だより</a></li>
                 </ul>
-                <ul>
-                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="ttl_l">OBOGクラブについて</a></li>
+                <ul class="nav-wrapper">
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="ttl_l">中外炉OBOGクラブについて</a></li>
                     <li><a href="<?php echo home_url('/about#memberpost'); ?>" class="ttl_m">ご入稿について（会員限定）</a></li>
                     <li><a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank" class="ttl_m">弔事のご連絡について</a></li>
                 </ul>
