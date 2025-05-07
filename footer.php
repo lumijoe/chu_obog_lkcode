@@ -39,10 +39,10 @@
                     <img class="is-footerlogo" src="<?php echo get_template_directory_uri(); ?>/images/home/footer-logo.svg" alt="コーポレートサイトロゴ">
                 </figure>
                 <a href="https://twitter.com/CHUGAIRO_pr" target="_blank" rel="noopener noreferrer">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_x.png" alt="エックスアイコン">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_logo_x.png" alt="エックスアイコン" class="sns_logo">
                 </a>
                 <a href="https://www.youtube.com/@chugairo9408" target="_blank" rel="noopener noreferrer">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_youtube.png" alt="youtubeアイコン">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_logo_youtube.png" alt="youtubeアイコン" class="sns_logo">
                 </a>
             </div>
             <div class="is-copy">

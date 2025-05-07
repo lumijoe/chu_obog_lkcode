@@ -29,10 +29,11 @@
         height: 130px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         .is-row {
             display: flex;
+            align-items: center;
             gap: 8px;
             figure {
                 margin: 0!important;
@@ -42,20 +43,21 @@
                 height: 40px;
                 width: auto;
             }
-            // img {
-            //     height: 40px;
-            //     width: auto;
-            // }
+            .sns_logo {
+                max-height: 26px;
+                width: auto;
+            }
         }
         .is-copy {
             font-size: 14px;
         }
         &-inner {
             width: 1100px;
-            margin: 0 auto;
+            margin: 0 3%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
         }
     }
     #pageTop {
