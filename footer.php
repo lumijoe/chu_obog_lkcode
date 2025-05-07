@@ -33,19 +33,21 @@
         </figure>
     </section>
     <section class="footer-bottom">
-        <div class="is-row">
-            <figure>
-                <img class="is-footerlogo" src="<?php echo get_template_directory_uri(); ?>/images/home/footer-logo.png" alt="コーポレートサイトロゴ">
-            </figure>
-            <a href="https://twitter.com/CHUGAIRO_pr" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_x.png" alt="エックスアイコン">
-            </a>
-            <a href="https://www.youtube.com/@chugairo9408" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_youtube.png" alt="youtubeアイコン">
-            </a>
-        </div>
-        <div class="is-copy">
-            <small>&copy;Chugai Ro Co., Ltd. All rights reserved.</small>
+        <div class="footer-bottom-inner">
+            <div class="is-row">
+                <figure>
+                    <img class="is-footerlogo" src="<?php echo get_template_directory_uri(); ?>/images/home/footer-logo.svg" alt="コーポレートサイトロゴ">
+                </figure>
+                <a href="https://twitter.com/CHUGAIRO_pr" target="_blank" rel="noopener noreferrer">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_x.png" alt="エックスアイコン">
+                </a>
+                <a href="https://www.youtube.com/@chugairo9408" target="_blank" rel="noopener noreferrer">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_youtube.png" alt="youtubeアイコン">
+                </a>
+            </div>
+            <div class="is-copy">
+                <small>&copy;Chugai Ro Co., Ltd. All rights reserved.</small>
+            </div>
         </div>
     </section>
 

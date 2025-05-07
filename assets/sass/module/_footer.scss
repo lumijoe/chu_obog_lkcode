@@ -30,20 +30,32 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         .is-row {
             display: flex;
             gap: 8px;
-            .is-footer-logo {
-                height: 28px;
+            figure {
+                margin: 0!important;
+            }
+            
+            .is-footerlogo {
+                height: 40px;
                 width: auto;
             }
-            img {
-                height: 25px;
-                width: auto;
-            }
+            // img {
+            //     height: 40px;
+            //     width: auto;
+            // }
         }
         .is-copy {
-            font-size: 10px;
+            font-size: 14px;
+        }
+        &-inner {
+            width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
     #pageTop {

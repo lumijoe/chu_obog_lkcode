@@ -28,21 +28,28 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .footer .footer-bottom .is-row {
   display: flex;
   gap: 8px;
 }
-.footer .footer-bottom .is-row .is-footer-logo {
-  height: 28px;
-  width: auto;
+.footer .footer-bottom .is-row figure {
+  margin: 0 !important;
 }
-.footer .footer-bottom .is-row img {
-  height: 25px;
+.footer .footer-bottom .is-row .is-footerlogo {
+  height: 40px;
   width: auto;
 }
 .footer .footer-bottom .is-copy {
-  font-size: 10px;
+  font-size: 14px;
+}
+.footer .footer-bottom-inner {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .footer #pageTop {
   display: flex;
