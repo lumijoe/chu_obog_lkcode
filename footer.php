@@ -13,24 +13,26 @@
         </svg>
     </a>
     <section class="footer-upper">
-        <div>
-            <ul>
-                <li><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a></li>
-                <li><a href="<?php echo home_url('/newscategory/allevent'); ?>">全体行事</a></li>
-                <li><a href="<?php echo home_url('/newscategory/company'); ?>">会社だより</a></li>
-                <li><a href="<?php echo home_url('/newscategory/obog'); ?>">OBOG会だより</a></li>
-                <li><a href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a></li>
-            </ul>
-            <ul>
-                <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">OBOGクラブについて</a></li>
-                <li><a href="<?php echo home_url('/about#memberpost'); ?>">ご入稿について（会員限定）</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a></li>
-            </ul>
+        <div class="footer-upper-inner">
+            <div>
+                <ul>
+                    <li><a href="<?php echo get_post_type_archive_link('news'); ?>" class="ttl_l">お知らせ一覧</a></li>
+                    <li><a href="<?php echo home_url('/newscategory/allevent'); ?>" class="ttl_m">全体行事</a></li>
+                    <li><a href="<?php echo home_url('/newscategory/company'); ?>" class="ttl_m">会社だより</a></li>
+                    <li><a href="<?php echo home_url('/newscategory/obog'); ?>" class="ttl_m">OBOG会だより</a></li>
+                    <li><a href="<?php echo home_url('/newscategory/member'); ?>" class="ttl_m">会員だより</a></li>
+                </ul>
+                <ul>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="ttl_l">OBOGクラブについて</a></li>
+                    <li><a href="<?php echo home_url('/about#memberpost'); ?>" class="ttl_m">ご入稿について（会員限定）</a></li>
+                    <li><a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank" class="ttl_m">弔事のご連絡について</a></li>
+                </ul>
+            </div>
+            <figure class="is-corporate">
+                <figcaption>公式サイトは <a href="https://chugai.co.jp/" target="_blank" rel="noopener noreferrer">こちら</a></figcaption>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/home/footer-banner-corporate.png" alt="コーポレートサイトのバナー">
+            </figure>
         </div>
-        <figure class="is-corporate">
-            <figcaption>公式サイトは <a href="https://chugai.co.jp/" target="_blank" rel="noopener noreferrer">こちら</a></figcaption>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/home/footer-banner-corporate.png" alt="コーポレートサイトのバナー">
-        </figure>
     </section>
     <section class="footer-bottom">
         <div class="footer-bottom-inner">
