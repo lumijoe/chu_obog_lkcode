@@ -23,6 +23,8 @@
   align-items: flex-end;
 }
 .footer .footer-bottom {
+  background-color: white;
+  height: 130px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
