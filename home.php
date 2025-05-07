@@ -26,22 +26,23 @@ get_header();
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
-        <div class="carousel-caption d-none d-md-block">
-          <p>中外炉OBOGクラブは
-            中外炉工業株式会社を退職された
+        <div class="carousel-caption d-none d-md-block hero-carousel">
+          <p>中外炉OBOGクラブは、中外炉工業株式会社を退職された<br>
             OBOGの皆さまのためのコミュニティクラブです</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
-        <div class="carousel-caption d-none d-md-block">
-          <!-- <h5>2つ目のスライド</h5> -->
+        <div class="carousel-caption d-none d-md-block hero-carousel">
+          <p>中外炉OBOGクラブは、中外炉工業株式会社を退職された<br>
+        OBOGの皆さまのためのコミュニティクラブです</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
-        <div class="carousel-caption d-none d-md-block">
-          <!-- <h5>3つ目のスライド</h5> -->
+        <div class="carousel-caption d-none d-md-block hero-carousel">
+          <p>中外炉OBOGクラブは、中外炉工業株式会社を退職された<br>
+        OBOGの皆さまのためのコミュニティクラブです</p>
         </div>
       </div>
     </div>

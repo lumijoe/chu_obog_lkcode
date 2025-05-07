@@ -149,6 +149,22 @@
   background-color: rgb(194, 194, 194);
 }
 
+.hero-carousel {
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  width: 100%;
+}
+.hero-carousel p {
+  margin-bottom: 0 !important;
+  font-size: 29px;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black, 2px 2px 5px rgb(0, 0, 0);
+  letter-spacing: 0.2rem;
+  line-height: 1.7;
+}
+
 .l-news-latest {
   height: auto;
   width: 100%;
