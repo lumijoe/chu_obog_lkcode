@@ -187,7 +187,7 @@
 .l-pagebanner-inner {
   max-width: 100%;
   height: auto;
-  margin: 65px auto;
+  margin: 60px auto auto;
   display: grid;
 }
 .l-pagebanner-inner a {
@@ -199,6 +199,8 @@
 }
 .l-pagebanner-inner .grid-item .is-row {
   padding-top: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -206,6 +208,7 @@
 }
 .l-pagebanner-inner .grid-item .is-row figcaption h2 {
   font-size: clamp(13px, 3vw, 25px);
+  margin-bottom: 0 !important;
 }
 .l-pagebanner-inner .img-wide {
   max-width: 800px;
@@ -259,6 +262,7 @@ section.for-all {
 }
 section.for-all figcaption h3 {
   font-size: clamp(13px, 3vw, 25px);
+  margin-bottom: 0 !important;
 }
 section.for-all .l-pagebanner-inner {
   max-width: 800px;
@@ -285,6 +289,10 @@ section.for-all .banner-white .is-fronticon {
 }
 section.for-all .grid-item p {
   font-size: clamp(12px, 3vw, 17px);
+  margin-bottom: 0 !important;
+  color: #333;
+  letter-spacing: 0.08rem;
+  line-height: 1.7;
 }
 
 .l-titleview {
