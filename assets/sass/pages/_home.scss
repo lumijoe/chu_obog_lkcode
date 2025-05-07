@@ -162,6 +162,11 @@ section.for-all {
     margin: 0;
     padding-top: 65px;
     padding-bottom: 65px;
+    figcaption {
+        h3 {
+            font-size: clamp(13px, 3vw, 25px);
+        } 
+    }
     .l-pagebanner-inner {
         max-width: 800px;
     }
@@ -184,5 +189,8 @@ section.for-all {
             max-height: 119px;
             height: auto;
         }
+    }
+    .grid-item p {
+        font-size: clamp(12px, 3vw, 17px);
     }
 }
