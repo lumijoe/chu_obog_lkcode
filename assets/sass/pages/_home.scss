@@ -27,28 +27,31 @@
 .l-news-latest {
     height: auto;
     width: 100%;
-    background-color: rgb(215, 242, 242);
+    // background-color: rgb(215, 242, 242);
     margin: 65px auto;
     &-wrapper {
         h2 {
             text-align: left;
             margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            color: #0e1346;
+            font-size: 25px;
+            letter-spacing: 0.1rem;
+            // padding-left: 2rem;
+            // padding-right: 2rem;
         }
         ul {
-            // padding-left: 2rem;
-            padding: 2rem 2rem;
+            padding-left: 0rem!important;
+            padding-top: 24px;
+            margin-bottom: 40px!important;
         }
         margin: 0 auto;
         padding: 45px auto;
         height: 100%;
         max-width:800px;
-        background-color: antiquewhite;
+        // background-color: antiquewhite;
 
         li {
             gap: 2rem;
-            margin-bottom: 16px;
             display: flex;
             align-items: center;
             p {
@@ -56,16 +59,25 @@
                 font-size: 14px;
             }
             date {
-                font-size: 12px;
+                font-size: 11px;
+                color: #7A7D9A;
             }
             .item-category {
-                font-size:12px;
+                font-size:11px;
                 padding: 3px 0;
                 min-width: 120px;
                 max-width: 120px;
-                background-color: #aeaeae;
+                background-color: #F1F1F1;
                 text-align: center;
-                
+                color: #29318A;
+                line-height: 26px;
+                letter-spacing: 0.1rem;
+                a {
+                    color: #333;
+                    font-size: 14px;
+                    text-decoration: none!important;
+                    letter-spacing: 0.1rem;
+                }
             }
             .new-badge::before {
                 content: "NEW";
@@ -79,7 +91,10 @@
         }
         li:last-child {
             margin-bottom: 0;
-          }
+        }
+        li + li {
+            padding-top: 20px;
+        }
     }
     // .add-icon {
     //     border: 1px solid #232323;

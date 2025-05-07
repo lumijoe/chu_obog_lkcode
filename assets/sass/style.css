@@ -168,7 +168,6 @@
 .l-news-latest {
   height: auto;
   width: 100%;
-  background-color: rgb(215, 242, 242);
   margin: 65px auto;
 }
 .l-news-latest-wrapper {
@@ -176,20 +175,21 @@
   padding: 45px auto;
   height: 100%;
   max-width: 800px;
-  background-color: antiquewhite;
 }
 .l-news-latest-wrapper h2 {
   text-align: left;
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  color: #0e1346;
+  font-size: 25px;
+  letter-spacing: 0.1rem;
 }
 .l-news-latest-wrapper ul {
-  padding: 2rem 2rem;
+  padding-left: 0rem !important;
+  padding-top: 24px;
+  margin-bottom: 40px !important;
 }
 .l-news-latest-wrapper li {
   gap: 2rem;
-  margin-bottom: 16px;
   display: flex;
   align-items: center;
 }
@@ -198,15 +198,25 @@
   font-size: 14px;
 }
 .l-news-latest-wrapper li date {
-  font-size: 12px;
+  font-size: 11px;
+  color: #7A7D9A;
 }
 .l-news-latest-wrapper li .item-category {
-  font-size: 12px;
+  font-size: 11px;
   padding: 3px 0;
   min-width: 120px;
   max-width: 120px;
-  background-color: #aeaeae;
+  background-color: #F1F1F1;
   text-align: center;
+  color: #29318A;
+  line-height: 26px;
+  letter-spacing: 0.1rem;
+}
+.l-news-latest-wrapper li .item-category a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none !important;
+  letter-spacing: 0.1rem;
 }
 .l-news-latest-wrapper li .new-badge::before {
   content: "NEW";
@@ -219,6 +229,9 @@
 }
 .l-news-latest-wrapper li:last-child {
   margin-bottom: 0;
+}
+.l-news-latest-wrapper li + li {
+  padding-top: 20px;
 }
 .l-news-latest button {
   display: flex;
@@ -437,23 +450,36 @@ li, ol, ul {
 }
 
 .add-icon {
-  border: 1px solid #232323;
   border-radius: 60px;
-  background-color: #fff;
-  color: #232323;
+  background-color: #F5F5F5;
   display: flex;
+  font-size: 14px;
+  width: 216px;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  padding-left: 25px;
+}
+.add-icon a {
+  color: #0E1346;
+  text-decoration: none !important;
 }
 
 .add-icon::after {
   content: "";
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 32px;
+  height: 32px;
   margin-left: 0.5em;
-  background-image: url("../../images/common/icon_right.svg");
+  background-image: url("../../images/common/icon_right_bgblue.svg");
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
+}
+
+.add-icon:hover {
+  opacity: 0.8;
+  background-color: #f5f5f5;
 }
 
 button {

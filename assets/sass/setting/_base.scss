@@ -4,22 +4,34 @@ li, ol, ul {
 } 
 
 .add-icon {
-    border: 1px solid #232323;
     border-radius: 60px;
-    background-color: #fff;
-    color: #232323;
+    background-color: #F5F5F5;
     display: flex;
+    font-size: 14px;
+    width: 216px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding-left: 25px;
+    a {
+        color: #0E1346;
+        text-decoration: none!important;
+    }
 }
 .add-icon::after {
     content: '';
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 32px;
+    height: 32px;
     margin-left: 0.5em;
-    background-image: url('../../images/common/icon_right.svg');
+    background-image: url('../../images/common/icon_right_bgblue.svg');
     background-size: contain;
     background-repeat: no-repeat;
     vertical-align: middle;
+}
+.add-icon:hover {
+    opacity: 0.8;
+    background-color: #f5f5f5;
 }
 button {
     display: flex;
