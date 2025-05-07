@@ -242,7 +242,7 @@
 .l-pagebanner h2.section-ttl::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
   width: 64px;
@@ -254,6 +254,8 @@ section.for-all {
   max-width: 100%;
   height: auto;
   margin: 0;
+  padding-top: 65px;
+  padding-bottom: 65px;
 }
 section.for-all .l-pagebanner-inner {
   max-width: 800px;

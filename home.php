@@ -183,8 +183,14 @@ get_header();
           <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_bgwhite.png" alt="" class="is-background">
           <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_note_blue.svg" alt="" class="is-fronticon">
         </div>
+        <div class="is-row">
+          <figcaption>
+            <h2>ご入稿について（会員限定）</h2>
+          </figcaption>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
+        </div>
       </a>
-      <h2>ご入稿について（会員限定）<br><span class="is-figspan">サイト内の「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。OBOG会の予定案内や開催後の楽しいレポートのほか、ぜひ皆さまの近況報告や随想などをご入稿ください。</span></h2>
+      <p>サイト内の「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。OBOG会の予定案内や開催後の楽しいレポートのほか、ぜひ皆さまの近況報告や随想などをご入稿ください。</p>
     </div>
     <div class="grid-item">
       <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
@@ -192,8 +198,14 @@ get_header();
           <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_bgwhite.png" alt="" class="is-background">
           <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_blue.svg" alt="" class="is-fronticon">
         </div>
+        <div class="is-row">
+          <figcaption>
+            <h2>弔事のご連絡について</h2>
+          </figcaption>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
+        </div>
       </a>
-      <h2>弔事のご連絡について<br><span class="is-figspan">弔事のご連絡は、記入様式を印刷し、各項目にご記入のうえFAXでご連絡願います。なお、土日祝日は担当者不在につき、ご対応が遅れる場合もあることを、予めご了承願います。</span></h2>
+      <p>弔事のご連絡は、記入様式を印刷し、各項目にご記入のうえFAXでご連絡願います。なお、土日祝日は担当者不在につき、ご対応が遅れる場合もあることを、予めご了承願います。</p>
     </div>
   </div>
 </section>
