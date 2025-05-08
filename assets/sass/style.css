@@ -161,6 +161,9 @@
   padding-right: 0 !important;
   padding-left: 3%;
 }
+.header .container-fluid h1 {
+  margin-bottom: 0px !important;
+}
 
 .l-breadcrumb {
   height: 32px;
