@@ -12,6 +12,8 @@
         color: white;
         border-radius: 0px!important;
         margin: 0!important;
+        margin-top: -8px!important;
+        margin-bottom: -8px!important;
         a {
             color: white;
             text-decoration: none!important;
@@ -26,5 +28,12 @@
     }
     .btn+.btn {
         margin-left: 1px!important;
+    }
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-end!important;
+    }
+    .container-fluid {
+        padding-right: 0!important;
     }
 }

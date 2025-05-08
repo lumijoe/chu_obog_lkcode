@@ -38,8 +38,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- sp only -->
-                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none">
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
                         </li>
@@ -56,13 +56,13 @@
                             <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline-success" type="submit">
+                    <!-- <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">弔事のご連絡について</a>
                     </button>
                     <button class="btn btn-outline-success" type="submit">
                         <a href="<?php echo home_url('/about#memberpost'); ?>">ご入稿について（会員限定）</a>
-                    </button>
-                </div> -->
+                    </button> -->
+                </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <button class="btn" type="submit">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
