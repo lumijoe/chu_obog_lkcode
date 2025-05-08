@@ -81,10 +81,8 @@ get_header();
             <?php
             $terms = get_the_terms(get_the_ID(), 'newscategory');
             if ($terms && !is_wp_error($terms)) :
-              $term_names = array_map(function ($term) {
-                return $term->name;
-              }, $terms);
-              $category_output = implode(', ', $term_names);
+              $first_term = $terms[0];
+              $category_output = $first_term->name;
             else :
               $category_output = 'カテゴリなし';
             endif;
