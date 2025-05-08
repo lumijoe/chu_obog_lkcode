@@ -391,7 +391,7 @@ section.for-all .grid-item p {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 110px;
 }
 .l-titleview-ttl {
   position: absolute;
