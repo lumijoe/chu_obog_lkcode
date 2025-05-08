@@ -1,6 +1,6 @@
 <aside id="sidebar-news" class="widget-area aside-area">
     <h3 class="archive-label">アーカイブ</h3>
-    <ul>
+    <ul class="archive-wrapper">
         <?php
         wp_get_archives(array(
             'type'            => 'monthly', // 月別アーカイブ
