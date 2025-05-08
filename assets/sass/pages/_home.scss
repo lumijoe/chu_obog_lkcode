@@ -26,9 +26,9 @@
 }
 .l-news-latest {
     height: auto;
-    width: 100%;
+    // width: 100%;
     // background-color: rgb(215, 242, 242);
-    margin: 65px auto 90px;
+    margin: 65px 5% 90px 5%;
     &-wrapper {
         h2 {
             text-align: left;
@@ -124,7 +124,9 @@
     }
 }
 .l-pagebanner {
-    max-width: 800px;
+    max-width: calc(800px + 10%);
+    padding-left: 5%;
+    padding-right: 5%;
     margin: 0 auto;
     &-inner {
         a {

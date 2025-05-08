@@ -27,6 +27,7 @@
 .footer section .is-corporate img {
   width: 300px;
   height: auto;
+  max-width: 100%;
 }
 .footer .footer-upper {
   display: flex;
@@ -135,6 +136,11 @@
   text-decoration: none !important;
   font-size: 14px;
 }
+.header .top-ttl {
+  padding-left: 32px;
+  color: #29318a;
+  font-size: clamp(20px, 3vw, 25px);
+}
 .header .btn:hover {
   opacity: 0.8;
 }
@@ -153,6 +159,7 @@
 }
 .header .container-fluid {
   padding-right: 0 !important;
+  padding-left: 3%;
 }
 
 .l-breadcrumb {
@@ -179,8 +186,7 @@
 
 .l-news-latest {
   height: auto;
-  width: 100%;
-  margin: 65px auto 90px;
+  margin: 65px 5% 90px 5%;
 }
 .l-news-latest-wrapper {
   margin: 0 auto;
@@ -256,7 +262,9 @@
 }
 
 .l-pagebanner {
-  max-width: 800px;
+  max-width: calc(800px + 10%);
+  padding-left: 5%;
+  padding-right: 5%;
   margin: 0 auto;
 }
 .l-pagebanner-inner {

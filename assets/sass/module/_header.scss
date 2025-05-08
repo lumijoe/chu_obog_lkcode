@@ -20,6 +20,11 @@
             font-size: 14px;
         }
     }
+    .top-ttl {
+        padding-left: 32px;
+        color: #29318a;
+        font-size: clamp(20px, 3vw, 25px);
+    }
     .btn:hover {
         opacity: 0.8;
     }
@@ -38,5 +43,6 @@
     }
     .container-fluid {
         padding-right: 0!important;
+        padding-left: 3%;
     }
 }
