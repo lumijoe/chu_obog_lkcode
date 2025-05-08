@@ -144,6 +144,9 @@
 .header .btn + .btn {
   margin-left: 1px !important;
 }
+.header .navbar-toggler {
+  margin-right: 3%;
+}
 .header .navbar-collapse {
   display: flex;
   justify-content: flex-end !important;
