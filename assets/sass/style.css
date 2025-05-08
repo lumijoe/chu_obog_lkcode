@@ -168,7 +168,7 @@
 .l-news-latest {
   height: auto;
   width: 100%;
-  margin: 65px auto;
+  margin: 65px auto 90px;
 }
 .l-news-latest-wrapper {
   margin: 0 auto;
@@ -196,6 +196,10 @@
 .l-news-latest-wrapper li p {
   margin-bottom: 0 !important;
   font-size: 14px;
+}
+.l-news-latest-wrapper li p a {
+  color: #333;
+  text-decoration: none;
 }
 .l-news-latest-wrapper li date {
   font-size: 11px;
