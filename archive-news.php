@@ -11,7 +11,7 @@
 
 <!-- titleview -->
 <section class="l-titleview">
-    <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_news.png" alt="お知らせ一覧のページビュー">
     <div class="l-titleview-ttl">
         <p>お知らせ一覧ページ</p>
         <small>全てのお知らせをご案内しています</small>

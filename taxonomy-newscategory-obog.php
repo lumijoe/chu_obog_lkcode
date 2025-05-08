@@ -11,7 +11,7 @@
 </section>
 <!-- titleview -->
 <section class="l-titleview">
-    <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_obog.png" alt="OBOG会だよりページビュー">
     <div class="l-titleview-ttl">
         <p><?php single_term_title(); ?>ページ</p>
         <small>全国の各OBOG会からのご案内やレポートを掲載しています<br>

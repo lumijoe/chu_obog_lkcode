@@ -11,7 +11,7 @@
 </section>
 <!-- titleview -->
 <section class="l-titleview">
-    <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_member.png" alt="会員だよりページビュー">
     <div class="l-titleview-ttl">
         <p><?php single_term_title(); ?>ページ</p>
         <small>会員の入会情報や慶弔情報、近況報告、随想などを掲載しています</small>
