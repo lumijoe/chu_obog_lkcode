@@ -24,6 +24,9 @@
         }
     }
 }
+.single-wrapper {
+    margin-top: 50px!important;
+}
 .aside-area {
     padding-right: 0px!important;
 }
@@ -68,12 +71,29 @@
 }
 .article-single-wrapper {
     padding-right: 2rem;
+    padding-top: 2rem;
+    h2 {
+        font-size: clamp(16px, 2vw, 23px)!important;
+    }
+    .date-category-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding-bottom: 17px;
+        .item-category {
+            margin-left: 8px;
+        }
+    }
 }
 .l-article {
     article {
         date {
             font-size: 11px;
             color: #7A7D9A;
+        }
+        img {
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
         .item-category {
             font-size: 11px;
@@ -92,6 +112,8 @@
         }
         p {
             margin-bottom: 0px!important;
+            line-height: 1.7rem;
+            letter-spacing: 0.12rem;
         }
     }
     ul {

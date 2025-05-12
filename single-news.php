@@ -33,24 +33,25 @@
 </section>
 
 <!-- 記事セクション -->
-<div class="l-side-grid">
+<div class="l-side-grid single-wrapper">
     <section class="l-article article-single-wrapper">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article>
-                    <!-- ACF投稿日時 -->
-                    <date class="post-date"><?php echo get_the_date('Y.m.d'); ?></date>
-                    <!-- ACFカテゴリ -->
-                    <?php
-                    $terms = get_the_terms(get_the_ID(), 'newscategory');
-                    if ($terms && !is_wp_error($terms)) :
-                        $first_term = $terms[0];
-                        $category_output = $first_term->name;
-                    else :
-                        $category_output = 'カテゴリなし';
-                    endif;
-                    ?>
-                    <p class="item-category"><?php echo esc_html($category_output); ?></p>
-
+                    <div class="date-category-wrapper">
+                        <!-- ACF投稿日時 -->
+                        <date class="post-date"><?php echo get_the_date('Y.m.d'); ?></date>
+                        <!-- ACFカテゴリ -->
+                        <?php
+                        $terms = get_the_terms(get_the_ID(), 'newscategory');
+                        if ($terms && !is_wp_error($terms)) :
+                            $first_term = $terms[0];
+                            $category_output = $first_term->name;
+                        else :
+                            $category_output = 'カテゴリなし';
+                        endif;
+                        ?>
+                        <p class="item-category"><?php echo esc_html($category_output); ?></p>
+                    </div>
                     <!-- ACFタイトル -->
                     <h2><?php the_field('post_title'); ?></h2>
 
@@ -89,7 +90,7 @@
                 <!-- 前後の記事ナビゲーション -->
                 <nav>
                     <p><?php previous_post_link('« %link'); ?></p>
-                    <p><a href="<?php echo get_post_type_archive_link('news'); ?>">一覧に戻る</a></p>
+                    <p><a href="<?php echo get_post_type_archive_link('news'); ?>">一覧へ戻る</a></p>
                     <p><?php next_post_link('%link »'); ?></p>
                 </nav>
 
