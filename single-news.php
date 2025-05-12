@@ -104,7 +104,8 @@
     <section>
         <?php get_sidebar('news'); ?> <!-- sidebar-news.php を読み込む -->
     </section>
-
 </div>
+<!-- OBOGの皆さまへ -->
+<?php get_template_part('template-parts/obog-banner'); ?>
 
 <?php get_footer(); ?>
