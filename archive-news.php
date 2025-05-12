@@ -36,7 +36,7 @@
                 <?php while (have_posts()) : the_post(); ?>
                     <li>
                          <!-- ACF投稿日時 -->
-                         <p class="post-date"><?php echo get_the_date('Y年m月d日'); ?></p>
+                         <date class="post-date"><?php echo get_the_date('Y.m.d'); ?></date>
 
                         <!-- カテゴリ表示 -->
                         <?php
@@ -49,7 +49,7 @@
                         endif;
                         ?>
                         <p class="item-category"><?php echo esc_html($category_output); ?></p>
-                        
+
                         <!-- ACFタイトル -->
                         <?php if (get_field('post_title')) : ?>
                             <a href="<?php the_permalink(); ?>">TEST投稿：<?php the_field('post_title'); ?></a>
