@@ -13,9 +13,7 @@
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_obog.png" alt="OBOG会だよりページビュー">
     <div class="l-titleview-ttl">
-        <p><?php single_term_title(); ?>ページ</p>
-        <small>全国の各OBOG会からのご案内やレポートを掲載しています<br>
-            幹事の皆様からのご投稿をお待ちしております</small>
+        <p><?php single_term_title(); ?></p>
     </div>
 </section>
 
@@ -28,6 +26,9 @@
     <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
 
+<p class="l-page-caption">全国の各OBOG会からのご案内やレポートを掲載しています<br>
+            幹事の皆様からのご投稿をお待ちしております</p>
+
 <!-- サイドバー -->
 <div class="l-side-grid">
     <!-- 記事セクション -->
@@ -36,6 +37,7 @@
         // タクソノミーに関連する投稿があるかチェック
         if (have_posts()) : ?>
             <ul>
+                <hr class="article-top-hr">
                 <?php while (have_posts()) : the_post(); ?>
                     <li>
                         <!-- ACF投稿日時 -->
@@ -55,7 +57,7 @@
 
                         <!-- ACFタイトル -->
                         <?php if (get_field('post_title')) : ?>
-                            <a href="<?php the_permalink(); ?>">TEST投稿：<?php the_field('post_title'); ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a>
                         <?php endif; ?>
 
                         <hr>

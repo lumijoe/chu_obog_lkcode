@@ -21,6 +21,10 @@
             font-size: 14px;
         }
     }
+    .btn-login {
+        position: fixed;
+        z-index: 9000;
+    }
     .top-ttl {
         padding-left: 32px;
         color: #29318a;
@@ -58,7 +62,40 @@
         width: 100%;
         z-index: 5000;
     }
-    @media (max-width: 990px) {
+    .nav-link {
+        font-size: 20px;
+    }
+    .nav-link:hover {
+        color: #29318a;
+    }
+    .nav-only-cta {
+        padding-left: 0px!important;
+        li {
+            background-color: #29318a;
+            width: 100%;
+            border-radius: 2px;
+            img {
+                margin-right: 10px;
+            }
+            a {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                padding: 0.5rem 1rem;
+            }
+        }
+        li:hover {
+            opacity: 0.8;
+        }
+        li + li {
+            margin-top: 20px;
+        }
+
+    }
+    @media (max-width: 991px) {
         .navbar-collapse {
           position: fixed;
           top: 0;
@@ -105,10 +142,20 @@
             }
         }
     }
+    @media (max-width: 394px) {
+        .navbar-brand {
+            img {
+                display: none;
+            }
+        }
+    }
 }
-@media (max-width: 990px) {
+@media (max-width: 991px) {
     .header {
         height: 100%
     }
+}
+.login-modal {
+    z-index: 9000;
 }
 

@@ -13,8 +13,7 @@
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_member.png" alt="会員だよりページビュー">
     <div class="l-titleview-ttl">
-        <p><?php single_term_title(); ?>ページ</p>
-        <small>会員の入会情報や慶弔情報、近況報告、随想などを掲載しています</small>
+        <p><?php single_term_title(); ?></p>
     </div>
 </section>
 
@@ -27,6 +26,8 @@
     <button class="is-current"><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
 
+<p class="l-page-caption">会員の入会情報や慶弔情報、近況報告、随想などを掲載しています</p>
+
 <!-- サイドバー -->
 <div class="l-side-grid">
     <!-- 記事セクション -->
@@ -35,6 +36,7 @@
         // タクソノミーに関連する投稿があるかチェック
         if (have_posts()) : ?>
             <ul>
+                <hr class="article-top-hr">
                 <?php while (have_posts()) : the_post(); ?>
                     <li>
                         <!-- ACF投稿日時 -->
@@ -54,7 +56,7 @@
 
                         <!-- ACFタイトル -->
                         <?php if (get_field('post_title')) : ?>
-                            <a href="<?php the_permalink(); ?>">TEST投稿：<?php the_field('post_title'); ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a>
                         <?php endif; ?>
 
                         <hr>

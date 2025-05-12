@@ -42,31 +42,31 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none">
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
-                        </li>
+                        </li><hr>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo home_url('/newscategory/allevent'); ?>">全体行事</a>
-                        </li>
+                        </li><hr>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo home_url('/newscategory/company'); ?>">会社だより</a>
-                        </li>
+                        </li><hr>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo home_url('/newscategory/obog'); ?>">OBOG会だより</a>
-                        </li>
+                        </li><hr>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
-                        </li>
+                        </li><hr>
                     </ul>
-                    <ul class="d-lg-none">
+                    <ul class="d-lg-none nav-only-cta">
                         <li>
                             <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_white.png " alt="" width="45" height="42" style="max-width:100%;">
-                            <br>弔事の<br>ご連絡について
+                            弔事の<br>ご連絡について
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo home_url('/about#memberpost'); ?>">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_note_white.png " alt="" width="45" height="42" style="max-width:100%;">
-                                <br>ご入稿について<br>（会員限定）
+                                ご入稿について<br>（会員限定）
                             </a>
                         </li>
                     </ul>
@@ -89,11 +89,11 @@
             </div>
         </nav>
         <!-- ログインボタン -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <button type="button" class="btn btn-primary btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
             ログイン
         </button>
         <!-- ログインモーダル -->
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal fade login-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

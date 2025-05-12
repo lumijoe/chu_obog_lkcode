@@ -11,7 +11,7 @@
 <!-- titleview -->
 <section class="l-titleview">
     <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
-    <p><?php single_term_title(); ?>ページ</p>
+    <p><?php single_term_title(); ?></p>
     <!-- <small>ページの内容を説明しています</small> -->
 </section>
 
@@ -32,6 +32,7 @@
         // タクソノミーに関連する投稿があるかチェック
         if (have_posts()) : ?>
             <ul>
+                <hr class="article-top-hr">
                 <?php while (have_posts()) : the_post(); ?>
                     <li>
                         <!-- ACF投稿日時 -->
@@ -51,7 +52,7 @@
 
                         <!-- ACFタイトル -->
                         <?php if (get_field('post_title')) : ?>
-                            <a href="<?php the_permalink(); ?>">TEST投稿：<?php the_field('post_title'); ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a>
                         <?php endif; ?>
 
                         

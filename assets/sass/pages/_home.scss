@@ -7,6 +7,11 @@
         margin-bottom: 0px!important;
     }
 }
+.carousel-item {
+    img {
+        min-height: 120px;
+    }
+}
 .hero-carousel {
     left: 50%;
     bottom: 50%;
@@ -16,7 +21,7 @@
     width: 100%;
     p {
         margin-bottom: 0!important;
-        font-size: 29px;
+        font-size: clamp(13px, 3vw, 24px);
         text-shadow:
     -1px -1px 0 black,
      1px -1px 0 black,
@@ -261,5 +266,26 @@ section.for-all {
     .l-pagebanner .grid-container2 {
         grid-template-columns: 1fr;
         gap: 35px;
+    }
+}
+@media (max-width: 605px) {
+    .hero-carousel {
+        .sp-605 {
+            display: block!important;
+        }
+    }
+}
+.main {
+    margin-top: 0px;
+
+}
+@media (max-width: 991px) {
+    .main {
+       margin-top: 45px;
+    }
+}
+@media (max-width: 538px) {
+    .main {
+       margin-top: 30px;
     }
 }
