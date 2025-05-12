@@ -6,7 +6,8 @@
 
 .header {
     background: red;
-    height: 110px;
+    height: 104px;
+    position: relative;
     .btn {
         background-color:#29318a;
         color: white;
@@ -23,7 +24,7 @@
     .top-ttl {
         padding-left: 32px;
         color: #29318a;
-        font-size: clamp(20px, 3vw, 25px);
+        font-size: clamp(16px, 2vw, 25px);
     }
     .btn:hover {
         opacity: 0.8;
@@ -36,6 +37,7 @@
     }
     .navbar-toggler {
         margin-right: 3%;
+        z-index: 6000;
     }
     .navbar-collapse {
         // display: flex;
@@ -46,6 +48,67 @@
         padding-left: 3%;
         h1 {
             margin-bottom: 0px!important;
+            z-index: 6000;
+        }
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5000;
+    }
+    @media (max-width: 990px) {
+        .navbar-collapse {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100dvh;
+          padding: 8rem 2rem 6rem;
+          background-color: white;
+          z-index: 5000;
+          overflow: auto;
+        }
+      
+        .navbar.is-open {
+          display: block;
+          position: fixed;
+          width: 100%;
+        }
+      
+        body.no-scroll {
+          overflow: hidden;
+          height: 100vh;
+        }
+    }
+    @media (max-width: 538px) {
+        .top-ttl {
+            padding-left: 10px;
+        }
+        .navba-brand {
+            img {
+                width: auto;
+                height: 31px;
+            }
+        }
+    }
+    @media (max-width: 394px) {
+        .top-ttl {
+            padding-left: 8px;
+            font-size: 12px;
+        }
+        .navba-brand {
+            img {
+                width: auto;
+                height: 21px;
+            }
         }
     }
 }
+@media (max-width: 990px) {
+    .header {
+        height: 100%
+    }
+}
+

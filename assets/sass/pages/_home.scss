@@ -1,7 +1,11 @@
 .l-breadcrumb {
-    height: 32px;
+    height: auto;
     width: 100%;
     background-color: rgb(194, 194, 194);
+    .breadcrumb {
+        padding-top: 8px;
+        margin-bottom: 0px!important;
+    }
 }
 .hero-carousel {
     left: 50%;
@@ -242,5 +246,21 @@ section.for-all {
         color: #333;
         letter-spacing: 0.08rem;
         line-height: 1.7;
+    }
+}
+@media (max-width: 538px) {
+    .l-news-latest-wrapper li {
+        gap: 0.5rem;
+    }
+    .l-pagebanner-inner .grid-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .l-pagebanner .grid-container2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }

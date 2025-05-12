@@ -31,7 +31,7 @@
         <?php get_template_part('template-parts/modal-login'); ?>
     <?php endif; ?>
     <header id="header" class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="z-index:5000;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <h1><a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.png" alt="" width="199" height="52" style="max-width:100%;"><span class="top-ttl">中外炉OBOGクラブ</span></a></h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,8 +56,22 @@
                             <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
                         </li>
                     </ul>
+                    <ul class="d-lg-none">
+                        <li>
+                            <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_white.png " alt="" width="45" height="42" style="max-width:100%;">
+                            <br>弔事の<br>ご連絡について
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo home_url('/about#memberpost'); ?>">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_note_white.png " alt="" width="45" height="42" style="max-width:100%;">
+                                <br>ご入稿について<br>（会員限定）
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContentPC">
                     <button class="btn" type="submit">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_white.png " alt="" width="45" height="42" style="max-width:100%;">
@@ -138,6 +152,28 @@
                     }
                 });
             });
+        </script>
+        <script>
+           document.addEventListener("DOMContentLoaded", function () {
+                const navbarCollapse = document.getElementById("navbarSupportedContent");
+                const navbar = document.querySelector(".navbar");
+                const toggler = document.querySelector(".navbar-toggler");
+
+                if (navbarCollapse && navbar && toggler) {
+                    // メニュー開く
+                    navbarCollapse.addEventListener("show.bs.collapse", function () {
+                    navbar.classList.add("is-open");
+                    document.body.classList.add("no-scroll");
+                    });
+
+                    // メニュー閉じる
+                    navbarCollapse.addEventListener("hide.bs.collapse", function () {
+                    navbar.classList.remove("is-open");
+                    document.body.classList.remove("no-scroll");
+                    });
+                }
+            });
+
         </script>
     </header>
     <main class="main">

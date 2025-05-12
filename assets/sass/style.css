@@ -122,7 +122,8 @@
  */
 .header {
   background: red;
-  height: 110px;
+  height: 104px;
+  position: relative;
 }
 .header .btn {
   background-color: #29318a;
@@ -140,7 +141,7 @@
 .header .top-ttl {
   padding-left: 32px;
   color: #29318a;
-  font-size: clamp(20px, 3vw, 25px);
+  font-size: clamp(16px, 2vw, 25px);
 }
 .header .btn:hover {
   opacity: 0.8;
@@ -153,6 +154,7 @@
 }
 .header .navbar-toggler {
   margin-right: 3%;
+  z-index: 6000;
 }
 .header .navbar-collapse {
   justify-content: flex-end !important;
@@ -163,12 +165,70 @@
 }
 .header .container-fluid h1 {
   margin-bottom: 0px !important;
+  z-index: 6000;
+}
+.header .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+}
+@media (max-width: 990px) {
+  .header .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    padding: 8rem 2rem 6rem;
+    background-color: white;
+    z-index: 5000;
+    overflow: auto;
+  }
+  .header .navbar.is-open {
+    display: block;
+    position: fixed;
+    width: 100%;
+  }
+  .header body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+@media (max-width: 538px) {
+  .header .top-ttl {
+    padding-left: 10px;
+  }
+  .header .navba-brand img {
+    width: auto;
+    height: 31px;
+  }
+}
+@media (max-width: 394px) {
+  .header .top-ttl {
+    padding-left: 8px;
+    font-size: 12px;
+  }
+  .header .navba-brand img {
+    width: auto;
+    height: 21px;
+  }
 }
 
+@media (max-width: 990px) {
+  .header {
+    height: 100%;
+  }
+}
 .l-breadcrumb {
-  height: 32px;
+  height: auto;
   width: 100%;
   background-color: rgb(194, 194, 194);
+}
+.l-breadcrumb .breadcrumb {
+  padding-top: 8px;
+  margin-bottom: 0px !important;
 }
 
 .hero-carousel {
@@ -382,6 +442,21 @@ section.for-all .grid-item p {
   line-height: 1.7;
 }
 
+@media (max-width: 538px) {
+  .l-news-latest-wrapper li {
+    gap: 0.5rem;
+  }
+  .l-pagebanner-inner .grid-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .l-pagebanner .grid-container2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 .l-titleview {
   height: 110px;
   width: 100%;

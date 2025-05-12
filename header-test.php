@@ -31,33 +31,33 @@
         <?php get_template_part('template-parts/modal-login'); ?>
     <?php endif; ?>
     <header id="header" class="header">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-        <h1><a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.png" alt="" width="199" height="52" style="max-width:100%;"><span class="top-ttl">中外炉OBOGクラブ</span></a></h1>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                                <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">知らせ一覧</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo home_url('/newscategory/allevent'); ?>">全体行事</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo home_url('/newscategory/company'); ?>">会社だより</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo home_url('/newscategory/obog'); ?>">OBOG会だより</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
-                            </li>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="z-index:5000;">
+            <div class="container-fluid">
+                <h1><a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.png" alt="" width="199" height="52" style="max-width:100%;"><span class="top-ttl">中外炉OBOGクラブ</span></a></h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- sp only -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo home_url('/newscategory/allevent'); ?>">全体行事</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo home_url('/newscategory/company'); ?>">会社だより</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo home_url('/newscategory/obog'); ?>">OBOG会だより</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
+                        </li>
                     </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <button class="btn" type="submit">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_white.png " alt="" width="45" height="42" style="max-width:100%;">
@@ -74,10 +74,6 @@
                 </div>
             </div>
         </nav>
-        
-
-
-
         <!-- ログインボタン -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
             ログイン
