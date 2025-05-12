@@ -63,9 +63,13 @@
     ul {
         padding: 2rem 2rem 2rem 0px;
         li {
+            gap: 2rem;
+            display: flex;
+            align-items: center;
             date {
                 font-size: 11px;
                 color: #7A7D9A;
+                width: 60px;
             }
             .item-category {
                 font-size: 11px;
@@ -82,6 +86,41 @@
                 color: #333;
                 text-decoration: none;
             }
+            p {
+                margin-bottom: 0px!important;
+            }
+        }
+        li + li {
+            padding-top: 20px;
+        }
+    }
+    .pagination {
+        width: 100%!important;
+        padding: 1rem!important;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .page-numbers {
+            color: #29318A!important;
+            background-color: #F1F1F1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            margin: 0 4px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            &.current {
+                color: white!important;
+                background-color: #29318A;
+                text-decoration: none;
+            }
+    
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 }
@@ -90,6 +129,8 @@
     grid-template-columns: 2fr 0.5fr;
     max-width: 1000px;
     margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .archive-label {
     display: flex;

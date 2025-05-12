@@ -226,6 +226,7 @@
 .l-news-latest-wrapper li date {
   font-size: 11px;
   color: #7A7D9A;
+  width: 60px;
 }
 .l-news-latest-wrapper li .item-category {
   font-size: 11px;
@@ -450,9 +451,15 @@ section.for-all .grid-item p {
 .l-article ul {
   padding: 2rem 2rem 2rem 0px;
 }
+.l-article ul li {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+}
 .l-article ul li date {
   font-size: 11px;
   color: #7A7D9A;
+  width: 60px;
 }
 .l-article ul li .item-category {
   font-size: 11px;
@@ -469,12 +476,48 @@ section.for-all .grid-item p {
   color: #333;
   text-decoration: none;
 }
+.l-article ul li p {
+  margin-bottom: 0px !important;
+}
+.l-article ul li + li {
+  padding-top: 20px;
+}
+.l-article .pagination {
+  width: 100% !important;
+  padding: 1rem !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.l-article .pagination .page-numbers {
+  color: #29318A !important;
+  background-color: #F1F1F1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0 4px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+}
+.l-article .pagination .page-numbers.current {
+  color: white !important;
+  background-color: #29318A;
+  text-decoration: none;
+}
+.l-article .pagination .page-numbers:hover {
+  opacity: 0.8;
+}
 
 .l-side-grid {
   display: grid;
   grid-template-columns: 2fr 0.5fr;
   max-width: 1000px;
   margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .archive-label {
