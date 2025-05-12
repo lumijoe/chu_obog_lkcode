@@ -66,15 +66,14 @@
         }
     }
 }
+.article-single-wrapper {
+    padding-right: 2rem;
+}
 .l-article {
     article {
-        gap: 2rem;
-        display: flex;
-        align-items: center;
         date {
             font-size: 11px;
             color: #7A7D9A;
-            width: 60px;
         }
         .item-category {
             font-size: 11px;

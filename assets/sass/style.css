@@ -623,15 +623,13 @@ section.for-all .grid-item p {
   color: white;
 }
 
-.l-article article {
-  gap: 2rem;
-  display: flex;
-  align-items: center;
+.article-single-wrapper {
+  padding-right: 2rem;
 }
+
 .l-article article date {
   font-size: 11px;
   color: #7A7D9A;
-  width: 60px;
 }
 .l-article article .item-category {
   font-size: 11px;
