@@ -13,6 +13,7 @@
         transform: translate(0, -50%);
         left: 3rem;
         color: #232323;
+        padding-right: 3rem;
         p {
             margin-bottom: 0 !important;
             font-size: clamp(16px, 5vw, 35px);
@@ -66,6 +67,34 @@
     }
 }
 .l-article {
+    article {
+        gap: 2rem;
+        display: flex;
+        align-items: center;
+        date {
+            font-size: 11px;
+            color: #7A7D9A;
+            width: 60px;
+        }
+        .item-category {
+            font-size: 11px;
+            padding: 3px 0;
+            min-width: 120px;
+            max-width: 120px;
+            background-color: #F1F1F1;
+            text-align: center;
+            color: #29318A;
+            line-height: 26px;
+            letter-spacing: 0.1rem;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        p {
+            margin-bottom: 0px!important;
+        }
+    }
     ul {
         padding: 2rem 2rem 2rem 0px;
         margin-bottom: 100px;

@@ -568,6 +568,7 @@ section.for-all .grid-item p {
   transform: translate(0, -50%);
   left: 3rem;
   color: #232323;
+  padding-right: 3rem;
 }
 .l-titleview-ttl p {
   margin-bottom: 0 !important;
@@ -622,6 +623,34 @@ section.for-all .grid-item p {
   color: white;
 }
 
+.l-article article {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+}
+.l-article article date {
+  font-size: 11px;
+  color: #7A7D9A;
+  width: 60px;
+}
+.l-article article .item-category {
+  font-size: 11px;
+  padding: 3px 0;
+  min-width: 120px;
+  max-width: 120px;
+  background-color: #F1F1F1;
+  text-align: center;
+  color: #29318A;
+  line-height: 26px;
+  letter-spacing: 0.1rem;
+}
+.l-article article a {
+  color: #333;
+  text-decoration: none;
+}
+.l-article article p {
+  margin-bottom: 0px !important;
+}
 .l-article ul {
   padding: 2rem 2rem 2rem 0px;
   margin-bottom: 100px;

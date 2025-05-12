@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="l-breadcrumb">
+<!-- <section class="l-breadcrumb">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
@@ -7,7 +7,6 @@
             <?php
             $terms = get_the_terms(get_the_ID(), 'newscategory');
             if ($terms && !is_wp_error($terms)) :
-                // 最初のカテゴリだけ使う
                 $first_term = $terms[0];
                 $term_link = get_term_link($first_term);
             ?>
@@ -19,36 +18,43 @@
 
         </ol>
     </nav>
-</section>
+</section> -->
 <!-- titleview -->
 <section class="l-titleview">
-    <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
+<img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_news.png" alt="お知らせ画像">
     <div class="l-titleview-ttl">
-        <p>お知らせ詳細</p>
+    <p class="l-page-caption">
+        <?php 
+            $title = get_field('post_title');
+            echo mb_strimwidth($title, 0, 50, '…', 'UTF-8');
+        ?>
+    </p>
     </div>
 </section>
+
 <!-- 記事セクション -->
+
 <section class="l-article">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article>
-                <!-- ACFタイトル -->
-                <h2><?php the_field('post_title'); ?></h2>
                 <!-- ACF投稿日時 -->
-                <p><?php echo get_the_date('Y年m月d日'); ?></p>
+                <date class="post-date"><?php echo get_the_date('Y.m.d'); ?></date>
                 <!-- ACFカテゴリ -->
                 <?php
-                $terms = get_the_terms(get_the_ID(), 'newscategory');
-                if ($terms && !is_wp_error($terms)) : ?>
-                    <p class="post-category">
-                        <?php
-                        $term_list = array();
-                        foreach ($terms as $term) {
-                            $term_list[] = $term->name;
-                        }
-                        echo implode(', ', $term_list);
+                        $terms = get_the_terms(get_the_ID(), 'newscategory');
+                        if ($terms && !is_wp_error($terms)) :
+                            $first_term = $terms[0];
+                            $category_output = $first_term->name;
+                        else :
+                            $category_output = 'カテゴリなし';
+                        endif;
                         ?>
-                    </p>
-                <?php endif; ?>
+                        <p class="item-category"><?php echo esc_html($category_output); ?></p>
+
+                <!-- ACFタイトル -->
+                <h2><?php the_field('post_title'); ?></h2>
+                
+                <hr>
                 <!-- ACF本文 -->
                 <p><?php the_field('post_text'); ?></p>
                 <!-- 画像 -->
