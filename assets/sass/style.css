@@ -429,7 +429,7 @@
   align-items: center;
 }
 .l-pagebanner-inner .grid-item .is-row figcaption h2 {
-  font-size: clamp(13px, 3vw, 25px);
+  font-size: clamp(13px, 4vw, 25px);
   margin-bottom: 0 !important;
 }
 .l-pagebanner-inner .img-wide {
@@ -459,7 +459,7 @@
   max-width: 100%;
 }
 .l-pagebanner h2.section-ttl {
-  font-size: clamp(20px, 3vw, 33px);
+  font-size: clamp(20px, 4vw, 33px);
   text-align: center;
   position: relative;
   color: #0e1346;
@@ -504,8 +504,8 @@ section.for-all .banner-white .is-fronticon {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 112px;
-  max-width: 100%;
+  width: 100px;
+  max-width: 90%;
   max-height: 119px;
   height: auto;
 }
