@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- パンくずリスト　 -->
-<section class="l-breadcrumb">
+<!-- <section class="l-breadcrumb">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
@@ -8,7 +8,7 @@
             <li class="breadcrumb-item active" aria-current="page">会社だより</li>
         </ol>
     </nav>
-</section>
+</section> -->
 <!-- titleview -->
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_company.png" alt="会社だよりページビュー">

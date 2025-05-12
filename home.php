@@ -6,13 +6,13 @@
 get_header('');
 ?>
 <!-- パンくずリスト　 -->
-<section class="l-breadcrumb">
+<!-- <section class="l-breadcrumb">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">TOP</a></li>
     </ol>
   </nav>
-</section>
+</section> -->
 
 <!-- スライダー -->
 <section id="home">
