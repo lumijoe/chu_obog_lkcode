@@ -117,3 +117,31 @@
         right: 20px;
     }
 }
+@media (max-width: 864px) {
+    .footer .footer-upper-inner {
+        flex-direction: column;
+    }
+    .footer section .is-corporate {
+        margin: 0 auto;
+        & figcaption {
+            text-align: center;
+            margin-right: 0px;
+        }
+    }
+    .footer .footer-bottom-inner {
+        flex-direction: column;
+    }
+   
+}
+@media (max-width: 536px) {
+    .footer .footer-upper-inner .is-row {
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 35px;
+    }
+    .footer section .is-corporate figcaption {
+        text-align: center;
+        margin-right: 0px;
+    }
+   
+}
