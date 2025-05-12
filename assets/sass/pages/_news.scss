@@ -62,9 +62,26 @@
 .l-article {
     ul {
         padding: 2rem 2rem 2rem 0px;
-        li date {
-            font-size: 11px;
-            color: #7A7D9A;
+        li {
+            date {
+                font-size: 11px;
+                color: #7A7D9A;
+            }
+            .item-category {
+                font-size: 11px;
+                padding: 3px 0;
+                min-width: 120px;
+                max-width: 120px;
+                background-color: #F1F1F1;
+                text-align: center;
+                color: #29318A;
+                line-height: 26px;
+                letter-spacing: 0.1rem;
+            }
+            a {
+                color: #333;
+                text-decoration: none;
+            }
         }
     }
 }

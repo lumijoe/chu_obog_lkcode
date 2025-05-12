@@ -454,6 +454,21 @@ section.for-all .grid-item p {
   font-size: 11px;
   color: #7A7D9A;
 }
+.l-article ul li .item-category {
+  font-size: 11px;
+  padding: 3px 0;
+  min-width: 120px;
+  max-width: 120px;
+  background-color: #F1F1F1;
+  text-align: center;
+  color: #29318A;
+  line-height: 26px;
+  letter-spacing: 0.1rem;
+}
+.l-article ul li a {
+  color: #333;
+  text-decoration: none;
+}
 
 .l-side-grid {
   display: grid;
