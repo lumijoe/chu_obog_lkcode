@@ -2,7 +2,13 @@ li, ol, ul {
     text-decoration: none;
     list-style-type: none;
 } 
-
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    overflow-x: hidden;
+}
+hr {
+    opacity: 0.17;
+}
 .add-icon {
     border-radius: 60px;
     background-color: #F5F5F5;

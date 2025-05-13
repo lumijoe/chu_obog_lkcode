@@ -27,7 +27,7 @@
 </div>
 
 <p class="l-page-caption">全国の各OBOG会からのご案内やレポートを掲載しています<br>
-            幹事の皆様からのご投稿をお待ちしております</p>
+    幹事の皆様からのご投稿をお待ちしております</p>
 
 <!-- サイドバー -->
 <div class="l-side-grid">
@@ -39,29 +39,29 @@
             <ul>
                 <hr class="article-top-hr">
                 <?php while (have_posts()) : the_post(); ?>
-                    <li>
-                        <!-- ACF投稿日時 -->
-                        <date><?php echo get_the_date('Y.m.d'); ?></date>
+                    <li class="sp-article-wrapper">
+                        <div class="sp-article">
+                            <!-- ACF投稿日時 -->
+                            <date><?php echo get_the_date('Y.m.d'); ?></date>
 
-                        <!-- カテゴリ表示 -->
-                        <?php
-                        $terms = get_the_terms(get_the_ID(), 'newscategory');
-                        if ($terms && !is_wp_error($terms)) :
-                            $first_term = $terms[0];
-                            $category_output = $first_term->name;
-                        else :
-                            $category_output = 'カテゴリなし';
-                        endif;
-                        ?>
-                        <p class="item-category"><?php echo esc_html($category_output); ?></p>
-
+                            <!-- カテゴリ表示 -->
+                            <?php
+                            $terms = get_the_terms(get_the_ID(), 'newscategory');
+                            if ($terms && !is_wp_error($terms)) :
+                                $first_term = $terms[0];
+                                $category_output = $first_term->name;
+                            else :
+                                $category_output = 'カテゴリなし';
+                            endif;
+                            ?>
+                            <p class="item-category"><?php echo esc_html($category_output); ?></p>
+                        </div>
                         <!-- ACFタイトル -->
                         <?php if (get_field('post_title')) : ?>
                             <a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a>
                         <?php endif; ?>
-
-                        <hr>
                     </li>
+                    <hr>
                 <?php endwhile; ?>
             </ul>
 

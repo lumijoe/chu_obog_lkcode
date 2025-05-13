@@ -58,7 +58,7 @@ get_header();
 </section>
 
 <!-- お知らせ新着 -->
-<section class="l-news-latest">
+<section class="l-news-latest l-article">
   <div class="l-news-latest-wrapper">
     <h2>お知らせ新着</h2>
     <?php
@@ -73,22 +73,23 @@ get_header();
     if ($news_query->have_posts()) : ?>
       <ul>
         <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
-          <li>
-            <!-- 日付 -->
-            <date class="post-date"><?php echo get_the_date('Y.m.d'); ?></date>
+          <li class="sp-article-wrapper">
+            <div class="sp-article">
+              <!-- 日付 -->
+              <date class="post-date"><?php echo get_the_date('Y.m.d'); ?></date>
 
-            <!-- カテゴリ -->
-            <?php
-            $terms = get_the_terms(get_the_ID(), 'newscategory');
-            if ($terms && !is_wp_error($terms)) :
-              $first_term = $terms[0];
-              $category_output = $first_term->name;
-            else :
-              $category_output = 'カテゴリなし';
-            endif;
-            ?>
-            <p class="item-category"><?php echo esc_html($category_output); ?></p>
-
+              <!-- カテゴリ -->
+              <?php
+              $terms = get_the_terms(get_the_ID(), 'newscategory');
+              if ($terms && !is_wp_error($terms)) :
+                $first_term = $terms[0];
+                $category_output = $first_term->name;
+              else :
+                $category_output = 'カテゴリなし';
+              endif;
+              ?>
+              <p class="item-category"><?php echo esc_html($category_output); ?></p>
+            </div>
             <!-- タイトル（ACF post_title） -->
             <?php if (get_field('post_title')) : ?>
               <p><a href="<?php the_permalink(); ?>"><?php the_field('post_title'); ?></a></p>
@@ -96,6 +97,7 @@ get_header();
               <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
             <?php endif; ?>
           </li>
+          <hr>
         <?php endwhile; ?>
       </ul>
       <?php wp_reset_postdata(); ?>
