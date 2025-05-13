@@ -107,10 +107,10 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">ログイン</h5>
+                        <h5 class="modal-title" id="loginModalLabel">会員専用ページ</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body modal-login">
                         <form id="loginForm">
                             <div class="mb-3">
                                 <label for="username" class="form-label">ユーザー名</label>
@@ -120,7 +120,11 @@
                                 <label for="password" class="form-label">パスワード</label>
                                 <input type="password" class="form-control" id="password" placeholder="パスワードを入力">
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">ログイン</button>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="logincheck">
+                                <label class="form-check-label" for="logincheck">ログイン状態を保持する</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">ログインする</button>
                         </form>
                         <div id="error-message" class="text-danger mt-2" style="display: none;">
                             ユーザー名またはパスワードが間違っています。
@@ -163,14 +167,14 @@
             document.getElementById('loginForm').addEventListener('submit', function(event) {
                 event.preventDefault();
 
-                const usernameInput = document.getElementById('username').value;
-                const passwordInput = document.getElementById('password').value;
+                // const usernameInput = document.getElementById('username').value;
+                // const passwordInput = document.getElementById('password').value;
 
-                const data = {
-                    action: 'login_check',
-                    username: usernameInput,
-                    password: passwordInput
-                };
+                // const data = {
+                //     action: 'login_check',
+                //     username: usernameInput,
+                //     password: passwordInput
+                // };
 
                 jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', data, function(response) {
                     if (response.success) {
