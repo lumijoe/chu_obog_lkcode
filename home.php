@@ -3,7 +3,7 @@
 /**
  * トップページ
  */
-get_header('');
+get_header('test');
 ?>
 <!-- パンくずリスト　 -->
 <!-- <section class="l-breadcrumb">
@@ -35,14 +35,14 @@ get_header('');
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
         <div class="carousel-caption d-md-block hero-carousel">
           <p>中外炉OBOGクラブは、<br class="sp-605 d-none">中外炉工業株式会社を退職された<br>
-        OBOGの皆さまのための<br class="sp-605 d-none">コミュニティクラブです</p>
+            OBOGの皆さまのための<br class="sp-605 d-none">コミュニティクラブです</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
         <div class="carousel-caption d-md-block hero-carousel">
           <p>中外炉OBOGクラブは、<br class="sp-605 d-none">中外炉工業株式会社を退職された<br>
-        OBOGの皆さまのための<br class="sp-605 d-none">コミュニティクラブです</p>
+            OBOGの皆さまのための<br class="sp-605 d-none">コミュニティクラブです</p>
         </div>
       </div>
     </div>

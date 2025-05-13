@@ -25,6 +25,11 @@
     <?php wp_head(); ?>
 </head>
 
+<style>
+    .btn-login {
+        display: none !important;
+    }
+</style>
 
 <body <?php body_class(); ?>>
     <?php if (!is_logged_in()) : ?>
@@ -42,25 +47,30 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none">
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧</a>
-                        </li><hr>
+                        </li>
+                        <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo home_url('/newscategory/allevent'); ?>">全体行事</a>
-                        </li><hr>
+                        </li>
+                        <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo home_url('/newscategory/company'); ?>">会社だより</a>
-                        </li><hr>
+                        </li>
+                        <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo home_url('/newscategory/obog'); ?>">OBOG会だより</a>
-                        </li><hr>
+                        </li>
+                        <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo home_url('/newscategory/member'); ?>">会員だより</a>
-                        </li><hr>
+                        </li>
+                        <hr>
                     </ul>
                     <ul class="d-lg-none nav-only-cta">
                         <li>
                             <a href="<?php echo get_template_directory_uri(); ?>/images/home/chugairo_print.pdf" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_white.png " alt="" width="45" height="42" style="max-width:100%;">
-                            弔事の<br>ご連絡について
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_mail_white.png " alt="" width="45" height="42" style="max-width:100%;">
+                                弔事の<br>ご連絡について
                             </a>
                         </li>
                         <li>
@@ -154,26 +164,47 @@
             });
         </script>
         <script>
-           document.addEventListener("DOMContentLoaded", function () {
+            // ハンバーガーナビパネル 
+            document.addEventListener("DOMContentLoaded", function() {
                 const navbarCollapse = document.getElementById("navbarSupportedContent");
                 const navbar = document.querySelector(".navbar");
                 const toggler = document.querySelector(".navbar-toggler");
 
                 if (navbarCollapse && navbar && toggler) {
-                    // メニュー開く
-                    navbarCollapse.addEventListener("show.bs.collapse", function () {
-                    navbar.classList.add("is-open");
-                    document.body.classList.add("no-scroll");
+                    // 開く
+                    navbarCollapse.addEventListener("show.bs.collapse", function() {
+                        navbar.classList.add("is-open");
+                        document.body.classList.add("no-scroll");
                     });
 
-                    // メニュー閉じる
-                    navbarCollapse.addEventListener("hide.bs.collapse", function () {
-                    navbar.classList.remove("is-open");
-                    document.body.classList.remove("no-scroll");
+                    // 閉じる
+                    navbarCollapse.addEventListener("hide.bs.collapse", function() {
+                        navbar.classList.remove("is-open");
+                        document.body.classList.remove("no-scroll");
                     });
                 }
             });
-
         </script>
+
+        <script>
+            document.addEventListener('click', function(event) {
+                // 1. ログイン済みユーザーは何もしない（WP の body_class() で 'logged-in' が付くので利用）
+                if (document.body.classList.contains('logged-in')) return;
+
+                // 2. 既にモーダル内をクリックした場合はスキップ
+                if (event.target.closest('#loginModal .modal-content')) return;
+
+                // 3. クリックされたのが送信ボタン（ログインボタン）の場合、何もしない
+                if (event.target.closest('.btn-login')) return;
+
+                // クリックされたらフォーム表示
+                const modalEl = document.getElementById('loginModal');
+                const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                modal.show();
+            });
+        </script>
+
+
+
     </header>
     <main class="main">
