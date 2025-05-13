@@ -151,11 +151,6 @@
   height: 104px;
   position: relative;
 }
-.header .modal-backdrop {
-  --bs-backdrop-zindex: 8000 !important;
-  --bs-backdrop-bg: #000;
-  --bs-backdrop-opacity: 0.7 !important;
-}
 .header .modal.show .modal-dialog {
   top: 50%;
   transform: translate(0, -50%) !important;
@@ -299,6 +294,12 @@
 }
 .login-modal {
   z-index: 9000;
+}
+
+.modal-backdrop {
+  --bs-backdrop-zindex: 8000 !important;
+  --bs-backdrop-bg: #000;
+  --bs-backdrop-opacity: 0.7 !important;
 }
 
 .l-breadcrumb {
