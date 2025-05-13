@@ -136,6 +136,29 @@
         <?php endif; ?>
 
         <script>
+            // ハンバーガーナビパネル 
+            document.addEventListener("DOMContentLoaded", function() {
+                const navbarCollapse = document.getElementById("navbarSupportedContent");
+                const navbar = document.querySelector(".navbar");
+                const toggler = document.querySelector(".navbar-toggler");
+
+                if (navbarCollapse && navbar && toggler) {
+                    // 開く
+                    navbarCollapse.addEventListener("show.bs.collapse", function() {
+                        navbar.classList.add("is-open");
+                        document.body.classList.add("no-scroll");
+                    });
+
+                    // 閉じる
+                    navbarCollapse.addEventListener("hide.bs.collapse", function() {
+                        navbar.classList.remove("is-open");
+                        document.body.classList.remove("no-scroll");
+                    });
+                }
+            });
+        </script>
+
+        <script>
             // フォーム送信時にAJAXでログイン処理をサーバーにリクエスト
             document.getElementById('loginForm').addEventListener('submit', function(event) {
                 event.preventDefault();
@@ -163,28 +186,7 @@
                 });
             });
         </script>
-        <script>
-            // ハンバーガーナビパネル 
-            document.addEventListener("DOMContentLoaded", function() {
-                const navbarCollapse = document.getElementById("navbarSupportedContent");
-                const navbar = document.querySelector(".navbar");
-                const toggler = document.querySelector(".navbar-toggler");
 
-                if (navbarCollapse && navbar && toggler) {
-                    // 開く
-                    navbarCollapse.addEventListener("show.bs.collapse", function() {
-                        navbar.classList.add("is-open");
-                        document.body.classList.add("no-scroll");
-                    });
-
-                    // 閉じる
-                    navbarCollapse.addEventListener("hide.bs.collapse", function() {
-                        navbar.classList.remove("is-open");
-                        document.body.classList.remove("no-scroll");
-                    });
-                }
-            });
-        </script>
 
         <script>
             document.addEventListener('click', function(event) {
@@ -194,7 +196,9 @@
                 // 2. 既にモーダル内をクリックした場合はスキップ
                 if (event.target.closest('#loginModal .modal-content')) return;
 
-                // 3. クリックされたのが aタグ、buttonタグ、またはその他の要素でも無視しない
+                // 3. クリックされたのが送信ボタン（ログインボタン）の場合、何もしない
+                if (event.target.closest('.btn-login')) return;
+
                 // クリックされたらフォーム表示
                 const modalEl = document.getElementById('loginModal');
                 const modal = bootstrap.Modal.getOrCreateInstance(modalEl);

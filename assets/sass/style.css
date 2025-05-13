@@ -151,6 +151,15 @@
   height: 104px;
   position: relative;
 }
+.header .modal-backdrop {
+  --bs-backdrop-zindex: 8000 !important;
+  --bs-backdrop-bg: #000;
+  --bs-backdrop-opacity: 0.7 !important;
+}
+.header .modal.show .modal-dialog {
+  top: 50%;
+  transform: translate(0, -50%) !important;
+}
 .header .btn {
   background-color: #29318a;
   color: white;

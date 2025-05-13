@@ -5,6 +5,16 @@
 @use '../setting/config' as *;
 
 .header {
+    .modal-backdrop {
+        --bs-backdrop-zindex: 8000 !important;
+        --bs-backdrop-bg: #000;
+        --bs-backdrop-opacity: 0.7 !important;
+    }
+
+    .modal.show .modal-dialog {
+        top: 50%;
+        transform: translate(0, -50%) !important;
+    }
     background: red;
     height: 104px;
     position: relative;

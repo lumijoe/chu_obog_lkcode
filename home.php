@@ -3,7 +3,7 @@
 /**
  * トップページ
  */
-get_header('test');
+get_header();
 ?>
 <!-- パンくずリスト　 -->
 <!-- <section class="l-breadcrumb">
