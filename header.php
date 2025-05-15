@@ -53,6 +53,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none">
                         <li class="nav-item">
+                            <a class="nav-link" href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">中外炉<br>OBOGクラブについて<img src="https://nagahama-p.sakura.ne.jp/obog/wp-content/themes/chu_obog/images/common/icon_right_bgwhite.svg" alt="" data-src="https://nagahama-p.sakura.ne.jp/obog/wp-content/themes/chu_obog/images/common/icon_right_bgwhite.svg" decoding="async" class=" lazyloaded"></a>
+
+                        </li>
+                        <hr>
+                        <li class="nav-item">
                             <a class="nav-link" href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧<img src="https://nagahama-p.sakura.ne.jp/obog/wp-content/themes/chu_obog/images/common/icon_right_bgwhite.svg" alt="" data-src="https://nagahama-p.sakura.ne.jp/obog/wp-content/themes/chu_obog/images/common/icon_right_bgwhite.svg" decoding="async" class=" lazyloaded"></a>
 
                         </li>
