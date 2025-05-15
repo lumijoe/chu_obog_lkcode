@@ -160,7 +160,7 @@
                 align-items: center;
                 figcaption {
                     h2 {
-                        font-size: clamp(16px, 4vw, 25px);
+                        font-size: clamp(16px, 5vw, 25px);
                         margin-bottom: 0!important;
                         font-weight: 400;
                         letter-spacing: 0.1rem;
@@ -197,7 +197,7 @@
         }
     }
     h2.section-ttl {
-        font-size: clamp(20px, 4vw, 33px);
+        font-size: clamp(20px, 6vw, 33px);
         text-align: center;
         position: relative;
         color: #0e1346;
@@ -224,7 +224,7 @@ section.for-all {
     padding-bottom: 65px;
     figcaption {
         h3 {
-            font-size: clamp(16px, 4vw, 25px);
+            font-size: clamp(16px, 5vw, 25px);
             margin-bottom: 0!important;
             font-weight: 400;
             letter-spacing: 0.13rem;
@@ -298,6 +298,15 @@ section.for-all {
     .main {
        margin-top: 30px;
     }
+    .max538-none {
+        display: none;
+    }
+    .max538-display {
+        display: block!important;
+    }
+    .l-pagebanner-inner {
+        margin: 35px auto auto;
+    }
 }
 @media (max-width: 600px) {
     .sp-article-wrapper {
@@ -306,7 +315,7 @@ section.for-all {
         gap: 0.5rem!important;
     }
     .sp-article {
-        display: flex;
+        display: flex!important;
         align-items: center;
         date {
             margin-right: 1rem;

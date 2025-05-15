@@ -46,7 +46,7 @@
             <div class="container-fluid">
                 <h1><a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.png" alt="" width="199" height="52" style="max-width:100%;"><span class="top-ttl">中外炉OBOGクラブ</span></a></h1>
                 <!-- sp only navmenu btn -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- sp only -->
@@ -148,20 +148,19 @@
         <?php endif; ?>
 
         <script>
-            // ハンバーガーナビパネル 
             document.addEventListener("DOMContentLoaded", function() {
                 const navbarCollapse = document.getElementById("navbarSupportedContent");
                 const navbar = document.querySelector(".navbar");
                 const toggler = document.querySelector(".navbar-toggler");
 
                 if (navbarCollapse && navbar && toggler) {
-                    // 開く
+
                     navbarCollapse.addEventListener("show.bs.collapse", function() {
                         navbar.classList.add("is-open");
                         document.body.classList.add("no-scroll");
                     });
 
-                    // 閉じる
+
                     navbarCollapse.addEventListener("hide.bs.collapse", function() {
                         navbar.classList.remove("is-open");
                         document.body.classList.remove("no-scroll");

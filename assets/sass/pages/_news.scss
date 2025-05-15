@@ -268,13 +268,16 @@ span.tag_new {
         align-items: flex-start!important;
         gap: 0.5rem!important;
     }
+    span.tag_new {
+        margin-right: 10px;
+        margin-left: 8px;
+    }
     .sp-article {
         display: flex;
         align-items: center;
         date {
             margin-right: 1rem;
         }
-
     }
     .l-article .item-category {
         font-size: 14px!important;
@@ -284,6 +287,9 @@ span.tag_new {
     }
     l-article ul li + li {
         padding-top: 0px!important;
+    }
+    .l-article hr {
+        margin: 0.8rem 0 !important;
     }
     
   }
