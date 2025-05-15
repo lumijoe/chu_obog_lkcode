@@ -56,7 +56,8 @@ get_header();
     </section>
     <br>
     <br>
-    <section id="memberpost">
+    <div id="memberpost" style="position: relative; top: -110px;"></div>
+    <section>
         <h1>ご入稿について【会員限定】</h1>
         <p>
             会員の皆さまからの情報ご入稿について<br>
