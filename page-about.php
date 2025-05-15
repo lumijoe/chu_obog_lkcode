@@ -33,26 +33,28 @@ get_header();
 <section class="l-about">
     <section id="club" class="l-pagebanner">
         <h2 class="section-ttl">「中外炉OBOGクラブ」のご案内</h2>
-        <p>中外炉OBOGクラブは、中外炉工業株式会社を退職されたOBOGの皆さまのためのコミュニティークラブで、所定の基準を満たす中外炉OBOGの皆さまなら、だれでも入会できるメンバーズクラブです。<br><br>
+        <p style="font-size:14px; line-height: 2rem;"><span style="font-size:clamp(16px, 3vw, 20px); line-height: 2rem;">中外炉OBOGクラブは、中外炉工業株式会社を退職されたOBOGの皆さまのためのコミュニティークラブで、所定の基準を満たす中外炉OBOGの皆さまなら、だれでも入会できるメンバーズクラブです。</span><br><br>
             1.クラブの目的
             <span class="txt-wrapper"><span class="wrapper-num">1）</span><span>OBOG間の親睦と互助を図る</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">2）</span><span>OBOGと会社との情報交流を深め、「人中心」企業の一体感を醸成する</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">3）</span><span>長年勤めた会社への誇りを継承する風土づくりに貢献し、会社の発展に寄与する</span></span>
+            <br>
             2.登録対象者
             <span class="txt-wrapper"><span class="wrapper-num">1）</span><span>定年退職者または勤続20年以上の円満退職者で、本クラブの目的に賛同する60歳以上の中外炉OBOG</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">2）</span><span>1）の基準のほか、会社が適格と判断し、本クラブの目的に賛同する60歳以上の中外炉OBOG</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">※ </span><span>会員本人の死亡もしくは本クラブの目的に反する行為があった場合は、会員資格を失います。</span></span>
+            <br>
             3.会員特典
             <span class="txt-wrapper"><span class="wrapper-num">◼️ </span><span>ID、パスワード認証により、会員専用ホームページが閲覧できます</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">◼️</span><span>「OBOG通信」や「メール案内」が受け取れます</span></span>
-            <span class="txt-wrapper-detail"><span class="wrapper-detail-num">・</span><span>年1回発行する「OBOG通信」を全会員にお届けします。</span></span>
-            <span class="txt-wrapper-detail"><span class="wrapper-detail-num">・</span><span>メールアドレスご登録済会員の皆さまには、弔事連絡やホームページの更新などタイムリーな情報を、「メール案内」としてお届けします。</span></span>
+            <span class="txt-wrapper"><span class="wrapper-num">・</span><span>年1回発行する「OBOG通信」を全会員にお届けします。</span></span>
+            <span class="txt-wrapper"><span class="wrapper-num">・</span><span>メールアドレスご登録済会員の皆さまには、弔事連絡やホームページの更新などタイムリーな情報を、「メール案内」としてお届けします。</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">◼️ </span><span>「中外炉OBOGクラブ」全体懇親会に参加できます</span></span>
-            <span class="txt-wrapper-detail"><span class="wrapper-detail-num">・</span><span>数年に1度の開催を前提に会社が計画する「中外炉OBOGクラブ」全体懇親会に参加できます。</span></span>
+            <span class="txt-wrapper"><span class="wrapper-num">・</span><span>数年に1度の開催を前提に会社が計画する「中外炉OBOGクラブ」全体懇親会に参加できます。</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">◼️ </span><span> 弔事の際会社の規定が適用されます</span></span>
-            <span class="txt-wrapper-detail"><span class="wrapper-detail-num">・</span><span>会員ご本人や配偶者が亡くなられた場合、会社は規定に準じた各種の手配を行います。</span></span>
+            <span class="txt-wrapper"><span class="wrapper-num">・</span><span>会員ご本人や配偶者が亡くなられた場合、会社は規定に準じた各種の手配を行います。</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">※ </span><span>ご不幸があった場合は、必ず人事部（ TEL:072-247-2502 FAX:072-247-2508 ）までご連絡ください。なお、必要な情報をもれなくご連絡いただくため、弔事のご連絡記入様式を使い、FAX送信していただければ幸いです。</span></span>
-            <span class="txt-wrapper-detail"><span class="wrapper-detail-num">・</span><span>「メール案内」や「専用ホームページ」を通じ、会員の皆さまに弔事連絡をします。</span></span>
+            <span class="txt-wrapper"><span class="wrapper-num">・</span><span>「メール案内」や「専用ホームページ」を通じ、会員の皆さまに弔事連絡をします。</span></span>
         </p>
     </section>
 
