@@ -157,7 +157,7 @@
  * ===========================================
  */
 .header {
-  background: red;
+  background: rgb(255, 255, 255);
   height: 104px;
   position: relative;
 }
@@ -398,7 +398,6 @@
 .l-news-latest-wrapper ul {
   padding-left: 0rem !important;
   padding-top: 24px;
-  margin-bottom: 40px !important;
 }
 .l-news-latest-wrapper li {
   gap: 2rem;
@@ -737,7 +736,7 @@ span.tag_new {
 }
 
 .l-article hr {
-  margin: 2rem 0 !important;
+  margin: 0.6rem 0 !important;
 }
 .l-article article date {
   font-size: 11px;
@@ -770,7 +769,6 @@ span.tag_new {
 }
 .l-article ul {
   padding: 2rem 2rem 2rem 0px;
-  margin-bottom: 100px;
 }
 .l-article ul .article-top-hr {
   margin-top: 0px !important;

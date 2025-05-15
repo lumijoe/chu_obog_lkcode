@@ -64,7 +64,7 @@ get_header();
     <?php
     $args = array(
       'post_type'      => 'news',
-      'posts_per_page' => 5,
+      'posts_per_page' => 4,
       'post_status'    => 'publish',
     );
 
