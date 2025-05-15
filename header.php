@@ -134,7 +134,7 @@
             </div>
         </div>
         <?php if (is_logged_in()) : ?>
-            <p style="color: green;">ログイン中です | <a href="<?php echo home_url('/?action=logout'); ?>">ログアウト</a></p>
+            <p style="color: green;">ログイン中です | <a href="<?php echo home_url('/?action=oboglogout'); ?>">ログアウト</a></p>
         <?php else : ?>
             <p style="color: red;">ログアウト状態です</p>
         <?php endif; ?>
