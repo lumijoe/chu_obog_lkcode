@@ -633,6 +633,16 @@ section.for-all .grid-item p {
     padding-top: 0px !important;
   }
 }
+span.tag_new {
+  padding: 0.2rem 0.7rem;
+  text-align: center;
+  background-color: #f9602c;
+  color: #fff;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.1rem;
+}
+
 .l-titleview {
   height: 200px;
   width: 100%;
@@ -732,6 +742,7 @@ section.for-all .grid-item p {
 .l-article article date {
   font-size: 11px;
   color: #7A7D9A;
+  margin-right: 0.5rem;
 }
 .l-article article img {
   margin-top: 30px;

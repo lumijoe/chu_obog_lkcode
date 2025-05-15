@@ -1,3 +1,13 @@
+span.tag_new {
+    padding: 0.2rem 0.7rem;
+    text-align: center;
+    background-color: #f9602c;
+    color: #fff;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.1rem;
+}
+
 .l-titleview {
     height: 200px;
     width: 100%;
@@ -93,6 +103,7 @@
         date {
             font-size: 11px;
             color: #7A7D9A;
+            margin-right: 0.5rem;
         }
         img {
             margin-top: 30px;
