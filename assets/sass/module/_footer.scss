@@ -3,6 +3,10 @@
  * ========================================== 
  */
  .footer {
+    #pageTop {
+        color: #ffffff!important;
+        background-color: #29318a!important;
+    }
     background-color: #0E1346;
     position: relative;
     section {
@@ -17,6 +21,7 @@
                 text-decoration: none!important;
                 font-size: 16px;
                 padding-bottom: 6px;
+                font-weight: 500;
                 a {
                     color: white;
                     text-decoration: none!important;
@@ -55,6 +60,8 @@
             }
             .ttl_m {
                 font-size: 16px;
+                font-weight: 340;
+                letter-spacing: 0.1rem;
             }
             .is-row {
                 display: flex;
@@ -64,7 +71,9 @@
                     margin-bottom: 0!important;
                     li:first-child {
                         padding-bottom: 18px!important;
-                        font-weight: bold;
+                        font-weight: 440;
+                        letter-spacing: 0.1rem;
+                        margin-bottom: 10px;
                     }
                     li + li {
                         padding-bottom: 15px!important;
@@ -83,7 +92,7 @@
         .is-row {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
             figure {
                 margin: 0!important;
             }
@@ -91,9 +100,10 @@
             .is-footerlogo {
                 height: 40px;
                 width: auto;
+                margin-right: 20px;
             }
             .sns_logo {
-                max-height: 26px;
+                max-height: 38px;
                 width: auto;
             }
         }
@@ -116,6 +126,15 @@
         position: fixed;
         bottom: 93px;
         right: 20px;
+        border: 2px solid #29318a;
+        border-radius: 99px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        &.show {
+            display: block;
+            opacity: 1;
+        }
     }
 }
 @media (max-width: 864px) {
@@ -132,6 +151,13 @@
     .footer .footer-bottom-inner {
         flex-direction: column;
     }
+    .footer .footer-bottom .is-row .is-footerlogo {
+        margin-right: 0px;
+    }
+    .footer .footer-bottom .is-row {
+        margin-bottom: 8px;
+    }
+
    
 }
 @media (max-width: 536px) {
@@ -152,6 +178,10 @@
         margin-top: 2rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
+    }
+    .footer .footer-bottom .is-row {
+        margin-bottom: 0px;
+        margin-top: 25px;
     }
 
    

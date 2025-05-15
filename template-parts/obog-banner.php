@@ -10,7 +10,7 @@
         </div>
         <div class="is-row">
           <figcaption>
-            <h3>ご入稿について（会員限定）</h3>
+            <h3>ご入稿について(会員限定)</h3>
           </figcaption>
           <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
         </div>
@@ -34,4 +34,3 @@
     </div>
   </div>
 </section>
-

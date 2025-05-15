@@ -31,7 +31,7 @@ get_header();
             OBOGの皆さまのための<br class="sp-605 d-none">コミュニティクラブです</p>
         </div>
       </div>
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_page_top.png" class="d-block w-100" alt="">
         <div class="carousel-caption d-md-block hero-carousel">
           <p>中外炉OBOGクラブは、<br class="sp-605 d-none">中外炉工業株式会社を退職された<br>
@@ -53,14 +53,14 @@ get_header();
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+    </button> -->
+    </div>
 </section>
 
 <!-- お知らせ新着 -->
 <section class="l-news-latest l-article">
   <div class="l-news-latest-wrapper">
-    <h2>お知らせ新着</h2>
+    <h2>お知らせ 新着</h2>
     <?php
     $args = array(
       'post_type'      => 'news',

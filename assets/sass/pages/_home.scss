@@ -45,8 +45,7 @@
             color: #0e1346;
             font-size: 25px;
             letter-spacing: 0.1rem;
-            // padding-left: 2rem;
-            // padding-right: 2rem;
+            font-weight: 400;
         }
         ul {
             padding-left: 0rem!important;
@@ -138,6 +137,7 @@
     padding-left: 5%;
     padding-right: 5%;
     margin: 0 auto;
+    margin-bottom: 94px;
     &-inner {
         a {
             text-decoration: none!important;
@@ -147,6 +147,7 @@
         height: auto;
         margin: 60px auto auto;
         display: grid;
+        justify-items: center;
         .grid-item {
             text-align: start;
             .is-row {
@@ -161,7 +162,8 @@
                     h2 {
                         font-size: clamp(16px, 4vw, 25px);
                         margin-bottom: 0!important;
-                        font-weight: bold;
+                        font-weight: 400;
+                        letter-spacing: 0.1rem;
                     }
                     
                 }
@@ -186,7 +188,7 @@
     }
     .grid-container2 {
         grid-template-columns: 1fr 1fr;
-        gap: 65px;
+        gap: 52px;
         .is-figspan {
             font-size: 12px;
         }
@@ -199,15 +201,17 @@
         text-align: center;
         position: relative;
         color: #0e1346;
-        font-weight: bold;
+        font-weight: 440;
+        letter-spacing: 0.2rem;
+        margin-bottom: 90px;
         &::after {
             content: "";
             position: absolute;
-            bottom: -16px;
+            bottom: -28px;
             left: 50%;
             transform: translateX(-50%);
             width: 64px;
-            border-bottom: 2px solid #0e1346;
+            border-bottom: 4px solid #29318a;
         }
     }
 }
@@ -222,7 +226,8 @@ section.for-all {
         h3 {
             font-size: clamp(16px, 4vw, 25px);
             margin-bottom: 0!important;
-            font-weight: bold;
+            font-weight: 400;
+            letter-spacing: 0.13rem;
         } 
     }
     .l-pagebanner-inner {
@@ -236,6 +241,7 @@ section.for-all {
             height: auto;
             max-height: 200px;
             border-radius: 5px;
+            border: 1px solid #c0c0c0;
         }
         .is-fronticon {
             position: absolute;
@@ -254,6 +260,7 @@ section.for-all {
         color: #333;
         letter-spacing: 0.08rem;
         line-height: 1.7;
+        padding-top: 6px;
     }
 }
 @media (max-width: 538px) {

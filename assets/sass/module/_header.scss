@@ -5,6 +5,10 @@
 @use '../setting/config' as *;
 
 .header {
+    .bg-body-tertiary {
+        background-color: white!important;
+    }
+
     .modal.show .modal-dialog {
         top: 50%;
         transform: translate(0, -50%) !important;
@@ -59,10 +63,17 @@
         margin: 0!important;
         margin-top: -8px!important;
         margin-bottom: -8px!important;
+        width: 143px;
         a {
             color: white;
             text-decoration: none!important;
             font-size: 14px;
+            display: inline-block;
+            line-height: 16px;
+            letter-spacing: 0.14rem;
+            padding-top: 3px;
+            padding-bottom: 7px;
+            font-weight: 480;
         }
     }
     .btn-login {
@@ -73,6 +84,8 @@
         padding-left: 32px;
         color: #29318a;
         font-size: clamp(16px, 2vw, 25px);
+        letter-spacing: 0.15rem;
+        font-weight: 560;
     }
     .btn:hover {
         opacity: 0.8;
@@ -105,9 +118,21 @@
         left: 0;
         width: 100%;
         z-index: 5000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .navbar-nav {
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
     .nav-link {
         font-size: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .nav-link:hover {
         color: #29318a;
