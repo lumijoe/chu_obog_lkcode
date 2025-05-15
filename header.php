@@ -167,14 +167,14 @@
             document.getElementById('loginForm').addEventListener('submit', function(event) {
                 event.preventDefault();
 
-                const usernameInput = document.getElementById('username').value;
-                const passwordInput = document.getElementById('password').value;
+                 const usernameInput = document.getElementById('username').value;
+                 const passwordInput = document.getElementById('password').value;
 
-                const data = {
-                    action: 'login_check',
-                    username: usernameInput,
-                    password: passwordInput
-                };
+                 const data = {
+                     action: 'login_check',
+                     username: usernameInput,
+                     password: passwordInput
+                 };
 
                 jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', data, function(response) {
                     if (response.success) {
@@ -192,9 +192,9 @@
             });
         </script>
 
-        <?php if (!is_logged_in()) { ?>
-            <script>
-                /*document.addEventListener('click', function(event) {
+		<?php if(!is_logged_in()) {?>
+        <script>
+            /*document.addEventListener('click', function(event) {
                 // 1. ログイン済みユーザーは何もしない（WP の body_class() で 'logged-in' が付くので利用）
                 if (document.body.classList.contains('logged-in')) return;
 
@@ -209,24 +209,23 @@
                 const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
                 modal.show();
             });*/
-                document.addEventListener('click', click_obog_doc);
+            document.addEventListener('click', click_obog_doc);
+            function click_obog_doc(event) {
+                // 1. ログイン済みユーザーは何もしない（WP の body_class() で 'logged-in' が付くので利用）
+                if (document.body.classList.contains('logged-in')) return;
 
-                function click_obog_doc(event) {
-                    // 1. ログイン済みユーザーは何もしない（WP の body_class() で 'logged-in' が付くので利用）
-                    if (document.body.classList.contains('logged-in')) return;
+                // 2. 既にモーダル内をクリックした場合はスキップ
+                if (event.target.closest('#loginModal .modal-content')) return;
 
-                    // 2. 既にモーダル内をクリックした場合はスキップ
-                    if (event.target.closest('#loginModal .modal-content')) return;
+                // 3. クリックされたのが送信ボタン（ログインボタン）の場合、何もしない
+                if (event.target.closest('.btn-login')) return;
 
-                    // 3. クリックされたのが送信ボタン（ログインボタン）の場合、何もしない
-                    if (event.target.closest('.btn-login')) return;
-
-                    // クリックされたらフォーム表示
-                    const modalEl = document.getElementById('loginModal');
-                    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-                    modal.show();
-                }
-            </script>
+                // クリックされたらフォーム表示
+                const modalEl = document.getElementById('loginModal');
+                const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                modal.show();
+            }
+        </script>
         <?php } ?>
     </header>
     <main class="main">

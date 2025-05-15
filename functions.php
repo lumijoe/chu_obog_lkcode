@@ -266,7 +266,7 @@ add_action('template_redirect', 'restrict_pages_if_not_logged_in');
 // ========================
 function handle_custom_logout()
 {
-    if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+    if (isset($_GET['action']) && $_GET['action'] === 'oboglogout') {
         $_SESSION['logged_in'] = false;
         wp_redirect(home_url('/'));
         exit;
