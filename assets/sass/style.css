@@ -318,10 +318,14 @@
   box-shadow: none !important;
 }
 .header .navbar-toggler-icon {
-  background-image: url("../../images/common/icon_navpanel_open.png");
+  background-image: url("../../images/common/icon_navpanel_open01.png");
+  width: 40px;
+  height: 40px;
 }
 .header .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
-  background-image: url("../../images/common/icon_navpanel_close.png");
+  background-image: url("../../images/common/icon_navpanel_close01.png");
+  width: 40px;
+  height: 40px;
 }
 .header .nav-only-cta {
   padding-left: 0px !important;

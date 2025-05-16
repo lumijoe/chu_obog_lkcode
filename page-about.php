@@ -53,8 +53,8 @@ get_header();
             <span class="txt-wrapper"><span class="wrapper-num">・</span><span>数年に1度の開催を前提に会社が計画する「中外炉OBOGクラブ」全体懇親会に参加できます。</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">◼️ </span><span> 弔事の際会社の規定が適用されます</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">・</span><span>会員ご本人や配偶者が亡くなられた場合、会社は規定に準じた各種の手配を行います。</span></span>
-            <span class="txt-wrapper"><span class="wrapper-num">※ </span><span>ご不幸があった場合は、必ず人事部（ TEL:072-247-2502 FAX:072-247-2508 ）までご連絡ください。なお、必要な情報をもれなくご連絡いただくため、弔事のご連絡記入様式を使い、FAX送信していただければ幸いです。</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">・</span><span>「メール案内」や「専用ホームページ」を通じ、会員の皆さまに弔事連絡をします。</span></span>
+            <span class="txt-wrapper"><span class="wrapper-num">※ </span><span>ご不幸があった場合は、必ず人事部（ TEL:072-247-2502 FAX:072-247-2508 ）までご連絡ください。なお、必要な情報をもれなくご連絡いただくため、弔事のご連絡記入様式を使い、FAX送信していただければ幸いです。</span></span>
         </p>
     </section>
 
