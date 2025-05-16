@@ -62,12 +62,12 @@ get_header();
     <section class="l-pagebanner">
         <h2 class="section-ttl">ご入稿について【会員限定】</h2>
          <p class="section-h3">
-            <span class="section-txt">中外炉OBOGクラブでは、「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。</span><br><br>
+            <span class="section-txt">「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。</span><br><br>
             各OBOG会幹事の皆さまには、ご計画されておられるOBOG会の予定ご案内や開催後の楽しいレポートを、また多種多様なご趣味やスポーツ、あるいは地域・文化活動などでご活躍されておられる会員の皆さまには、ぜひその近況報告や随想などをご入稿ください。
             テーマは特に問いませんので、ご家族のことやご自身の健康療法など、身近なことでも構いません。
             <br>
-
-            ≪ご入稿方法≫<br>
+            <span class="section-h4">
+            ご入稿方法</span><br>
             ご入稿いただける場合は、皆さまの電子メールに、原稿となる写真や文章の電子データを添付し<br>人事部OBOG原稿受付専用メールアドレス：ob-genkou@mail.chugai.co.jpまで送信願います。
             なお、添付していただく写真は、最大3枚(合計1MB以内)としてください。<br>
 
@@ -78,7 +78,7 @@ get_header();
             中外炉工業株式会社 人事部 OBOG原稿受付窓口宛<br>
             TEL：072-247-2502<br>
 
-            ≪掲載時期≫<br>
+            <span class="section-h4">掲載時期</span><br>
             毎月25日までにご入稿頂いた原稿は、翌月10日頃までに掲載させていただきます。</p>
     </section>
     <button class="btn btn-primay add-icon"><a href="<?php echo home_url('/'); ?>">トップへ戻る</a></button>
