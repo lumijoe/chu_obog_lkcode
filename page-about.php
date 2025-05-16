@@ -60,7 +60,7 @@ get_header();
 
     <div id="memberpost" style="position: relative; top: -110px;"></div>
     <section class="l-pagebanner">
-        <h2 class="section-ttl">ご入稿について【会員限定】</h2>
+        <h2 class="section-ttl">ご入稿について<br class="d-none display-590">【会員限定】</h2>
          <p class="section-h3">
             <span class="section-txt">「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。</span><br><br>
             各OBOG会幹事の皆さまには、ご計画されておられるOBOG会の予定ご案内や開催後の楽しいレポートを、また多種多様なご趣味やスポーツ、あるいは地域・文化活動などでご活躍されておられる会員の皆さまには、ぜひその近況報告や随想などをご入稿ください。
@@ -70,12 +70,11 @@ get_header();
             <h4 class="section-h4">
             ご入稿方法</h4>
             <hr class="section-h4-hr">
-            <p>
-            ご入稿いただける場合は、皆さまの電子メールに、原稿となる写真や文章の電子データを添付し<br>人事部OBOG原稿受付専用メールアドレス：ob-genkou@mail.chugai.co.jpまで送信願います。
+            <p class="section-h4-txt">
+            ご入稿いただける場合は、皆さまの電子メールに、原稿となる写真や文章の電子データを添付し、<br>人事部OBOG原稿受付専用メールアドレス：ob-genkou@mail.chugai.co.jpまで送信願います。
             なお、添付していただく写真は、最大3枚(合計1MB以内)としてください。<br>
-
+            <br>
             原稿類をご郵送でお送りいただく場合は、以下宛先までお願いします。<br>
-
             〒592-8331<br>
             堺市西区築港新町2-4<br>
             中外炉工業株式会社 人事部 OBOG原稿受付窓口宛<br>
@@ -83,7 +82,7 @@ get_header();
             </p>
             <h4 class="section-h4">掲載時期</h4>
             <hr class="section-h4-hr">
-            <p>
+            <p class="section-h4-txt">
             毎月25日までにご入稿頂いた原稿は、翌月10日頃までに掲載させていただきます。</p>
     </section>
     <button class="btn btn-primay add-icon"><a href="<?php echo home_url('/'); ?>">トップへ戻る</a></button>

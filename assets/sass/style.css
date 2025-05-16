@@ -1069,6 +1069,7 @@ span.tag_new {
   font-weight: 400;
   letter-spacing: 0.13rem;
   color: #0e1346;
+  margin-top: 40px;
 }
 .l-about .l-pagebanner .section-h4-hr {
   color: #29318a;
@@ -1076,8 +1077,24 @@ span.tag_new {
   width: 100%;
   height: 3px;
   opacity: 1;
+  margin: 23px auto;
+}
+.l-about .l-pagebanner .section-h4-txt {
+  font-size: 14px;
+  line-height: 2rem;
+  letter-spacing: 0.15rem;
+}
+@media (max-width: 590px) {
+  .l-about .display-590 {
+    display: block !important;
+  }
 }
 
+@media (max-width: 890px) {
+  .display-890 {
+    display: block !important;
+  }
+}
 li, ol, ul {
   text-decoration: none;
   list-style-type: none;
