@@ -33,7 +33,7 @@ get_header();
 <section class="l-about">
     <section id="club" class="l-pagebanner">
         <h2 class="section-ttl">「中外炉OBOGクラブ」のご案内</h2>
-        <p class="section-h3"><span class="section-txt">中外炉OBOGクラブは、中外炉工業株式会社を退職されたOBOGの皆さまのためのコミュニティークラブで、所定の基準を満たす中外炉OBOGの皆さまなら、だれでも入会できるメンバーズクラブです。</span><br><br>
+        <p style="font-size:14px; line-height: 2rem;"><span style="font-size:clamp(16px, 3vw, 20px); line-height: 2rem;">中外炉OBOGクラブは、中外炉工業株式会社を退職されたOBOGの皆さまのためのコミュニティークラブで、所定の基準を満たす中外炉OBOGの皆さまなら、だれでも入会できるメンバーズクラブです。</span><br><br>
             1.クラブの目的
             <span class="txt-wrapper"><span class="wrapper-num">1）</span><span>OBOG間の親睦と互助を図る</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">2）</span><span>OBOGと会社との情報交流を深め、「人中心」企業の一体感を醸成する</span></span>
@@ -54,18 +54,18 @@ get_header();
             <span class="txt-wrapper"><span class="wrapper-num">◼️ </span><span> 弔事の際会社の規定が適用されます</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">・</span><span>会員ご本人や配偶者が亡くなられた場合、会社は規定に準じた各種の手配を行います。</span></span>
             <span class="txt-wrapper"><span class="wrapper-num">・</span><span>「メール案内」や「専用ホームページ」を通じ、会員の皆さまに弔事連絡をします。</span></span>
-            <span class="txt-wrapper"><span class="wrapper-num">※ </span><span>ご不幸があった場合は、必ず人事部（ TEL:072-247-2502 FAX:072-247-2508 ）までご連絡ください。なお、必要な情報をもれなくご連絡いただくため、弔事のご連絡記入様式を使い、FAX送信していただければ幸いです。様式は<a href="https://nagahama-p.sakura.ne.jp/obog/wp-content/themes/chu_obog/images/home/chugairo_print.pdf" target="_blank">こちら</a>よりダウンロードいただけます。</span></span>
+            <span class="txt-wrapper"><span class="wrapper-num">※ </span><span>ご不幸があった場合は、必ず人事部（ TEL:072-247-2502 FAX:072-247-2508 ）までご連絡ください。なお、必要な情報をもれなくご連絡いただくため、弔事のご連絡記入様式を使い、FAX送信していただければ幸いです。</span></span>
         </p>
     </section>
 
     <div id="memberpost" style="position: relative; top: -110px;"></div>
     <section class="l-pagebanner">
         <h2 class="section-ttl">ご入稿について【会員限定】</h2>
-         <p class="section-h3">
-            <span class="section-txt">中外炉OBOGクラブでは、「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。</span><br><br>
+        <p>
+            会員の皆さまからの情報ご入稿について<br>
+            中外炉OBOGクラブでは、「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。<br>
             各OBOG会幹事の皆さまには、ご計画されておられるOBOG会の予定ご案内や開催後の楽しいレポートを、また多種多様なご趣味やスポーツ、あるいは地域・文化活動などでご活躍されておられる会員の皆さまには、ぜひその近況報告や随想などをご入稿ください。
-            テーマは特に問いませんので、ご家族のことやご自身の健康療法など、身近なことでも構いません。
-            <br>
+            テーマは特に問いませんので、ご家族のことやご自身の健康療法など、身近なことでも構いません。<br>
 
             ≪ご入稿方法≫<br>
             ご入稿いただける場合は、皆さまの電子メールに、原稿となる写真や文章の電子データを添付し<br>人事部OBOG原稿受付専用メールアドレス：ob-genkou@mail.chugai.co.jpまで送信願います。
