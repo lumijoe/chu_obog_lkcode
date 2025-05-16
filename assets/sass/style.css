@@ -1064,6 +1064,19 @@ span.tag_new {
 .l-about .l-pagebanner h2.section-ttl::after {
   bottom: -24px;
 }
+.l-about .l-pagebanner h4.section-h4 {
+  font-size: clamp(16px, 6vw, 25px);
+  font-weight: 400;
+  letter-spacing: 0.13rem;
+  color: #0e1346;
+}
+.l-about .l-pagebanner .section-h4-hr {
+  color: #29318a;
+  background-color: #29318a;
+  width: 100%;
+  height: 3px;
+  opacity: 1;
+}
 
 li, ol, ul {
   text-decoration: none;
