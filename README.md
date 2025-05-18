@@ -1,6 +1,6 @@
 # chu_obog_lkcodeを追加
 
-gitテスト
+gitテスト、コピー複製テスト
 お知らせ一覧のサイト構築をarchive.php、home.phpと揃えること
 
 ##functions.php
