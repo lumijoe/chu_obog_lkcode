@@ -1,13 +1,6 @@
 <!-- カスタム投稿の一覧 -->
 <?php get_header(); ?>
-<!-- <section class="l-breadcrumb">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
-        </ol>
-    </nav>
-</section> -->
+
 
 <!-- titleview -->
 <section class="l-titleview">

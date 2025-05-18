@@ -7,21 +7,7 @@
 
 get_header();
 ?>
-<!-- <section class="l-breadcrumb">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/about'); ?>">OBOGクラブについて</a></li>
-        </ol>
-    </nav>
-</section> -->
-<!-- titleview -->
-<!-- <section class="l-titleview">
-    <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
-    <div class="l-titleview-ttl">
-        <p>OBOGクラブについて</p>
-    </div>
-</section> -->
+
 <!-- titleview -->
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/about/img_page_about.png" alt="OBOGクラブについて">
@@ -61,16 +47,16 @@ get_header();
     <div id="memberpost" style="position: relative; top: -110px;"></div>
     <section class="l-pagebanner">
         <h2 class="section-ttl">ご入稿について<br class="d-none display-590">【会員限定】</h2>
-         <p class="section-h3">
+        <p class="section-h3">
             <span class="section-txt">「OBOG会だより」や「会員だより」でご紹介する原稿を募集しています。</span><br><br>
             各OBOG会幹事の皆さまには、ご計画されておられるOBOG会の予定ご案内や開催後の楽しいレポートを、また多種多様なご趣味やスポーツ、あるいは地域・文化活動などでご活躍されておられる会員の皆さまには、ぜひその近況報告や随想などをご入稿ください。
             テーマは特に問いませんので、ご家族のことやご自身の健康療法など、身近なことでも構いません。
         </p>
-        
-            <h4 class="section-h4">
+
+        <h4 class="section-h4">
             ご入稿方法</h4>
-            <hr class="section-h4-hr">
-            <p class="section-h4-txt">
+        <hr class="section-h4-hr">
+        <p class="section-h4-txt">
             ご入稿いただける場合は、皆さまの電子メールに、原稿となる写真や文章の電子データを添付し、<br>人事部OBOG原稿受付専用メールアドレス：ob-genkou@mail.chugai.co.jpまで送信願います。
             なお、添付していただく写真は、最大3枚(合計1MB以内)としてください。<br>
             <br>
@@ -79,10 +65,10 @@ get_header();
             堺市西区築港新町2-4<br>
             中外炉工業株式会社 人事部 OBOG原稿受付窓口宛<br>
             TEL：072-247-2502<br>
-            </p>
-            <h4 class="section-h4">掲載時期</h4>
-            <hr class="section-h4-hr">
-            <p class="section-h4-txt">
+        </p>
+        <h4 class="section-h4">掲載時期</h4>
+        <hr class="section-h4-hr">
+        <p class="section-h4-txt">
             毎月25日までにご入稿頂いた原稿は、翌月10日頃までに掲載させていただきます。</p>
     </section>
     <button class="btn btn-primay add-icon"><a href="<?php echo home_url('/'); ?>">トップへ戻る</a></button>
