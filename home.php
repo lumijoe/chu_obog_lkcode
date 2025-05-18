@@ -26,8 +26,8 @@ get_header();
   <button class="close-btn" id="close-btn">✕</button>
   <h2>ログイン</h2>
   <form>
-    <label>ユーザー名：<br /><input type="text" name="username" /></label><br /><br />
-    <label>パスワード：<br /><input type="password" name="password" /></label><br /><br />
+    <label>ユーザー名：<br /><input type="text" name="username" placeholder="ユーザー名" required /></label><br /><br />
+    <label>パスワード：<br /><input type="password" name="password" placeholder="パスワード" required /></label><br /><br />
     <button type="submit">ログイン</button>
   </form>
 </div>
