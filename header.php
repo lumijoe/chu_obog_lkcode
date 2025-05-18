@@ -38,9 +38,6 @@
 </style>
 
 <body <?php body_class(); ?>>
-    <?php if (!is_logged_in()) : ?>
-        <?php get_template_part('template-parts/modal-login'); ?>
-    <?php endif; ?>
     <header id="header" class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -112,134 +109,8 @@
                 </div>
             </div>
         </nav>
-        <!-- ログインボタン -->
-        <button type="button" class="btn btn-primary btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
-            ログイン
-        </button>
-        <!-- ログインモーダル -->
-        <div class="modal fade login-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">会員専用ページ</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
-                    </div>
-                    <div class="modal-body modal-login">
-                        <form id="loginForm">
-                            <div class="mb-3">
-                                <label for="username" class="form-label">ユーザー名</label>
-                                <input type="text" class="form-control" id="username" placeholder="ユーザー名を入力">
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">パスワード</label>
-                                <input type="password" class="form-control" id="password" placeholder="パスワードを入力">
-                            </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="logincheck">
-                                <label class="form-check-label" for="logincheck">ログイン状態を保持する</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">ログインする</button>
-                        </form>
-                        <div id="error-message" class="text-danger mt-2" style="display: none;">
-                            ユーザー名またはパスワードが間違っています。
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php if (is_logged_in()) : ?>
-            <p style="color: green;">ログイン中です | <a href="<?php echo home_url('/?action=oboglogout'); ?>">ログアウト</a></p>
-        <?php else : ?>
-            <p style="color: red;">ログアウト状態です</p>
-        <?php endif; ?>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const navbarCollapse = document.getElementById("navbarSupportedContent");
-                const navbar = document.querySelector(".navbar");
-                const toggler = document.querySelector(".navbar-toggler");
-
-                if (navbarCollapse && navbar && toggler) {
-
-                    navbarCollapse.addEventListener("show.bs.collapse", function() {
-                        navbar.classList.add("is-open");
-                        document.body.classList.add("no-scroll");
-                    });
 
 
-                    navbarCollapse.addEventListener("hide.bs.collapse", function() {
-                        navbar.classList.remove("is-open");
-                        document.body.classList.remove("no-scroll");
-                    });
-                }
-            });
-        </script>
 
-        <script>
-            // フォーム送信時にAJAXでログイン処理をサーバーにリクエスト
-            document.getElementById('loginForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                const usernameInput = document.getElementById('username').value;
-                const passwordInput = document.getElementById('password').value;
-
-                const data = {
-                    action: 'login_check',
-                    username: usernameInput,
-                    password: passwordInput
-                };
-
-                jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', data, function(response) {
-                    if (response.success) {
-                        alert('ログイン成功');
-
-                        // Bootstrap 5 モーダルを閉じる方法
-                        const modalEl = document.getElementById('loginModal');
-                        const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
-                        modal.hide();
-                        document.removeEventListener('click', click_obog_doc);
-                    } else {
-                        document.getElementById('error-message').style.display = 'block';
-                    }
-                });
-            });
-        </script>
-
-        <?php if (!is_logged_in()) { ?>
-            <script>
-                /*document.addEventListener('click', function(event) {
-                // 1. ログイン済みユーザーは何もしない（WP の body_class() で 'logged-in' が付くので利用）
-                if (document.body.classList.contains('logged-in')) return;
-
-                // 2. 既にモーダル内をクリックした場合はスキップ
-                if (event.target.closest('#loginModal .modal-content')) return;
-
-                // 3. クリックされたのが送信ボタン（ログインボタン）の場合、何もしない
-                if (event.target.closest('.btn-login')) return;
-
-                // クリックされたらフォーム表示
-                const modalEl = document.getElementById('loginModal');
-                const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-                modal.show();
-            });*/
-                document.addEventListener('click', click_obog_doc);
-
-                function click_obog_doc(event) {
-                    // 1. ログイン済みユーザーは何もしない（WP の body_class() で 'logged-in' が付くので利用）
-                    if (document.body.classList.contains('logged-in')) return;
-
-                    // 2. 既にモーダル内をクリックした場合はスキップ
-                    if (event.target.closest('#loginModal .modal-content')) return;
-
-                    // 3. クリックされたのが送信ボタン（ログインボタン）の場合、何もしない
-                    if (event.target.closest('.btn-login')) return;
-
-                    // クリックされたらフォーム表示
-                    const modalEl = document.getElementById('loginModal');
-                    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-                    modal.show();
-                }
-            </script>
-        <?php } ?>
     </header>
     <main class="main">
