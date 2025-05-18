@@ -1,5 +1,5 @@
 # chu_obog_lkcodeを追加
-
+https://lkcodetest.sakura.ne.jp/obogtest/
 gitテスト、コピー複製テスト
 お知らせ一覧のサイト構築をarchive.php、home.phpと揃えること
 
