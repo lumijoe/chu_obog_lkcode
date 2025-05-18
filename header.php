@@ -31,9 +31,45 @@
     <?php wp_head(); ?>
 </head>
 
-<style>
+<!-- <style>
     .btn-login {
         display: none !important;
+    }
+</style> -->
+<style>
+    #login-form {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background: #fff;
+        border: 0px solid #333;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 12000;
+        width: 300px;
+    }
+
+    #login-form .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 12000;
     }
 </style>
 
