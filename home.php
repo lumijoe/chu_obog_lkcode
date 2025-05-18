@@ -57,6 +57,20 @@ get_header();
     </div>
 </section>
 
+
+<!--ログインフォーム  -->
+<div id="overlay"></div>
+
+<div id="login-form">
+  <button class="close-btn" id="close-btn">✕</button>
+  <h2>ログイン</h2>
+  <form>
+    <label>ユーザー名：<br /><input type="text" name="username" /></label><br /><br />
+    <label>パスワード：<br /><input type="password" name="password" /></label><br /><br />
+    <button type="submit">ログイン</button>
+  </form>
+</div>
+
 <!-- お知らせ新着 -->
 <section class="l-news-latest l-article">
   <div class="l-news-latest-wrapper">

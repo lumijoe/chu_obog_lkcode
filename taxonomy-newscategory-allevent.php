@@ -1,4 +1,13 @@
 <?php get_header(); ?>
+<div id="overlay"></div>
+
+<script src="login.js"></script>
+<script>
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+        alert("ログインしてください");
+        window.location.href = "https://lkcodetest.sakura.ne.jp/obogtest/";
+    }
+</script>
 <!-- パンくずリスト　 -->
 <!-- <section class="l-breadcrumb">
     <nav aria-label="breadcrumb">
@@ -101,5 +110,6 @@
 
 <!-- OBOGの皆さまへ -->
 <?php get_template_part('template-parts/obog-banner'); ?>
+
 
 <?php get_footer(); ?>

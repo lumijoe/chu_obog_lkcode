@@ -24,6 +24,32 @@ add_action('wp_enqueue_scripts', 'custom_theme_enqueue_styles');
 
 
 // ========================
+// スクリプト設定
+// ========================
+function custom_theme_enqueue_scripts()
+{
+    wp_enqueue_script(
+        // アラートテスト
+        'home-js',
+        get_template_directory_uri() . '/assets/js/home.js',
+        array(),
+        filemtime(get_template_directory() . '/assets/js/home.js'),
+        true // footerでの読み込みtrue
+    );
+
+    wp_enqueue_script(
+        // ログインテスト
+        'login-js',
+        get_template_directory_uri() . '/assets/js/login.js',
+        array(),
+        filemtime(get_template_directory() . '/assets/js/login.js'),
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'custom_theme_enqueue_scripts');
+
+
+// ========================
 // 管理画面：ロゴ設定
 // ========================
 function my_login_logo()
