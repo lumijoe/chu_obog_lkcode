@@ -1,7 +1,7 @@
 <!-- カスタム投稿の一覧 -->
 <?php get_header(); ?>
-
-
+<!-- ログインアラート -->
+<?php get_template_part('template-parts/login-alert'); ?>
 <!-- titleview -->
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_news.png" alt="お知らせ一覧のページビュー">

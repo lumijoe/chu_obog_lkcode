@@ -98,3 +98,28 @@
         </ol>
     </nav>
 </section>
+
+
+## single-news.php
+<!-- single-news.php -->
+<!-- パンくずリスト -->
+<section class="l-breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
+            <?php
+            $terms = get_the_terms(get_the_ID(), 'newscategory');
+            if ($terms && !is_wp_error($terms)) :
+                $first_term = $terms[0];
+                $term_link = get_term_link($first_term);
+            ?>
+                <li class="breadcrumb-item">
+                    <a href="<?php echo esc_url($term_link); ?>"><?php echo esc_html($first_term->name); ?></a>
+                </li>
+            <?php endif; ?>
+            <li class="breadcrumb-item"><?php the_field('post_title'); ?></li>
+
+        </ol>
+    </nav>
+</section>

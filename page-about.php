@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-
+<?php get_template_part('template-parts/login-alert'); ?>
 <!-- titleview -->
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/about/img_page_about.png" alt="OBOGクラブについて">
