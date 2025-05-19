@@ -207,3 +207,44 @@ function custom_admin_styles()
     </style>';
 }
 add_action('admin_head', 'custom_admin_styles');
+
+
+// ========================
+// .env の読み込み（WordPressルート直下）
+// ========================
+function load_env()
+{
+    $env_path = ABSPATH . '.env';
+    if (file_exists($env_path)) {
+        $lines = file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $line) {
+            if (strpos(trim($line), '#') === 0) continue;
+            list($name, $value) = explode('=', $line, 2);
+            $_ENV[trim($name)] = trim($value);
+        }
+    }
+}
+add_action('init', 'load_env');
+
+
+// ========================
+// login.js の読み込みと .env 情報の注入
+// ========================
+function enqueue_login_script()
+{
+    // login.js の読み込み（あなたのテーマの /js/login.js にあると仮定）
+    wp_enqueue_script(
+        'login-js',
+        get_template_directory_uri() . '/js/login.js',
+        array(), // 依存スクリプトがあれば ['jquery'] などを指定
+        null,
+        true // フッターで読み込む
+    );
+
+    // JavaScript に .env 情報を渡す
+    wp_localize_script('login-js', 'envVars', [
+        'username' => $_ENV['CROBC_USERNAME'] ?? '',
+        'password' => $_ENV['CROBC_PASSWORD'] ?? '',
+    ]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_login_script');

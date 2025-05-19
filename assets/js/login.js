@@ -1,3 +1,7 @@
+console.log("Username from .env:", envVars.username);
+console.log("Password from .env:", envVars.password);
+
+
 // セッションストレージでログイン状態を管理
 function isLoggedIn() {
   return sessionStorage.getItem("loggedIn") === "true";
@@ -43,13 +47,28 @@ document.getElementById("overlay").addEventListener("click", function () {
 });
 
 // ログインフォーム送信時にセッションストレージへ保存
+// document.querySelector("#login-form form").addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   setLoggedIn();
+//   document.getElementById("login-form").style.display = "none";
+//   document.getElementById("overlay").style.display = "none";
+// });
+// ログインフォーム送信時にenvVarsと比較して認証する
 document.querySelector("#login-form form").addEventListener("submit", function (event) {
   event.preventDefault();
-  setLoggedIn();
-  document.getElementById("login-form").style.display = "none";
-  document.getElementById("overlay").style.display = "none";
-  // 必要ならここでログイン後の処理を追加
+
+  const inputUsername = document.getElementById("username").value;
+  const inputPassword = document.getElementById("password").value;
+
+  if (inputUsername === envVars.username && inputPassword === envVars.password) {
+    setLoggedIn();
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  } else {
+    alert("ユーザー名またはパスワードが正しくありません。");
+  }
 });
+
 
 // すべてのaタグのクリックを監視し、未ログインなら遷移を止める
 document.querySelectorAll('a').forEach(function(link) {
