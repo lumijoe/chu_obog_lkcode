@@ -123,3 +123,16 @@
         </ol>
     </nav>
 </section>
+
+
+## archive-news_b
+<!-- archive-news_b.php -->
+<!-- パンくずリスト -->
+<section class="l-breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
+        </ol>
+    </nav>
+</section>

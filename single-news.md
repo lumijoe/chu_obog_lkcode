@@ -103,3 +103,26 @@
 <?php get_sidebar('news'); ?> <!-- sidebar-news.php を読み込む -->
 
 <?php get_footer(); ?>
+
+
+
+## 新着お知らせの方法
+    <!-- span新着タグ -->
+    <?php
+    // 投稿日と現在の日付を取得
+    $post_date = get_the_date('Y-m-d');
+    $post_datetime = new DateTime($post_date);
+    $now = new DateTime();
+
+    // 投稿が過去の日付かチェック（未来記事を除外）
+    if ($post_datetime <= $now) {
+        $interval = $now->diff($post_datetime)->days;
+
+        // 7日以内ならNEWを表示
+        if ($interval < 7) :
+    ?>
+            <span class="tag_new">NEW</span>
+    <?php
+        endif;
+    }
+    ?>
