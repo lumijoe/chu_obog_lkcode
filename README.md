@@ -1,8 +1,9 @@
 # chu_obog_lkcodeを追加(デバッグテスト用)
 
 https://lkcodetest.sakura.ne.jp/obogtest/
-root:~themes/chu_obog-main
-Github:chu_obog_lkcode
+⭕️root:~themes/chu_obog-main
+⭕️Github:chu_obog_lkcode
+⭕️最新meldチェック0607(.,md,image,txt以外)
 gitテスト、コピー複製テスト
 お知らせ一覧のサイト構築をarchive.php、home.phpと揃えること
 
